@@ -5,30 +5,32 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+	<?php if ( has_post_thumbnail() ) : ?>
+		<figure class="entry-image">
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+		</figure>
+	<?php endif; ?><!-- .entry-image -->
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php eighties_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+	<header class="entry-header">
+		<span class="entry-meta entry-meta-categories"><?php the_category( ', ' ); ?></span>
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<p class="entry-meta entry-meta-time"><i class="fa fa-clock-o"></i><?php echo eighties_get_time_difference( get_the_date( 'Y-m-d H:i:s' ) ); ?><p>
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
 	<?php else : ?>
-	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'eighties' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'eighties' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+		<div class="entry-content">
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'eighties' ) ); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'eighties' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
 	<?php endif; ?>
 
 	<footer class="entry-footer">
@@ -38,9 +40,9 @@
 				$categories_list = get_the_category_list( __( ', ', 'eighties' ) );
 				if ( $categories_list && eighties_categorized_blog() ) :
 			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'eighties' ), $categories_list ); ?>
-			</span>
+				<span class="cat-links">
+					<?php printf( __( 'Posted in %1$s', 'eighties' ), $categories_list ); ?>
+				</span>
 			<?php endif; // End if categories ?>
 
 			<?php

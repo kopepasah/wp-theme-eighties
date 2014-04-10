@@ -1,4 +1,36 @@
 /** -----------------------------------------------------:[ 9.0 - Widgets ]:---------- */
+/** ---:[ With JavaScript ]:--- */
+.js {
+	#secondary {
+		position: fixed;
+		top: 0;
+		right: -320px;
+		width: 320px;
+		.transition( ~'right 300ms ease' );
+	}
+	.widget-area-open {
+		overflow: hidden;
+		#secondary {
+			right: 0;
+		}
+		#page {
+			left: -320px;
+			right: 320px;
+		}
+	}
+}
+
+/** ---:[ Without JavaScript ]:--- */
+.no-js {
+	.widget {
+		&-area-toggle {
+			display: none;
+		}
+	}
+	#secondary {
+		.make-column(4);
+	}
+}
 .widget {
 	margin: 0 0 1.5em;
 }

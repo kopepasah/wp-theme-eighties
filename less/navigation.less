@@ -88,9 +88,6 @@ a:active {
 .main-navigation {
 	background: @primary;
 	display: none;
-	&-open {
-		overflow: hidden;
-	}
 	ul {
 		margin: 0;
 		ul {
@@ -139,8 +136,20 @@ a:active {
 	.main-navigation {
 		background: @dark;
 		overflow: scroll;
+		position: fixed;
 		width: 250px;
 		left: -250px;
+		.transition( ~'left 300ms ease' );
+		&-open {
+			overflow: hidden;
+			#site-navigation {
+				left: 0;
+			}
+			#page {
+				left: 250px;
+				right: -250px;
+			}
+		}
 		li {
 			display: block;
 			a {
@@ -211,11 +220,6 @@ a:active {
 	.current-menu-item {
 		> a {
 			background: @primary;
-		}
-	}
-	.admin-bar {
-		.main-navigation {
-			padding-top: 32px;
 		}
 	}
 }

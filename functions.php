@@ -8,9 +8,18 @@
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
+/*
+	TODO Calculate width.
+*/
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
+
+/**
+ * Set the theme mods in a global variable. This makes it easier to
+ * retrieve in templates and functions.
+ */
+// $GLOBALS['eighties_theme_mod'] = get_theme_mod( 'eighties' );
 
 if ( ! function_exists( 'eighties_setup' ) ) :
 /**
@@ -66,7 +75,7 @@ function eighties_setup() {
 	add_theme_support( 'less', array(
 		'enable'  => true,
 		'develop' => true,
-		'watch'   => true,
+		// 'watch'   => true,
 		'minify'  => true
 	) );
 }
@@ -74,16 +83,32 @@ endif; // eighties_setup
 add_action( 'after_setup_theme', 'eighties_setup' );
 
 /**
- * Register widgetized area and update sidebar with default widgets.
+ * Register a footer and interactive widget area.
  */
 function eighties_widgets_init() {
+	/**
+	 * Set up our interactive sidebar if a user decided
+	 * to enable this sidebar via the Customizer.
+	*/
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'eighties' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Interactive Sidebar', 'eighties' ),
+		'id'            => 'eighties-interactive-sidebar',
+		'description'   => __( 'This sidebar opens as a toggle on the right side of a users browser window. If empty, the sidebar with not display.', 'LION' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
+	) );
+
+	// Footer widget area.
+	register_sidebar( array(
+		'name'          => __( 'Footer', 'eighties' ),
+		'id'            => 'eighties-footer',
+		'description'   => __( 'Widget area for the footer. If no widgets are provided, this footer will not appear.', 'listed' ),
+		'before_widget' => '<aside id="%1$s" class="widget column col-4-12 %2$s"><div class="col-inner">',
+		'after_widget'  => '</div></aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'eighties_widgets_init' );
@@ -97,7 +122,7 @@ function eighties_scripts() {
 	wp_enqueue_style( 'eighties', get_stylesheet_uri() );
 
 	// Fonts
-	wp_enqueue_style( 'eighties-fonts', $protocol . '://fonts.googleapis.com/css?family=Poiret+One|Righteous' );
+	wp_enqueue_style( 'eighties-fonts', $protocol . '://fonts.googleapis.com/css?family=Raleway:500|Righteous' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fa/font-awesome.css' );
 
 	// Register scripts
@@ -106,7 +131,7 @@ function eighties_scripts() {
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7.1', false );
 
 	// Enqueue global (includes navigation and others).
-	wp_enqueue_script( 'eighties', get_template_directory_uri() . '/js/eighties.js', array( 'bigslide', 'modernizr' ), '20120206', true );
+	wp_enqueue_script( 'eighties', get_template_directory_uri() . '/js/eighties.js', array( 'modernizr' ), '20120206', true );
 
 	wp_enqueue_script( 'eighties-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

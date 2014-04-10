@@ -1,17 +1,23 @@
 /** -----------------------------------------------------:[ 10.0 - Content ]:---------- */
-#primary {
-	background: #fff;
+
+/** ---:[ Without JavaScript ]:--- */
+.no-js {
+	#content {
+		.make-row();
+		.max-width( 1200px );
+	}
+	#primary {
+		.make-column(8);
+	}
+}
+
+/** ----------------------------------------:[ 10.1 - Posts and pages ]:--- */
+.sticky {
 }
 .hentry {
 	> [class^="entry-"] {
 		.max-width( 760px );
 	}
-}
-/** ----------------------------------------:[ 10.1 - Posts and pages ]:--- */
-.sticky {
-}
-.hentry {
-	margin: 0 0 1.5em;
 }
 .byline,
 .updated {

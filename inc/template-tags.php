@@ -123,6 +123,38 @@ function eighties_categorized_blog() {
 }
 
 /**
+ * Return a time difference of a given time in
+ * days, hours or minutes depending on the time
+ * difference.
+ *
+ * @since 1.0.0
+ *
+ * @param $time (required)
+*/
+function eighties_get_time_difference( $time ) {
+	$current_time = new DateTime( current_time( 'mysql' ) );
+	$previous_time = new DateTime( $time );
+	$difference = $current_time->diff( $previous_time );
+	$timestamp = '';
+
+	if ( 0 < $difference->days ) {
+		$timestamp .= sprintf( translate_nooped_plural( _n_noop( '%s day', '%s days' ), $difference->days ), $difference->days ) . ' ago.';
+	} else {
+		if ( 0 == $difference->i && 0 == $difference->h ) {
+			$timestamp = __( 'Less than a minute ago.', 'listed' );
+		} else {
+			if ( 0 < $difference->h ) {
+				$timestamp .= sprintf( translate_nooped_plural( _n_noop( '%s hour ago', '%s hours ago', 'listed' ), $difference->h, 'listed' ), $difference->h );
+			} else {
+				$timestamp .= sprintf( translate_nooped_plural( _n_noop( '%s minute ago', '%s minutes ago', 'listed' ), $difference->i, 'listed' ), $difference->i );
+			}
+		}
+	}
+
+	return $timestamp;
+}
+
+/**
  * Flush out the transients used in eighties_categorized_blog.
  */
 function eighties_category_transient_flusher() {

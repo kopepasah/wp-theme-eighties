@@ -27,7 +27,9 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<a href class="main-navigation-toggle"><i class="fa fa-bars"></i></a>
-		<a href class="widget-area-toggle"><i class="fa fa-caret-square-o-right"></i></a>
+		<?php if ( is_active_sidebar( 'eighties-interactive-sidebar' ) ) : ?>
+			<a href class="widget-area-toggle"><i class="fa fa-caret-square-o-left"></i></a>
+		<?php endif; ?>
 
 		<div class="site-branding" <?php echo ( get_header_image() ) ? 'data-backstretch="' . get_header_image() . '"' : ''; ?>>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

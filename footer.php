@@ -10,6 +10,8 @@
 
 	</div><!-- #content -->
 
+	<?php get_sidebar( 'footer' ); ?>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'eighties' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'eighties' ), 'WordPress' ); ?></a>
