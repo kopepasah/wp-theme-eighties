@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package _s
+ * @package eighties
  */
 
 /**
@@ -13,11 +13,11 @@
  * @param array $args Configuration arguments.
  * @return array
  */
-function _s_page_menu_args( $args ) {
+function eighties_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', '_s_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'eighties_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -25,7 +25,7 @@ add_filter( 'wp_page_menu_args', '_s_page_menu_args' );
  * @param array $classes Classes for the body element.
  * @return array
  */
-function _s_body_classes( $classes ) {
+function eighties_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -33,7 +33,7 @@ function _s_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', '_s_body_classes' );
+add_filter( 'body_class', 'eighties_body_classes' );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
@@ -42,7 +42,7 @@ add_filter( 'body_class', '_s_body_classes' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function _s_wp_title( $title, $sep ) {
+function eighties_wp_title( $title, $sep ) {
 	if ( is_feed() ) {
 		return $title;
 	}
@@ -60,12 +60,12 @@ function _s_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'eighties' ), max( $paged, $page ) );
 	}
 
 	return $title;
 }
-add_filter( 'wp_title', '_s_wp_title', 10, 2 );
+add_filter( 'wp_title', 'eighties_wp_title', 10, 2 );
 
 /**
  * Sets the authordata global when viewing an author archive.
@@ -79,11 +79,41 @@ add_filter( 'wp_title', '_s_wp_title', 10, 2 );
  * @global WP_Query $wp_query WordPress Query object.
  * @return void
  */
-function _s_setup_author() {
+function eighties_setup_author() {
 	global $wp_query;
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
 	}
 }
-add_action( 'wp', '_s_setup_author' );
+add_action( 'wp', 'eighties_setup_author' );
+
+/**
+ * Add search to the primary menu.
+ *
+ * @return string Navigation menu items.
+*/
+function eighties_primary_menu_items( $items, $args ) {
+	if ( $args->theme_location != 'primary' ) {
+		return $items;
+	}
+
+	ob_start();
+	?>
+		<li class="menu-item menu-item-search">
+			<a href><i class="fa fa-search"></i></a>
+			<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<label>
+					<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'listed' ); ?></span>
+					<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'listed' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s">
+				</label>
+			</form>
+		</li>
+	<?php
+	$search = ob_get_clean();
+
+	$items = $search . $items;
+
+	return $items;
+}
+add_action( 'wp_nav_menu_items' , 'eighties_primary_menu_items', 100, 2 );

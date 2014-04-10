@@ -1,0 +1,293 @@
+/** -----------------------------------------------------:[ 5.0 - Navigation ]:---------- */
+
+/** ----------------------------------------:[ 5.1 - Links ]:--- */
+/*
+	TODO Lessify.
+*/
+a {
+	color: @primary;
+	text-decoration: none;
+	.transition( ~'color .2s ease' );
+}
+a:hover,
+a:focus,
+a:active {
+	color: @secondary;
+}
+
+/** ----------------------------------------:[ 5.2 - Menus ]:--- */
+
+/** ---:[ Structure ]:--- */
+.menu {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+		a {
+			display: block;
+		}
+		ul {
+			position: absolute;
+			z-index: 999999;
+			visibility: hidden;
+			margin-left: 0;
+			opacity: 0;
+			ul {
+				margin: -3.4rem 0 0 12rem;
+			}
+		}
+		&:hover {
+			position: static;
+			ul {
+				opacity: 1;
+				visibility: visible;
+				ul, ul ul, ul ul ul, ul ul ul ul  {
+					opacity: 0;
+				}
+			}
+		}
+		li {
+			display: block;
+			a {
+				width: 12rem;
+			}
+			&:hover {
+				ul {
+					opacity: 1;
+				}
+			}
+			li {
+				&:hover {
+					ul {
+						opacity: 1;
+					}
+				}
+				li {
+					&:hover {
+						ul {
+							opacity: 1;
+						}
+					}
+					li {
+						&:hover {
+							ul {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/** ---:[ Styles ]:--- */
+.main-navigation {
+	background: @primary;
+	display: none;
+	&-open {
+		overflow: hidden;
+	}
+	ul {
+		margin: 0;
+		ul {
+			background: @dark;
+		}
+	}
+	a {
+		text-decoration: none;
+		padding: 1em;
+		border-right: 1px solid fadeout( #fff, 90% );
+		background-color: transparent;
+		color: #FFF;
+		.transition( ~'background-color .2s ease' );
+		&:hover {
+			background: fadeout( #fff, 90% );
+		}
+	}
+	.current-menu-item {
+		> a {
+			background: fadeout( #fff, 90% );
+		}
+	}
+	li {
+		&.menu-item-search {
+			position: relative;
+			input {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				padding: 0 0 0 10px;
+				border-radius: 0;
+				border-color: transparent;
+				background: #FFF;
+				outline: none;
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+
+}
+
+/** ---:[ With JS ]:--- */
+.js {
+	.main-navigation {
+		background: @dark;
+		overflow: scroll;
+		width: 250px;
+		left: -250px;
+		li {
+			display: block;
+			a {
+				width: 100%;
+			}
+			&:hover {
+				ul, ul ul, ul ul ul, ul ul ul ul  {
+					opacity: 1;
+				}
+			}
+			&.menu-item-search {
+				display: none;
+			}
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+			.font-size( 14 );
+			visibility: visible;
+			opacity: 1;
+			ul {
+				position: static;
+				background: lighten( @dark, 3% );
+				.font-size( 12 );
+				a {
+					padding-left: 32px;
+					border-bottom: 1px solid lighten( @dark, 8% );
+				}
+				ul {
+					a {
+						padding-left: 48px;
+					}
+					ul {
+						a {
+							padding-left: 64px;
+						}
+						ul {
+							a {
+								padding-left: 80px;
+							}
+							ul {
+								a {
+									padding-left: 96px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 16px;
+			background-color: transparent;
+			border-bottom: 1px solid lighten( @dark, 5% );
+			color: #FFF;
+			-webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+			   -moz-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+			        box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+			.transition( ~'background-color .2s ease' );
+			&:hover {
+				background: lighten( @dark, 8% );
+			}
+		}
+	}
+	.current-menu-item {
+		> a {
+			background: @primary;
+		}
+	}
+	.admin-bar {
+		.main-navigation {
+			padding-top: 32px;
+		}
+	}
+}
+
+/** ---:[ Without JS ]:--- */
+.no-js {
+	.main-navigation {
+		display: block;
+		width: auto;
+		left: auto;
+		.menu {
+			.clearfix();
+			> li {
+				float: left;
+			}
+		}
+		li {
+			&.menu-item-search {
+				position: relative;
+				float: right;
+				border-left: 1px solid fadeout( #fff, 90% );
+				input {
+					visibility: hidden;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					padding: 0 0 0 10px;
+					border-radius: 0;
+					border-color: transparent;
+					background: #FFF;
+					outline: none;
+					&:focus {
+						outline: none;
+					}
+				}
+				.search-form {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: 48px;
+				}
+				&:hover {
+					input {
+						visibility: visible;
+					}
+				}
+			}
+		}
+		&-toggle {
+			display: none;
+		}
+	}
+}
+
+/** ----------------------------------------:[ other ]:--- */
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}

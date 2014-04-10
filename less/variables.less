@@ -1,0 +1,76 @@
+// Base Colors
+// Color scheme inspired Base 16 Eighties by Chris Kempson
+// http://chriskempson.github.io/base16/#eighties
+@base-00: #2d2d2d;  // Base 00 - Black
+@base-01: #f2777a;  // Base 08 - Red
+@base-02: #99cc99;  // Base 0B - Green
+@base-03: #ffcc66;  // Base 0A - Yellow
+@base-04: #6699cc;  // Base 0D - Blue
+@base-05: #cc99cc;  // Base 0E - Magenta
+@base-06: #66cccc;  // Base 0C - Cyan
+@base-07: #d3d0c8;  // Base 05 - White
+@base-08: #747369;  // Base 03 - Bright Black
+@base-09: @base-01; // Base 08 - Bright Red
+@base-10: @base-02; // Base 0B - Bright Green
+@base-11: @base-03; // Base 0A - Bright Yellow
+@base-12: @base-04; // Base 0D - Bright Blue
+@base-13: @base-05; // Base 0E - Bright Magenta
+@base-14: @base-06; // Base 0C - Bright Cyan
+@base-15: #f2f0ec;  // Base 07 - Bright White
+@base-16: #f99157;  // Base 09
+@base-17: #d27b53;  // Base 0F
+@base-18: #393939;  // Base 01
+@base-19: #515151;  // Base 02
+@base-20: #a09f93;  // Base 04
+@base-21: #e8e6df;  // Base 06
+
+// Color Pallet
+@dark:    @base-00;
+@red:     @base-01;
+@green:   @base-02;
+@yellow:  @base-03;
+@blue:    @base-04;
+@magenta: @base-05;
+@cyan:    @base-06;
+@light:   @base-07;
+
+// Named Colors
+@primary:   @red;
+@secondary: darken( @red, 5% );
+@success:   @green;
+@warning:   @yellow;
+@danger:    @red;
+@info:      @blue;
+
+// Links
+//@link-color:              @primary;
+//@link-color-hover:        @secondary;
+
+// Typography
+@font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-headers:     'Poiret One', cursive;
+@font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          16;
+/*@font-size-large:         @font-size-base * 1.25; // ~18px
+@font-size-small:         @font-size-base * 0.85; // ~12px
+@font-size-mini:          @font-size-base * 0.75; // ~11px*/
+
+@line-height-base:        1.4;
+
+@headings-font-family:    inherit; // empty to use BS default, @font-family-base
+@headings-font-weight:    500;
+
+// Forms
+@input-color-placeholder: lighten( @dark, 25% );
+
+// Width 
+@max-width: 1200px;
+
+// Grid
+// Used with the grid mixins below
+@grid-columns:          12;
+@grid-column-padding:   15px; // Left and right inner padding
+@grid-float-breakpoint: 1200px;

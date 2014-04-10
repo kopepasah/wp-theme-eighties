@@ -1,8 +1,8 @@
 <?php
 /**
- * _s functions and definitions
+ * eighties functions and definitions
  *
- * @package _s
+ * @package eighties
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( '_s_setup' ) ) :
+if ( ! function_exists( 'eighties_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( '_s_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function _s_setup() {
+function eighties_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on _s, use a find and replace
-	 * to change '_s' to the name of your theme in all the template files
+	 * If you're building a theme based on eighties, use a find and replace
+	 * to change 'eighties' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( '_s', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'eighties', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -38,19 +38,19 @@ function _s_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', '_s' ),
+		'primary' => __( 'Primary Menu', 'eighties' ),
 	) );
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
-		'default-color' => 'ffffff',
+	add_theme_support( 'custom-background', apply_filters( 'eighties_custom_background_args', array(
+		'default-color' => '2D2D2D',
 		'default-image' => '',
 	) ) );
 
@@ -61,16 +61,24 @@ function _s_setup() {
 		'comment-form',
 		'gallery',
 	) );
+
+	// Enable support for 
+	add_theme_support( 'less', array(
+		'enable'  => true,
+		'develop' => true,
+		'watch'   => true,
+		'minify'  => true
+	) );
 }
-endif; // _s_setup
-add_action( 'after_setup_theme', '_s_setup' );
+endif; // eighties_setup
+add_action( 'after_setup_theme', 'eighties_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-function _s_widgets_init() {
+function eighties_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', '_s' ),
+		'name'          => __( 'Sidebar', 'eighties' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -78,28 +86,44 @@ function _s_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', '_s_widgets_init' );
+add_action( 'widgets_init', 'eighties_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function _s_scripts() {
-	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+function eighties_scripts() {
+	$protocol = is_ssl() ? 'https' : 'http';
 
-	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_style( 'eighties', get_stylesheet_uri() );
 
-	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	// Fonts
+	wp_enqueue_style( 'eighties-fonts', $protocol . '://fonts.googleapis.com/css?family=Poiret+One|Righteous' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fa/font-awesome.css' );
+
+	// Register scripts
+	wp_register_script( 'backstretch', get_template_directory_uri() . '/js/jquery.backstretch.js', array( 'jquery' ), '2.0.4', true );
+	wp_register_script( 'bigslide', get_template_directory_uri() . '/js/jquery.bigslide.js', array( 'jquery' ), '0.4.3', true );
+	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7.1', false );
+
+	// Enqueue global (includes navigation and others).
+	wp_enqueue_script( 'eighties', get_template_directory_uri() . '/js/eighties.js', array( 'bigslide', 'modernizr' ), '20120206', true );
+
+	wp_enqueue_script( 'eighties-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if ( get_header_image() ) {
+		wp_enqueue_script( 'eighties-header', get_template_directory_uri() . '/js/header.js', array( 'backstretch' ), '20140407', true );
+	}
 }
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
+add_action( 'wp_enqueue_scripts', 'eighties_scripts' );
 
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

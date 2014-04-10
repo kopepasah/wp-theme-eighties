@@ -1,0 +1,39 @@
+/** -----------------------------------------------------:[ 14.0 - Header ]:---------- */
+.site {
+	&-header {
+		position: relative;
+		.main-navigation-toggle,
+		.widget-area-toggle {
+			position: absolute;
+			top: 16px;
+			left: 32px;
+			.font-size( 40 );
+			color: white;
+			&:hover {
+				color: darken( white, 5% );
+			}
+		}
+		.widget-area-toggle {
+			left: auto;
+			right: 32px;
+		}
+	}
+	&-branding {
+		clear: both;
+		.max-width( 600px );
+		padding: 5em 0;
+		text-align: center;
+	}
+	&-title, 
+	&-description {
+		font-family: 'Righteous', cursive;
+		color: white;
+		margin: 0;
+	}
+	&-title {
+		.font-size( 160 );
+		a {
+			color: white;
+		}
+	}
+}
