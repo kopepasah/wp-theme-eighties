@@ -1,47 +1,42 @@
-// Set a max width for an item.
+// Set the width of an item
+/*
+	TODO Should this be renamed?
+*/
 .max-width( @max-width: @max-width ) {
 	width: 100%;
 	max-width: @max-width;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-.font-size( @size: @font-size-base) {
+.font-size( @size: @font-size-base ) {
 	font-size: unit( @size, px );
 	font-size: unit( @size / @font-size-base, rem );
 }
 
-// Grid system
-// --------------------------------------------------
-
-// Grid
-.make-row() {
-  // Negative margin the row out to align the content of columns
-  margin-left: -@grid-column-padding;
-  margin-right: -@grid-column-padding;
-  // Then clear the floated columns
-  .clearfix();
+// -----------------------------------------------------:[ Mixins: Columns ]:---------- */
+.column( @n ) {
+	.font-size( @font-size-base );
+	float: left;
+	width: round( ( @n * 100% / 12 ), 7 );
 }
-.make-column(@columns) {
-  @media (min-width: @grid-float-breakpoint) {
-    float: left;
-    // Calculate width based on number of columns available
-    width: percentage(@columns / @grid-columns);
-  }
-  // Prevent columns from collapsing when empty
-  min-height: 1px;
-  // Set inner padding as gutters instead of margin
-  padding-left: @grid-column-padding;
-  padding-right: @grid-column-padding;
-  // Proper box-model (padding doesn't add to width)
-  .box-sizing(border-box);
+.inner( @p ) when ( @p = left ) {
+	margin-right: @spacing-base;
 }
-.make-column-offset(@columns) {
-  @media (min-width: @grid-float-breakpoint) {
-    margin-left: percentage(@columns / @grid-columns);
-  }
+.inner( @p ) when ( @p = middle ) {
+	margin-left: unit( @spacing-base / @spacing-base, em );
+	margin-right: unit( @spacing-base / @spacing-base, em );
 }
-
-
+.inner( @p ) when ( @p = right ) {
+	margin-left: @spacing-base;
+}
+.inner( @p ) when ( @p = false ) {
+	margin-left: auto;
+	margin-right: auto;
+}
+.break-column() {
+	float: none;
+	width: 100%;
+}
 
 //
 // Mixins: vendor prefixes

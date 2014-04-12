@@ -12,7 +12,7 @@
 	TODO Calculate width.
 */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+	$content_width = 760; /* pixels */
 }
 
 /**
@@ -75,7 +75,7 @@ function eighties_setup() {
 	add_theme_support( 'less', array(
 		'enable'  => true,
 		'develop' => true,
-		// 'watch'   => true,
+		'watch'   => true,
 		'minify'  => true
 	) );
 }
@@ -93,7 +93,7 @@ function eighties_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Interactive Sidebar', 'eighties' ),
 		'id'            => 'eighties-interactive-sidebar',
-		'description'   => __( 'This sidebar opens as a toggle on the right side of a users browser window. If empty, the sidebar with not display.', 'LION' ),
+		'description'   => __( 'This sidebar opens as a toggle on the right side of a users browser window. Note that the toggle feature requires JavaScript in order to function. But no need to worry, a plain sidebar will appear if JavaScript does not work. If empty, the sidebar with not display.', 'LION' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -105,8 +105,8 @@ function eighties_widgets_init() {
 		'name'          => __( 'Footer', 'eighties' ),
 		'id'            => 'eighties-footer',
 		'description'   => __( 'Widget area for the footer. If no widgets are provided, this footer will not appear.', 'listed' ),
-		'before_widget' => '<aside id="%1$s" class="widget column col-4-12 %2$s"><div class="col-inner">',
-		'after_widget'  => '</div></aside>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
@@ -122,7 +122,7 @@ function eighties_scripts() {
 	wp_enqueue_style( 'eighties', get_stylesheet_uri() );
 
 	// Fonts
-	wp_enqueue_style( 'eighties-fonts', $protocol . '://fonts.googleapis.com/css?family=Raleway:500|Righteous' );
+	wp_enqueue_style( 'eighties-fonts', $protocol . '://fonts.googleapis.com/css?family=Raleway:600|Righteous' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fa/font-awesome.css' );
 
 	// Register scripts

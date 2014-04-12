@@ -1,6 +1,6 @@
 /** -----------------------------------------------------:[ 2.0 - Typography ]:---------- */
 html {
-	font-size: 100%;
+	font-size: @font-size-base;
 }
 body,
 button,
@@ -9,15 +9,16 @@ select,
 textarea {
 	color: @dark;
 	font-family: @font-family-sans-serif;
-	font-size: 1rem;
+	font-size: 1em;
 	line-height: 1.4;
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: @font-family-headers;
+	font-family: @headings-font-family;
+	font-weight: @headings-font-weight;
 }
 h1 {
-	.font-size( 40 );
+	font-size: 2.25em;
 	letter-spacing: -1px;
 	margin-top: 0.75em;
 	margin-bottom: 0.75em;

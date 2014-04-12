@@ -3,20 +3,49 @@
 /** ---:[ Without JavaScript ]:--- */
 .no-js {
 	#content {
-		.make-row();
-		.max-width( 1200px );
+		.max-width();
+		.clearfix();
 	}
 	#primary {
-		.make-column(8);
+		.column( 8 );
+	}
+	#main {
+		.inner( left );
+	}
+    @media only screen and ( max-width: @max-width ) {
+		#content {
+			padding-left: @spacing-base;
+			padding-right: @spacing-base;
+		}
+	}
+	@media all and ( max-width: unit( ( @max-width * .8 ), px ) ) {
+		#primary {
+			.column( 7 );
+		}
+	}
+	@media all and ( max-width: unit( ( @max-width * .6 ), px ) ) {
+		#primary {
+			.break-column();
+		}
+		#main {
+			.inner( false );
+		}
 	}
 }
 
 /** ----------------------------------------:[ 10.1 - Posts and pages ]:--- */
-.sticky {
-}
 .hentry {
+	padding-top: unit( ( @spacing-base * 1.5 ), em );
+	padding-bottom: unit( ( @spacing-base * 1.5 ), em );
+	border-bottom: 1px solid lighten( @light, 15% );
 	> [class^="entry-"] {
 		.max-width( 760px );
+	}
+	&.sticky {
+/*		border-top: 5px solid @primary;
+		border-bottom: 5px solid @primary;
+		background: @dark;
+		color: @light;*/
 	}
 }
 .byline,
@@ -37,7 +66,7 @@
 	margin: 0 0 1.5em;
 }
 
-/** ----------------------------------------:[ 10.2 - Asides ]:--- */
+/** ----------------------------------------:[ 10.2 - Post Formats ]:--- */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;

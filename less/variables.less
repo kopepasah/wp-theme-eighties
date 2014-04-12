@@ -49,28 +49,23 @@
 // Typography
 @font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
-@font-family-headers:     'Raleway', sans-serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          16;
-/*@font-size-large:         @font-size-base * 1.25; // ~18px
-@font-size-small:         @font-size-base * 0.85; // ~12px
-@font-size-mini:          @font-size-base * 0.75; // ~11px*/
+@font-size-base:          16px;
+@line-height-base:        1.5;
 
-@line-height-base:        1.4;
-
+@font-family-headers:     'Raleway', sans-serif;
 @headings-font-family:    inherit; // empty to use BS default, @font-family-base
-@headings-font-weight:    500;
+@headings-font-weight:    600;
 
 // Forms
 @input-color-placeholder: lighten( @dark, 25% );
 
-// Width 
+// Structure
 @max-width: 1200px;
+@spacing-base: 3em;
 
 // Grid
-// Used with the grid mixins below
 @grid-columns:          12;
-@grid-column-padding:   15px; // Left and right inner padding
-@grid-float-breakpoint: 1000px;
+@grid-column-padding:   3em;

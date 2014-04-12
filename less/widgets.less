@@ -1,4 +1,16 @@
-/** -----------------------------------------------------:[ 9.0 - Widgets ]:---------- */
+/** -----------------------------------------------------:[ 9.0 - Sidebars & Widgets ]:---------- */
+.widget {
+	margin: 0 0 1.5em;
+	/** ---:[ Make sure select elements fit in widgets ]:--- */
+	select {
+		max-width: 100%;
+	}
+	/** ---:[ Search Widget ]:--- */
+	&_search .search-submit {
+		display: none;
+	}
+}
+
 /** ---:[ With JavaScript ]:--- */
 .js {
 	#secondary {
@@ -28,19 +40,16 @@
 		}
 	}
 	#secondary {
-		.make-column(4);
+		.column(4);
 	}
-}
-.widget {
-	margin: 0 0 1.5em;
-}
-
-/* Make sure select elements fit in widgets */
-.widget select {
-	max-width: 100%;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
+	@media all and ( max-width: unit( ( @max-width * .8 ), px ) ) {
+		#secondary {
+			.column( 5 );
+		}
+	}
+	@media all and ( max-width: unit( ( @max-width * .6 ), px ) ) {
+		#secondary {
+			.break-column();
+		}
+	}
 }
