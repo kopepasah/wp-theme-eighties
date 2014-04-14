@@ -119,3 +119,33 @@ function eighties_primary_menu_items( $items, $args ) {
 	return $items;
 }
 add_action( 'wp_nav_menu_items' , 'eighties_primary_menu_items', 100, 2 );
+
+/**
+ * Filter the excerpt length for archive and blog.
+ *
+ * @param string $length The current length.
+ * @return string $length The filterd length.
+*/
+function eighties_excerpt_length( $length ) {
+	if ( is_home() || is_archive() ) {
+		return 45;
+	} else {
+		return $length;
+	}
+}
+add_filter( 'excerpt_length', 'eighties_excerpt_length' );
+
+/**
+ * Filter the excerpt more for archive and blog.
+ *
+ * @param string $more The current more text.
+ * @return string $more The filterd more text.
+*/
+function eighties_excerpt_more( $more ) {
+	if ( is_home() || is_archive() ) {
+		return '...';
+	} else {
+		return $more;
+	}
+}
+add_filter( 'excerpt_more', 'eighties_excerpt_more' );
