@@ -14,8 +14,9 @@
  */
 function eighties_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'footer'    => 'page',
+		'type'          => 'click',
+		'container'      => 'main',
+		'footer_widgets' => false
 	) );
 }
 add_action( 'after_setup_theme', 'eighties_jetpack_setup' );
