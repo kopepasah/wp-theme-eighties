@@ -16,9 +16,9 @@
 		<?php get_sidebar( 'footer' ); ?>
 
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'eighties' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'eighties' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://wordpress.com/', 'eighties' ) ); ?>"><?php printf( __( 'Blog at %s', 'eighties' ), 'WordPress.com' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'eighties' ), 'eighties', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'eighties' ), 'Eighties', '<a href="http://kopepasah.com/" rel="designer">Kopepasah</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
