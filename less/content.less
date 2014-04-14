@@ -63,7 +63,7 @@
 		}
 	}
 }
-/** ---:[ Pages & Archive ]:--- */
+/** ---:[ 404 ]:--- */
 .page {
 	&-header {
 		
@@ -102,7 +102,8 @@
 		}
 	}
 	.blog,
-	.archive {
+	.archive,
+	.search {
 		.hentry {
 			text-align: center;
 			.transition( background-color .2s ease );
@@ -150,6 +151,11 @@
 		}
 		&-title {
 			margin: 0;
+		}
+		&-content {
+			padding-top: @spacing-base;
+			padding-bottom: @spacing-base;
+			text-align: center;
 		}
 	}
 }
