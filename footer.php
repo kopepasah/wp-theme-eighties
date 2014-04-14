@@ -4,7 +4,9 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package eighties
+ * @package Eighties
+ * @author Justin Kopepasah
+ * @since 1.0.0
  */
 ?>
 

@@ -2,7 +2,9 @@
 /**
  * eighties Theme Customizer
  *
- * @package eighties
+ * @package Eighties
+ * @author Justin Kopepasah
+ * @since 1.0.0
  */
 
 /**

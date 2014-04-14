@@ -3,7 +3,9 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package eighties
+ * @package Eighties
+ * @author Justin Kopepasah
+ * @since 1.0.0
  */
 
 /**

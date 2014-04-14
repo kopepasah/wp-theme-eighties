@@ -2,7 +2,9 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package eighties
+ * @package Eighties
+ * @author Justin Kopepasah
+ * @since 1.0.0
  */
 
 get_header(); ?>

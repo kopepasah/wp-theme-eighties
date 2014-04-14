@@ -4,7 +4,9 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package eighties
+ * @package Eighties
+ * @author Justin Kopepasah
+ * @since 1.0.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">

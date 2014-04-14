@@ -4,7 +4,9 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package eighties
+ * @package Eighties
+ * @author Justin Kopepasah
+ * @since 1.0.0
  */
 
 /**

@@ -2,7 +2,9 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package eighties
+ * @package Eighties
+ * @author Justin Kopepasah
+ * @since 1.0.0
  */
 ?>
 

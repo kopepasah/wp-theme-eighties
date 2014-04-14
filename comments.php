@@ -5,7 +5,9 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package eighties
+ * @package Eighties
+ * @author Justin Kopepasah
+ * @since 1.0.0
  */
 
 /*
