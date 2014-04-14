@@ -38,38 +38,164 @@
 	padding-top: unit( ( @spacing-base * 1.5 ), em );
 	padding-bottom: unit( ( @spacing-base * 1.5 ), em );
 	border-bottom: 1px solid lighten( @light, 15% );
-	> [class^="entry-"] {
-		.max-width( 760px );
+}
+.entry {
+	&-title {
+		margin-bottom: .1em;
+		a {
+			color: @dark;
+		}
 	}
-	&.sticky {
-/*		border-top: 5px solid @primary;
-		border-bottom: 5px solid @primary;
-		background: @dark;
-		color: @light;*/
+	&-meta {
+		font-size: .8em;
+		i {
+			margin-right: .5em;
+		}
+		&-time {
+			color: lighten( @dark, 50% );
+			a {
+				color: lighten( @dark, 50% );
+			}
+		}
+		&-categories {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
 	}
 }
-.byline,
-.updated {
-	display: none;
+/** ---:[ Pages & Archive ]:--- */
+.page {
+	&-header {
+		
+	}
 }
-.single .byline,
-.group-blog .byline {
-	display: inline;
+
+/** ---:[ Sticky Posts ]:--- */
+.sticky {
+	.entry {
+		&-title {
+			a {
+				
+			}
+		}
+	}
 }
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
+
+/** ---:[ With JavaScript ]:--- */
+.js {
+	.hentry {
+		> [class^="entry-"] {
+			/*
+				NOTE Perhaps we will define this with actual classes.
+			*/
+			.max-width( 760px );
+		}
+	}
+	.entry {
+		&-title {
+			margin-top: 0;
+		}
+		&-meta {
+			a {
+				
+			}
+		}
+	}
+	.blog,
+	.archive {
+		.hentry {
+			text-align: center;
+			.transition( background-color .2s ease );
+			&:hover {
+				cursor: pointer;
+				background-color: darken( #FFF, 2% );
+			}
+		}
+		.entry {
+			&-header,
+			&-summary {
+				text-align: center;
+			}
+		}
+		// Sticky posts
+		.sticky {
+			background: @primary;
+			color: #FFF;
+			&:hover {
+				cursor: pointer;
+				background-color: darken( @primary, 2% );
+			}
+			.entry {
+				&-title {
+					a {
+						color: #FFF;
+					}
+				}
+				&-meta {
+					a {
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+	.page {
+		&-header {
+			padding-top: @spacing-base;
+			padding-bottom: @spacing-base;
+			background: @primary;
+			border-bottom: 1px solid lighten( @light, 15% );
+			color: #FFF;
+			text-align: center;
+		}
+		&-title {
+			margin: 0;
+		}
+	}
 }
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+
+/** ---:[ Without JavaScript ]:--- */
+.no-js {
+	.hentry {
+		padding-top: unit( ( @spacing-base * 1.5 ), em );
+		padding-bottom: unit( ( @spacing-base * 1.5 ), em );
+		border-bottom: 1px solid lighten( @light, 15% );
+	}
+	.sticky {
+		border-left: 5px solid @primary;
+	}
 }
 
 /** ----------------------------------------:[ 10.2 - Post Formats ]:--- */
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-	display: none;
+.blog {
+	.format {
+		&-status {
+			background: @blue;
+			color: #FFF;
+			.entry {
+				&-title {
+					a {
+						color: #FFF;
+					}
+				}
+			}
+		}
+		&-aside {
+			background: @magenta;
+			color: #FFF;
+			> [class^="entry-"] {
+				.max-width( 600px );
+			}
+			.entry {
+				&-title {
+					font-size: 1.5em;
+					a {
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
 }
 
 /** ----------------------------------------:[ 10.3 - Comments ]:--- */

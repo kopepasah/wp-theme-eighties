@@ -141,8 +141,12 @@ function eighties_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+	if ( is_home() || is_archive() ) {
+		wp_enqueue_script( 'eighties-blog', get_template_directory_uri() . '/js/eighties-blog.js', array( 'modernizr' ), '20120206', true );
+	}
+
 	if ( get_header_image() ) {
-		wp_enqueue_script( 'eighties-header', get_template_directory_uri() . '/js/header.js', array( 'backstretch' ), '20140407', true );
+		wp_enqueue_script( 'eighties-header', get_template_directory_uri() . '/js/eighties-header.js', array( 'backstretch' ), '20140407', true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'eighties_scripts' );

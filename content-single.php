@@ -8,12 +8,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-
-		<div class="entry-meta">
-			<?php eighties_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		<span class="entry-meta entry-meta-categories"><?php the_category( ', ' ); ?></span>
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<p class="entry-meta entry-meta-time"><i class="fa fa-clock-o"></i><?php echo eighties_get_time_difference( get_the_date( 'Y-m-d H:i:s' ) ); ?><p>
 	</header><!-- .entry-header -->
+
+	<?php if ( has_post_thumbnail() ) : ?>
+		<figure class="entry-image">
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+		</figure>
+	<?php endif; ?><!-- .entry-image -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>

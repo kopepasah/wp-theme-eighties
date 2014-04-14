@@ -1,13 +1,42 @@
 /** -----------------------------------------------------:[ 9.0 - Sidebars & Widgets ]:---------- */
 .widget {
-	margin: 0 0 1.5em;
-	/** ---:[ Make sure select elements fit in widgets ]:--- */
+	> ul {
+		margin-left: 1em;
+	}
 	select {
 		max-width: 100%;
 	}
-	/** ---:[ Search Widget ]:--- */
 	&_search .search-submit {
 		display: none;
+	}
+	&_meta {
+		ul {
+			list-style: none;
+			margin: 0;
+		}
+	}
+	&_recent_entries,
+	&_recent_comments {
+		ul {
+			margin: 0;
+			list-style: none;
+		}
+		li {
+			margin-bottom: 1em;
+		}
+	}
+	&_recent_entries {
+		.post-date {
+			display: block;
+			&:before {
+				content: '\f017';
+				font-family: 'fontawesome', arial;
+				margin-right: 6px;
+				margin-left: 2px;
+				font-weight: 200;
+				vertical-align: middle;
+			}
+		}
 	}
 }
 
@@ -16,18 +45,55 @@
 	#secondary {
 		position: fixed;
 		top: 0;
-		right: -320px;
-		width: 320px;
+		bottom: 0;
+		right: -400px;
+		width: 400px;
+		overflow: scroll;
 		.transition( ~'right 300ms ease' );
-	}
-	.widget-area-open {
-		overflow: hidden;
-		#secondary {
-			right: 0;
+		background: @dark;
+		color: lighten( @dark, 30% );
+		-webkit-box-shadow: inset 1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+		   -moz-box-shadow: inset 1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+		        box-shadow: inset 1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+		.widget {
+			padding: 2em;
+			border-bottom: 1px solid lighten( @dark, 5% );
+			a {
+				color: #FFF;
+				&:hover {
+					color: lighten( @dark, 30% );
+				}
+			}
+			&-title {
+				margin: 0 0 1em;
+				color: #FFF;
+				font-size: 1.4em;
+				font-weight: normal;
+			}
 		}
-		#page {
-			left: -320px;
-			right: 320px;
+	}
+	.widget {
+		&-area-open {
+			overflow: hidden;
+			#secondary {
+				right: 0;
+			}
+			#page {
+				left: -400px;
+				right: 400px;
+			}
+		}
+	}
+	.admin-bar {
+		#secondary {
+			padding-top: 32px;
+		}
+	}
+	@media screen and ( max-width: 782px ) {
+		.admin-bar {
+			#secondary {
+				padding-top: 46px;
+			}
 		}
 	}
 }
@@ -35,6 +101,7 @@
 /** ---:[ Without JavaScript ]:--- */
 .no-js {
 	.widget {
+		margin: 0 0 1.5em;
 		&-area-toggle {
 			display: none;
 		}
