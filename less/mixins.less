@@ -130,6 +130,14 @@
           transform: translate3d(@x, @y, @z);
 }
 
+.filter( @filter ) {
+	-webkit-filter: @filter;
+	   -moz-filter: @filter;
+	    -ms-filter: @filter;
+	     -o-filter: @filter;
+	        filter: @filter;
+}
+
 // Backface visibility
 //
 // Prevent browsers from flickering when using CSS 3D transforms.

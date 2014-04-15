@@ -5,7 +5,7 @@
  * the navigation and sidebar toggles.
 */
 ( function( $ ) {
-	$( '.js .hentry' ).on( 'click', function() {
+	$( document ).on( 'click', '.js .hentry', function() {
 		window.location.href = $( this ).find( '[rel="bookmark"]').first().attr( 'href' );
 	});
 } )( jQuery );

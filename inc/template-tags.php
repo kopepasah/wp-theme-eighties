@@ -24,11 +24,11 @@ function eighties_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'eighties' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( 'Older Posts', 'eighties' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'eighties' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer Posts', 'eighties' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -54,8 +54,8 @@ function eighties_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'eighties' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'eighties' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'eighties' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '%title', 'Previous post link', 'eighties' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title', 'Next post link',     'eighties' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -66,6 +66,7 @@ endif;
 if ( ! function_exists( 'eighties_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
+ * REMOVE This is replaced by time difference.
  */
 function eighties_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -90,6 +91,56 @@ function eighties_posted_on() {
 			esc_html( get_the_author() )
 		)
 	);
+}
+endif;
+
+if ( ! function_exists( 'eighties_comment' ) ) :
+/**
+ * Template for comments and pingbacks.
+ *
+ * Used as a callback by wp_list_comments() for displaying the comments.
+ *
+ * @since 1.0.0
+*/
+function eighties_comment( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment;
+
+	$timestamp = eighties_get_time_difference( $comment->comment_date );
+
+	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
+
+		<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
+			<div class="comment-body">
+				<?php _e( 'Pingback:', 'listed' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'listed' ), '<span class="edit-link">', '</span>' ); ?>
+			</div>
+
+	<?php else : ?>
+
+		<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
+			<?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+			<div class="comment-wrap">
+				<div class="comment-top vcard">
+					<span class="comment-author">
+						<?php printf( __( '%s'), get_comment_author_link() ) ?>
+					</span>
+					<span class="comment-meta comment-time">
+						 &middot; <?php echo $timestamp; ?>
+					</span>
+				</div>
+				<div id="comment-body-<?php comment_ID(); ?>" class="comment-body">
+					<?php if ( $comment->comment_approved == '0' ) : ?>
+						<div class="comment-awaiting-moderation">
+							<p class="notice"><?php _e( 'Your comment is awaiting moderation.' ) ?></p>
+						</div>
+					<?php endif; ?>
+					<?php comment_text(); ?>
+				</div>
+				<div class="reply">
+					<?php comment_reply_link( array_merge( $args, array( 'add_below' => 'comment-body', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				</div>
+			</div>
+	<?php endif; ?>
+<?php
 }
 endif;
 

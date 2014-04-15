@@ -63,6 +63,7 @@
 		}
 	}
 }
+
 /** ---:[ 404 ]:--- */
 .page {
 	&-header {
@@ -173,30 +174,35 @@
 }
 
 /** ----------------------------------------:[ 10.2 - Post Formats ]:--- */
-.blog {
-	.format {
-		&-status {
-			background: @blue;
-			color: #FFF;
-			.entry {
-				&-title {
-					a {
-						color: #FFF;
+/** ---:[ With JavaScript ]:--- */
+.js {
+	.blog,
+	.archive,
+	.search {
+		.format {
+			&-status {
+				background: @blue;
+				color: #FFF;
+				.entry {
+					&-title {
+						a {
+							color: #FFF;
+						}
 					}
 				}
 			}
-		}
-		&-aside {
-			background: @magenta;
-			color: #FFF;
-			> [class^="entry-"] {
-				.max-width( 600px );
-			}
-			.entry {
-				&-title {
-					font-size: 1.5em;
-					a {
-						color: #FFF;
+			&-aside {
+				background: @magenta;
+				color: #FFF;
+				> [class^="entry-"] {
+					.max-width( 600px );
+				}
+				.entry {
+					&-title {
+						font-size: 1.5em;
+						a {
+							color: #FFF;
+						}
 					}
 				}
 			}
@@ -205,9 +211,4 @@
 }
 
 /** ----------------------------------------:[ 10.3 - Comments ]:--- */
-.comment-content a {
-	word-wrap: break-word;
-}
-.bypostauthor {
-	
-}
+@import 'comments';

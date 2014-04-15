@@ -1,18 +1,15 @@
 /** -----------------------------------------------------:[ 5.0 - Navigation ]:---------- */
 
 /** ----------------------------------------:[ 5.1 - Links ]:--- */
-/*
-	TODO Lessify.
-*/
 a {
 	color: @primary;
 	text-decoration: none;
 	.transition( ~'color .2s ease' );
-}
-a:hover,
-a:focus,
-a:active {
-	color: @secondary;
+	&:hover,
+	&:focus,
+	&:active {
+		color: @secondary;
+	}
 }
 
 /** ----------------------------------------:[ 5.2 - Menus ]:--- */
@@ -275,23 +272,61 @@ a:active {
 	}
 }
 
-/** ----------------------------------------:[ other ]:--- */
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+/** ----------------------------------------:[ Paging ]:--- */
+.paging-navigation,
+.post-navigation,
+.comment-navigation {
+	.max-width( 920px );
+	padding: @spacing-base 0;
+	.clearfix();
+	.nav {
+		&-previous,
+		&-next {
+			width: 48%;
+		}
+		&-previous {
+			float: left;
+			a {
+				.btn;
+			}
+		}
+		&-next {
+			float: right;
+			a {
+				float: right;
+				.btn;
+			}
+		}
+	}
 }
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
+.comment-navigation {
+	padding-bottom: 0;
 }
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+
+/** ----------------------------------------:[ Infinite Scroll (JavaScript Only) ]:--- */
+.js {
+	.infinite-loader {
+		color: #000;
+		display: block;
+		padding-top: 5em;
+		padding-bottom: 5em;
+		text-indent: -9999px;
+		.spinner {
+			// No way to override this without !important as the style is on the element.
+			left: 50% !important;
+		}
+	}
+	#infinite-handle {
+		padding: @spacing-base;
+		color: #FFF;
+		text-align: center;
+		span {
+			width: 80%;
+			max-width: 300px;
+			.btn;
+			&:hover {
+				opacity: .9;
+			}
+		}
+	}
 }

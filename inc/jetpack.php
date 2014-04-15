@@ -14,9 +14,28 @@
  */
 function eighties_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
-		'type'          => 'click',
+		'type'           => 'click',
 		'container'      => 'main',
-		'footer_widgets' => false
+		'footer_widgets' => false,
+		// 'wrapper'        => false
 	) );
 }
 add_action( 'after_setup_theme', 'eighties_jetpack_setup' );
+
+
+function eighties_jetpack_enqueue_scripts() {
+	wp_dequeue_style( 'the-neverending-homepage' );
+}
+add_action( 'wp_enqueue_scripts', 'eighties_jetpack_enqueue_scripts' );
+
+/**
+ * Change Jetpack's Infinite Scroll text.
+ *
+ * @since 1.0.0
+*/
+function eighties_infinite_scroll_js_settings( $settings ) {
+	$settings['text'] = __( 'Load More', 'listed' );
+
+	return $settings;
+}
+add_filter( 'infinite_scroll_js_settings', 'eighties_infinite_scroll_js_settings' );

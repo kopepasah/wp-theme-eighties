@@ -124,7 +124,7 @@ function eighties_scripts() {
 	wp_enqueue_style( 'eighties', get_stylesheet_uri() );
 
 	// Fonts
-	wp_enqueue_style( 'eighties-fonts', $protocol . '://fonts.googleapis.com/css?family=Raleway:600|Righteous' );
+	wp_enqueue_style( 'eighties-fonts', $protocol . '://fonts.googleapis.com/css?family=Raleway:600,800|Righteous' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fa/font-awesome.css' );
 
 	// Register scripts

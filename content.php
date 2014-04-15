@@ -17,6 +17,12 @@
 		<p>
 	</header><!-- .entry-header -->
 
+	<?php if ( has_post_thumbnail() ) : ?>
+		<figure class="entry-image">
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+		</figure>
+	<?php endif; ?><!-- .entry-image -->
+
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
