@@ -111,7 +111,7 @@ function eighties_comment( $comment, $args, $depth ) {
 
 		<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 			<div class="comment-body">
-				<?php _e( 'Pingback:', 'listed' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'listed' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php _e( 'Pingback:', 'eighties' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'eighties' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 
 	<?php else : ?>
@@ -219,7 +219,7 @@ function eighties_get_time_difference( $time ) {
 		 * hour. As such, let's show just the number of hours
 		 * that have passed.
 		*/
-		$timestamp .= sprintf( translate_nooped_plural( _n_noop( '%s Hour Ago', '%s Hours Ago', 'listed' ), $difference->h, 'listed' ), $difference->h );
+		$timestamp .= sprintf( translate_nooped_plural( _n_noop( '%s Hour Ago', '%s Hours Ago', 'eighties' ), $difference->h, 'eighties' ), $difference->h );
 	} else if ( 0 < $difference->i ) {
 		/**
 		 * If we've made it here, we know that we have not
@@ -227,13 +227,13 @@ function eighties_get_time_difference( $time ) {
 		 * minute. As such, let's show just the number of
 		 * minutes that have passed.
 		*/
-		$timestamp .= sprintf( translate_nooped_plural( _n_noop( '%s Minute Ago', '%s Minutes Ago', 'listed' ), $difference->i, 'listed' ), $difference->i );
+		$timestamp .= sprintf( translate_nooped_plural( _n_noop( '%s Minute Ago', '%s Minutes Ago', 'eighties' ), $difference->i, 'eighties' ), $difference->i );
 	} else {
 		/**
 		 * If we've made it here, that this post is fresh
 		 * off the press. Let's show how fresh it is.
 		*/
-		$timestamp = __( 'Just now', 'listed' );
+		$timestamp = __( 'Just now', 'eighties' );
 	}
 
 	return $timestamp;

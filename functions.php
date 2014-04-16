@@ -95,7 +95,7 @@ function eighties_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Interactive Sidebar', 'eighties' ),
 		'id'            => 'eighties-interactive-sidebar',
-		'description'   => __( 'This sidebar opens as a toggle on the right side of a users browser window. Note that the toggle feature requires JavaScript in order to function. But no need to worry, a plain sidebar will appear if JavaScript does not work. If empty, the sidebar with not display.', 'LION' ),
+		'description'   => __( 'This sidebar opens as a toggle on the right side of a users browser window. Note that the toggle feature requires JavaScript in order to function. But no need to worry, a plain sidebar will appear if JavaScript does not work. If empty, the sidebar with not display.', 'eighties' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -106,7 +106,7 @@ function eighties_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer', 'eighties' ),
 		'id'            => 'eighties-footer',
-		'description'   => __( 'Widget area for the footer. If no widgets are provided, this footer will not appear.', 'listed' ),
+		'description'   => __( 'Widget area for the footer. If no widgets are provided, this footer will not appear.', 'eighties' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',

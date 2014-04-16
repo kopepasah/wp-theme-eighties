@@ -19,7 +19,7 @@
 	 * up a toggle for navitaion on left side of
 	 * the window.
 	*/
-	$( '.main-navigation-toggle' ).on( 'click', function( event ) {
+	$( '.main-navigation-toggle, #mobile-menu-close' ).on( 'click', function( event ) {
 		event.preventDefault();
 
 		$( 'body' ).toggleClass( 'main-navigation-open' );

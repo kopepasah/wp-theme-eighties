@@ -34,7 +34,7 @@ add_action( 'wp_enqueue_scripts', 'eighties_jetpack_enqueue_scripts' );
  * @since 1.0.0
 */
 function eighties_infinite_scroll_js_settings( $settings ) {
-	$settings['text'] = __( 'Load More', 'listed' );
+	$settings['text'] = __( 'Load More', 'eighties' );
 
 	return $settings;
 }

@@ -106,8 +106,8 @@ function eighties_primary_menu_items( $items, $args ) {
 			<a href><i class="fa fa-search"></i></a>
 			<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<label>
-					<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'listed' ); ?></span>
-					<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'listed' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s">
+					<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'eighties' ); ?></span>
+					<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'eighties' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s">
 				</label>
 			</form>
 		</li>
@@ -151,3 +151,26 @@ function eighties_excerpt_more( $more ) {
 	}
 }
 add_filter( 'excerpt_more', 'eighties_excerpt_more' );
+
+/**
+ * Add the mobile menu close to the primary menu.
+ *
+ * @param string $items The current navigation items.
+ * @param string $args The current navigation arguments.
+ * @return string $items The modified navigation items.
+*/
+function eighties_wp_nav_menu_items( $items, $args ) {
+	// If not the primary menu, return the items.
+	if ( $args->theme_location != 'primary'  ) {
+		return $items;
+	}
+
+	$close = '<li id="mobile-menu-close" class="menu-item menu-item-hidden"><a href>' . __( 'Close', 'eighties' ) . '<i class="fa fa-times"></i></a></li>';
+
+	$close .= $items;
+
+	$items = $close;
+
+	return $items;
+}
+add_action( 'wp_nav_menu_items' , 'listed_header_menu_items', 100, 2 );
