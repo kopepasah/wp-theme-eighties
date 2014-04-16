@@ -37,19 +37,18 @@
 .hentry {
 	padding-top: unit( ( @spacing-base * 1.5 ), em );
 	padding-bottom: unit( ( @spacing-base * 1.5 ), em );
-	border-bottom: 1px solid lighten( @light, 15% );
+	border-bottom: 1px solid lighten( @light, 4% );
 }
 .entry {
 	&-title {
-		margin-bottom: .1em;
+		margin-top: 0;
 		a {
 			color: @dark;
 		}
 	}
 	&-meta {
-		font-size: .8em;
 		i {
-			margin-right: .5em;
+			margin-right: .4em;
 		}
 		&-time {
 			color: lighten( @dark, 50% );
@@ -62,12 +61,26 @@
 			font-weight: bold;
 		}
 	}
+	&-image {
+		margin-bottom: unit( ( 24 / @font-size-base ), em )
+	}
 }
 
-/** ---:[ 404 ]:--- */
+/** ---:[ Single ]:--- */
+.single {
+	.entry {
+		&-title {
+			.heading( 3, 24 );
+			line-height: 1.5;
+		}
+	}
+}
+/** ---:[ Pages ]:--- */
 .page {
-	&-header {
-		
+	.entry {
+		&-title {
+			font-size: 3em;
+		}
 	}
 }
 
@@ -93,9 +106,6 @@
 		}
 	}
 	.entry {
-		&-title {
-			margin-top: 0;
-		}
 		&-meta {
 			a {
 				
@@ -110,13 +120,18 @@
 			.transition( background-color .2s ease );
 			&:hover {
 				cursor: pointer;
-				background-color: darken( #FFF, 2% );
+				background-color: lighten( @light, 4% );
 			}
 		}
 		.entry {
 			&-header,
 			&-summary {
 				text-align: center;
+			}
+			&-summary {
+				p {
+					margin-bottom: 0;
+				}
 			}
 		}
 		// Sticky posts
@@ -146,7 +161,7 @@
 			padding-top: @spacing-base;
 			padding-bottom: @spacing-base;
 			background: @primary;
-			border-bottom: 1px solid lighten( @light, 15% );
+			border-bottom: 1px solid lighten( @light, 4% );
 			color: #FFF;
 			text-align: center;
 		}
@@ -166,7 +181,7 @@
 	.hentry {
 		padding-top: unit( ( @spacing-base * 1.5 ), em );
 		padding-bottom: unit( ( @spacing-base * 1.5 ), em );
-		border-bottom: 1px solid lighten( @light, 15% );
+		border-bottom: 1px solid lighten( @light, 4% );
 	}
 	.sticky {
 		border-left: 5px solid @primary;

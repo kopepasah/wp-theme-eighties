@@ -32,10 +32,23 @@ img {
 figure {
 	margin: 0;
 }
+
+/** ----------------------------------------:[ tables ]:--- */
 table {
-	margin: 0 0 1.5em;
 	width: 100%;
+	margin: 0 0 unit( ( 24 / @font-size-base ), em );
+	background: #FFF;
+}
+table, td, th {
+	border: 1px solid @light;
+	border-collapse: collapse;
 }
 th {
 	font-weight: bold;
+}
+th, td, caption {
+	padding: .75em;
+}
+tfoot {
+	font-style: italic;
 }

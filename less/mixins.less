@@ -13,6 +13,13 @@
 	font-size: unit( @size / @font-size-base, rem );
 }
 
+// @font-size = ems, @target = pixels
+.heading( @font-size, @target ) {
+	margin-top: unit( ( @target / ( @font-size-base * @font-size ) ), em );
+	margin-bottom: unit( ( @target / ( @font-size-base * @font-size ) ), em );
+	font-size: unit( @font-size, em );
+}
+
 // -----------------------------------------------------:[ Mixins: Columns ]:---------- */
 .column( @n ) {
 	.font-size( @font-size-base );
