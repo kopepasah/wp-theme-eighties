@@ -76,16 +76,16 @@ input {
 		outline: none;
 		padding: 1em;
 		background: #FFF;
-		border: 1px solid lighten( @light, 4% );
+		border: 1px solid @light;
 		border-radius: 2px;
 		color: darken( @light, 25% );
 		-webkit-appearance: none;
 		&:hover {
-			border-color: @light;
+			border-color: darken( @light, 10% );
 		}
 		&:focus {
-			border-color: @dark;
-			color: @dark;
+			border-color: darken( @light, 20% );
+			color: lighten( @dark, 20% );
 		}
 	}
 }
@@ -118,7 +118,7 @@ textarea {
 	width: 100%;
 	padding: 1em;
 	background: #FFF;
-	border: 1px solid lighten( @light, 4% );
+	border: 1px solid @light;
 	border-radius: 2px;
 	color: darken( @light, 25% );
 	outline: none;
@@ -126,11 +126,11 @@ textarea {
 	   -moz-appearance: none;
 	        appearance: none;
 	&:hover {
-		border-color: @light;
+		border-color: darken( @light, 10% );
 	}
 	&:focus {
-		border-color: @dark;
-		color: @dark;
+		border-color: darken( @light, 20% );
+		color: lighten( @dark, 20% );
 	}
 }
 
