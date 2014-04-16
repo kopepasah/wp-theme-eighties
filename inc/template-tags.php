@@ -54,8 +54,8 @@ function eighties_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'eighties' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<i class="fa fa-chevron-left"></i>%title', 'Previous post link', 'eighties' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title<i class="fa fa-chevron-right"></i>', 'Next post link',     'eighties' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '%title', 'Previous post link', 'eighties' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title', 'Next post link',     'eighties' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
