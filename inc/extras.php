@@ -173,4 +173,4 @@ function eighties_wp_nav_menu_items( $items, $args ) {
 
 	return $items;
 }
-add_action( 'wp_nav_menu_items' , 'listed_header_menu_items', 100, 2 );
+add_action( 'wp_nav_menu_items' , 'eighties_wp_nav_menu_items', 100, 2 );
