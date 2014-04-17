@@ -7,7 +7,7 @@
  * handled by a callback to eighties_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package Listed
+ * @package Eighties
  * @author Justin Kopepasah
  * @since 1.0.0
 */

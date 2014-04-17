@@ -2,7 +2,7 @@
 /**
  * The Footer Sidebar
  *
- * @package Listed
+ * @package Eighties
  * @since 1.0.0
  */
 
