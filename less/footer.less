@@ -1,6 +1,5 @@
 /** -----------------------------------------------------:[ 14.0 - Footer ]:---------- */
 #colophon {
-	padding-top: @spacing-base;
 	padding-bottom: unit( ( @spacing-base * 2 ), em );
 	background: @dark;
 	color: lighten( @dark, 30% );
@@ -9,7 +8,7 @@
 /** ---:[ Site Supplementary ]:--- */
 #site-supplementary {
 	.max-width( 960px );
-	padding-bottom: @spacing-base;
+	padding-top: @spacing-base;
 	.clearfix();
 	a {
 		color: lighten( @dark, 30% );
@@ -18,6 +17,7 @@
 		}
 	}
 	.widget {
+		margin-bottom: @spacing-base;
 		.column( 4 );
 		&:nth-child( 3n+1 ) {
 			clear: left;
@@ -31,7 +31,7 @@
 			padding-left: unit( ( @spacing-base / 1.5 ), em );
 		}
 		&-title {
-			margin-bottom: 0;
+			margin-top: 0;
 			margin-bottom: 1em;
 			color: #FFF;
 			font-weight: normal;
