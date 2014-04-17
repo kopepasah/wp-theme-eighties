@@ -17,18 +17,19 @@
 		margin-left: 85px;
 		margin-bottom: @spacing-base;
 	}
+	.no-comments {
+		.max-width( 760px );
+	}
 }
 
 #comments {
 	margin-top: @spacing-base;
-	padding-top: @spacing-base;
-	border-top: 1px solid lighten( @light, 4% );
 	.max-width( 760px );
 	margin-top: @spacing-base;
 	li {
 		&.odd, &.even {
 			clear: both;
-			overflow: hidden;
+			.clearfix();
 		}
 	}
 	.children {
@@ -77,6 +78,9 @@
 			}
 		}
 	}
+	.pingback {
+		margin: 1em 0;
+	}
 	.comment-reply-link,
 	.cancel-comment a {
 		color: darken( @light, 10% );
@@ -88,9 +92,6 @@
 	}
 	.cancel-comment {
 		
-	}
-	.no-comments {
-		margin: 1.5em 0 0;
 	}
 	.comment-respond {
 		+ .reply {

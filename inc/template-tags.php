@@ -110,9 +110,7 @@ function eighties_comment( $comment, $args, $depth ) {
 	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
 
 		<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
-			<div class="comment-body">
-				<?php _e( 'Pingback:', 'eighties' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'eighties' ), '<span class="edit-link">', '</span>' ); ?>
-			</div>
+			<?php _e( 'Pingback:', 'eighties' ); ?> <?php comment_author_link(); ?>
 
 	<?php else : ?>
 
