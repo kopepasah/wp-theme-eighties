@@ -33,7 +33,7 @@
 	$( '.widget-area-toggle' ).on( 'click', function( event ) {
 		event.preventDefault();
 
-		$( this ).find( 'i' ).toggleClass( 'fa-caret-square-o-left fa-caret-square-o-right' );
+		$( '#masthead' ).find( '.widget-area-toggle i' ).toggleClass( 'fa-caret-square-o-left fa-caret-square-o-right' );
 		$( 'body' ).toggleClass( 'widget-area-open' );
 	});
 } )( jQuery );
