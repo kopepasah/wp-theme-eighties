@@ -73,7 +73,8 @@ function eighties_setup() {
 		'gallery',
 	) );
 
-	// Enable support for 
+	// Enable support for less.
+	// REMOVE Remove less support before sending to WordPress.com.
 	add_theme_support( 'less', array(
 		'enable'  => true,
 		'develop' => true,
