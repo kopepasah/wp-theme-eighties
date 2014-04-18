@@ -50,7 +50,7 @@
 		left: 0;
 		right: 0;
 		width: 100%;
-		z-index: 999999;
+		z-index: 10;
 		opacity: 0;
 		background: @dark;
 		background: fadeout( @dark, 5% );
@@ -86,7 +86,6 @@
 	}
 	.widget {
 		&-area-open {
-			overflow: hidden;
 			#secondary {
 				bottom: 0;
 				opacity: 1;
@@ -100,13 +99,13 @@
 	}
 	.admin-bar {
 		#secondary {
-			padding-top: 32px;
+			top: 32px;
 		}
 	}
 	@media screen and ( max-width: 782px ) {
 		.admin-bar {
 			#secondary {
-				padding-top: 46px;
+				top: 46px;
 			}
 		}
 	}
