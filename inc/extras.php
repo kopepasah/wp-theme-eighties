@@ -165,7 +165,7 @@ function eighties_wp_nav_menu_items( $items, $args ) {
 		return $items;
 	}
 
-	$close = '<li id="mobile-menu-close" class="menu-item menu-item-hidden"><a href>' . __( 'Close', 'eighties' ) . '<i class="fa fa-times"></i></a></li>';
+	$close = '<li id="mobile-menu-close" class="menu-item menu-item-hidden"><a href><i class="fa fa-times"></i>' . __( 'Close', 'eighties' ) . '</a></li>';
 
 	$close .= $items;
 
