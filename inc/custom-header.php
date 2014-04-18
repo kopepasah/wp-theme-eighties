@@ -80,13 +80,28 @@ function eighties_header_style() {
 		}
 	<?php endif; ?>
 
-	<?php
-		// If the header height is different than 600, let's calculate a padding.
-		if ( 600 != $header->height ) :
-	?>
-		.site-branding {
-			padding: <?php echo ( $header->height / 4 / 16 ) ?>em 0;
-		}
+	<?php if ( 'blank' == get_header_textcolor() ) : ?>
+		<?php
+			// If the header height is different than 600, let's calculate a padding.
+			if ( 600 != $header->height ) :
+		?>
+			.site-branding {
+				padding: <?php echo ( $header->height / 2 / 16 ); ?>em 0;
+			}
+		<?php else : ?>
+			.site-branding {
+				padding: 18.75em 0;
+			}
+		<?php endif; ?>
+	<?php else : ?>
+		<?php
+			// If the header height is different than 600, let's calculate a padding.
+			if ( 600 != $header->height ) :
+		?>
+			.site-branding {
+				padding: <?php echo ( $header->height / 4 / 16 ) ?>em 0;
+			}
+		<?php endif; ?>
 	<?php endif; ?>
 
 	</style>
@@ -101,7 +116,7 @@ if ( ! function_exists( 'eighties_admin_header_style' ) ) :
  * @see eighties_custom_header_setup().
  */
 function eighties_admin_header_style() {
-	$header = get_custom_header();  
+	$header = get_custom_header();
 
 ?>
 	<style type="text/css">
@@ -111,6 +126,25 @@ function eighties_admin_header_style() {
 			background-color: #2D2D2D;
 			border: none;
 			font-size: 16px;
+			<?php if ( 'blank' == get_header_textcolor() ) : ?>
+				<?php
+					// If the header height is different than 600, let's calculate a padding.
+					if ( 600 != $header->height ) :
+				?>
+					padding: <?php echo ( $header->height / 2 / 16 ); ?>em 0;
+				<?php else : ?>
+					padding: 15em 0;
+				<?php endif; ?>
+			<?php else :  ?>
+				<?php
+					// If the header height is different than 600, let's calculate a padding.
+					if ( 600 != $header->height ) :
+				?>
+					padding: <?php echo ( $header->height / 4 / 16 ); ?>em 0;
+				<?php else : ?>
+					padding: 10em 0;
+				<?php endif; ?>
+			<?php endif; ?>
 			<?php if ( get_header_image() ) : ?>
 				background-image: url('<?php header_image(); ?>');
 				background-repeat: no-repeat;
@@ -122,17 +156,11 @@ function eighties_admin_header_style() {
 			max-width: 100%;
 		}
 		#headimg .displaying-header-text {
+			<?php if ( 'blank' == get_header_textcolor() ) : ?>
+				display: none;
+			<?php endif; ?>
 			width: 100%;
 			text-align: center;
-			<?php
-				// If the header height is different than 600, let's calculate a padding.
-				if ( 600 != $header->height ) :
-			?>
-				padding: <?php echo ( $header->height / 4 / 16 ); ?>em 0;
-			<?php else : ?>
-				padding: 5em 0;
-			<?php endif; ?>
-
 		}
 		#headimg .displaying-header-text a {
 			text-decoration: none;
@@ -156,12 +184,10 @@ function eighties_admin_header_image() {
 	$style = sprintf( 'style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
-		<?php if ( 'blank' != get_header_textcolor() ) : ?>
-			<div class="displaying-header-text">
-				<h1><a id="name" <?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-				<div id="desc" <?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-			</div>
-		<?php endif; ?>
+		<div class="displaying-header-text">
+			<h1><a id="name" <?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<div id="desc" <?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
+		</div>
 	</div>
 	<?php if ( 'blank' != get_header_textcolor() ) : ?>
 		<p><?php _e( 'This is just an example of what your text may look like. Actual fonts may differ on the public side.', 'eighties' ); ?></p>
