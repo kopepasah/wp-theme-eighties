@@ -781,29 +781,33 @@ a:active {
 
 /** ---:[ With JS ]:--- */
 .js .main-navigation {
-	background: #2d2d2d;
 	overflow: scroll;
 	position: fixed;
-	width: 250px;
 	top: 0;
-	bottom: 0;
-	left: -250px;
-	-webkit-transition: left 300ms ease;
-	-moz-transition: left 300ms ease;
-	-o-transition: left 300ms ease;
-	transition: left 300ms ease;
-	-webkit-box-shadow: inset -1.5em 0 1em -1em rgba(0, 0, 0, 0.25);
-	box-shadow: inset -1.5em 0 1em -1em rgba(0, 0, 0, 0.25);
-}
-.js .main-navigation-open {
-	overflow: hidden;
+	bottom: 110%;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 10;
+	opacity: 0;
+	background: #2d2d2d;
+	background: rgba(45, 45, 45, 0.95);
+	-webkit-transition: opacity 300ms linear, bottom 0s linear 300ms;
+	-moz-transition: opacity 300ms linear, bottom 0s linear 300ms;
+	-o-transition: opacity 300ms linear, bottom 0s linear 300ms;
+	transition: opacity 300ms linear, bottom 0s linear 300ms;
 }
 .js .main-navigation-open #site-navigation {
-	left: 0;
+	bottom: 0;
+	opacity: 1;
+	-webkit-transition: opacity 300ms linear, bottom 0s linear;
+	-moz-transition: opacity 300ms linear, bottom 0s linear;
+	-o-transition: opacity 300ms linear, bottom 0s linear;
+	transition: opacity 300ms linear, bottom 0s linear;
 }
 .js .main-navigation-open #page {
-	left: 250px;
-	right: -250px;
+	position: fixed;
+	z-index: 0;
 }
 .js .main-navigation li {
 	display: block;
@@ -824,19 +828,18 @@ a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	visibility: visible;
 	opacity: 1;
 }
 .js .main-navigation ul ul {
 	position: static;
-	font-size: 12px;
-	font-size: 0.75rem;
+	background: transparent;
+	font-size: .777777778em;
 }
 .js .main-navigation ul ul a {
 	padding-left: 32px;
-	background: #353535;
 	border-bottom: none;
 }
 .js .main-navigation ul ul ul a {
@@ -854,30 +857,33 @@ a:active {
 .js .main-navigation a {
 	display: block;
 	text-decoration: none;
-	padding: 16px;
-	background-color: #2d2d2d;
-	border-bottom: 1px solid #3a3a3a;
+	padding: 1em;
+	background-color: transparent;
+	border-right: 0;
+	border-left: 0px solid #f2777a;
+	border-bottom: 1px solid #323232;
 	color: #FFF;
-	-webkit-box-shadow: inset -1.5em 0 1em -1em rgba(0, 0, 0, 0.25);
-	box-shadow: inset -1.5em 0 1em -1em rgba(0, 0, 0, 0.25);
-	-webkit-transition: background-color .2s ease;
-	-moz-transition: background-color .2s ease;
-	-o-transition: background-color .2s ease;
-	transition: background-color .2s ease;
+	-webkit-transition: border-width .2s ease;
+	-moz-transition: border-width .2s ease;
+	-o-transition: border-width .2s ease;
+	transition: border-width .2s ease;
 }
-.js .main-navigation a:hover {
-	background: #414141;
+.js .main-navigation a:hover,
+.js .main-navigation a:active {
+	border-left-width: 3px;
+}
+@media screen and (max-width: 500px) {
+  .js .main-navigation a:hover {
+	  border-left-width: 0;
+  }
 }
 .js .main-navigation .current-menu-item > a {
-	background: #f2777a;
+	border-left-width: 3px;
 }
-.js .main-navigation #mobile-menu-close a {
-	background: #2d2d2d;
-	color: #FFF;
-}
-.js .main-navigation #mobile-menu-close a i {
+.js .main-navigation #mobile-menu-close i {
 	float: right;
-	font-size: 1.5em;
+	margin-top: 3px;
+	font-size: 1.2em;
 }
 .js .admin-bar .main-navigation {
 	top: 32px;
@@ -1222,21 +1228,21 @@ a:active {
 
 /** ---:[ With JavaScript ]:--- */
 .js #secondary {
+	overflow: scroll;
 	position: fixed;
 	top: 0;
-	bottom: 0;
-	right: -400px;
-	width: 400px;
-	overflow: scroll;
-	-webkit-transition: right 300ms ease;
-	-moz-transition: right 300ms ease;
-	-o-transition: right 300ms ease;
-	transition: right 300ms ease;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 10;
+	opacity: 0;
 	background: #2d2d2d;
-	color: #7a7a7a;
-	-webkit-box-shadow: inset 1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
-	-moz-box-shadow: inset 1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
-	box-shadow: inset 1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+	background: rgba(45, 45, 45, 0.95);
+	-webkit-transition: opacity 300ms linear, bottom 0s linear 300ms;
+	-moz-transition: opacity 300ms linear, bottom 0s linear 300ms;
+	-o-transition: opacity 300ms linear, bottom 0s linear 300ms;
+	transition: opacity 300ms linear, bottom 0s linear 300ms;
 }
 .js #secondary .widget {
 	padding: 2em;
@@ -1254,22 +1260,45 @@ a:active {
 	font-size: 1.4em;
 	font-weight: normal;
 }
-.js .widget-area-open {
-	overflow: hidden;
+.js #secondary .widget-area-toggle {
+	display: block;
+	width: 100%;
+	padding: 1em;
+	border-bottom: 1px solid #3a3a3a;
+	color: #FFF;
+	*zoom: 1;
+}
+.js #secondary .widget-area-toggle:before,
+.js #secondary .widget-area-toggle:after {
+	content: " ";
+	display: table;
+	line-height: 0;
+}
+.js #secondary .widget-area-toggle:after {
+	clear: both;
+}
+.js #secondary .widget-area-toggle i {
+	float: right;
+	margin-top: 5px;
 }
 .js .widget-area-open #secondary {
-	right: 0;
+	bottom: 0;
+	opacity: 1;
+	-webkit-transition: opacity 300ms linear, bottom 0s linear;
+	-moz-transition: opacity 300ms linear, bottom 0s linear;
+	-o-transition: opacity 300ms linear, bottom 0s linear;
+	transition: opacity 300ms linear, bottom 0s linear;
 }
 .js .widget-area-open #page {
-	left: -400px;
-	right: 400px;
+	position: fixed;
+	z-index: 0;
 }
 .js .admin-bar #secondary {
-	padding-top: 32px;
+	top: 32px;
 }
 @media screen and (max-width: 782px) {
   .js .admin-bar #secondary {
-	  padding-top: 46px;
+	  top: 46px;
   }
 }
 
@@ -1405,8 +1434,6 @@ a:active {
 }
 .entry-footer {
 	margin-top: 1.5em;
-	padding-top: 3em;
-	border-top: 1px solid #f6f6f6;
 }
 
 /** ---:[ Single ]:--- */
@@ -1444,12 +1471,6 @@ a:active {
 	-o-transition: background-color 0.2s ease;
 	transition: background-color 0.2s ease;
 }
-.js .blog .hentry:hover,
-.js .archive .hentry:hover,
-.js .search .hentry:hover {
-	cursor: pointer;
-	background-color: #f6f6f6;
-}
 .js .blog .entry-header,
 .js .archive .entry-header,
 .js .search .entry-header,
@@ -1468,12 +1489,6 @@ a:active {
 .js .search .sticky {
 	background: #f2777a;
 	color: #FFF;
-}
-.js .blog .sticky:hover,
-.js .archive .sticky:hover,
-.js .search .sticky:hover {
-	cursor: pointer;
-	background-color: #f16e71;
 }
 .js .blog .sticky .entry-title a,
 .js .archive .sticky .entry-title a,
@@ -1574,9 +1589,13 @@ a:active {
 	margin-left: 85px;
 	margin-bottom: 3em;
 }
+.discussion .no-comments {
+	width: 100%;
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+}
 #comments {
-	padding-top: 3em;
-	border-top: 1px solid #f6f6f6;
 	width: 100%;
 	max-width: 760px;
 	margin-left: auto;
@@ -1586,7 +1605,19 @@ a:active {
 #comments li.odd,
 #comments li.even {
 	clear: both;
-	overflow: hidden;
+	*zoom: 1;
+}
+#comments li.odd:before,
+#comments li.even:before,
+#comments li.odd:after,
+#comments li.even:after {
+	content: " ";
+	display: table;
+	line-height: 0;
+}
+#comments li.odd:after,
+#comments li.even:after {
+	clear: both;
 }
 #comments .children {
 	margin: 0;
@@ -1621,6 +1652,9 @@ a:active {
 	border-color: #f2777a;
 	color: #f2777a;
 }
+#comments .pingback {
+	margin: 1em 0;
+}
 #comments .comment-reply-link,
 #comments .cancel-comment a {
 	color: #d3d3d3;
@@ -1633,9 +1667,6 @@ a:active {
 #comments .comment-reply-link:hover,
 #comments .cancel-comment a:hover {
 	color: #6699cc;
-}
-#comments .no-comments {
-	margin: 1.5em 0 0;
 }
 #comments .comment-respond + .reply {
 	display: none;
@@ -1850,8 +1881,6 @@ object {
 	transition: left 300ms ease, right 300ms ease;
 }
 
-/** ---:[ Columns ]:--- */
-/*@import 'columns';*/
 /** -----------------------------------------------------:[ 14.0 - Header ]:---------- */
 .site-header {
 	position: relative;
@@ -1863,23 +1892,45 @@ object {
 	left: 32px;
 	font-size: 40px;
 	font-size: 2.5rem;
+	line-height: 1;
 	color: white;
+	padding: 5px 10px;
+	background: #2d2d2d;
+	background: rgba(45, 45, 45, 0.8);
+	border-radius: 2px;
 }
 .site-header .main-navigation-toggle:hover,
 .site-header .widget-area-toggle:hover {
 	color: #f2f2f2;
 }
+.site-header .main-navigation-toggle:hover .toggle-title,
+.site-header .widget-area-toggle:hover .toggle-title {
+	opacity: 1;
+}
 .site-header .widget-area-toggle {
 	left: auto;
 	right: 32px;
 }
+.site-header .toggle-title {
+	left: 5px;
+	bottom: -30px;
+	position: absolute;
+	padding: .5em;
+	opacity: 0;
+	background: #2d2d2d;
+	background: rgba(45, 45, 45, 0.8);
+	border-radius: 2px;
+	font-size: 12px;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	-webkit-transition: opacity 200ms linear;
+	-moz-transition: opacity 200ms linear;
+	-o-transition: opacity 200ms linear;
+	transition: opacity 200ms linear;
+}
 .site-branding {
 	clear: both;
-	width: 100%;
-	max-width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 5em 0;
+	padding: 10em 0;
 	text-align: center;
 }
 .site-title,
@@ -1891,14 +1942,17 @@ object {
 .site-title {
 	font-size: 160px;
 	font-size: 10rem;
+	line-height: 1.1;
 }
 .site-title a {
 	color: white;
 }
+.site-description {
+	margin-top: 1.5em;
+}
 
 /** -----------------------------------------------------:[ 14.0 - Footer ]:---------- */
 #colophon {
-	padding-top: 3em;
 	padding-bottom: 6em;
 	background: #2d2d2d;
 	color: #7a7a7a;
@@ -1910,7 +1964,7 @@ object {
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-bottom: 3em;
+	padding-top: 3em;
 	*zoom: 1;
 }
 #site-supplementary:before,
@@ -1929,6 +1983,7 @@ object {
 	color: #FFF;
 }
 #site-supplementary .widget {
+	margin-bottom: 3em;
 	font-size: 16px;
 	font-size: 1rem;
 	float: left;
@@ -1946,7 +2001,7 @@ object {
 	padding-left: 2em;
 }
 #site-supplementary .widget-title {
-	margin-bottom: 0;
+	margin-top: 0;
 	margin-bottom: 1em;
 	color: #FFF;
 	font-weight: normal;
