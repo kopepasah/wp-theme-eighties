@@ -8,14 +8,35 @@
 			top: 16px;
 			left: 32px;
 			.font-size( 40 );
+			line-height: 1;
 			color: white;
+			padding: 5px 10px;
+			background: @dark;
+			background: fadeout( @dark, 20% );
+			border-radius: 2px;
 			&:hover {
 				color: darken( white, 5% );
+				.toggle-title {
+					opacity: 1;
+				}
 			}
 		}
 		.widget-area-toggle {
 			left: auto;
 			right: 32px;
+		}
+		.toggle-title {
+			left: 5px;
+			bottom: -30px;
+			position: absolute;
+			padding: .5em;
+			opacity: 0;
+			background: @dark;
+			background: fadeout( @dark, 20% );
+			border-radius: 2px;
+			.font-size( 12 );
+			text-transform: uppercase;
+			.transition( ~'opacity 200ms linear' );
 		}
 	}
 	&-branding {

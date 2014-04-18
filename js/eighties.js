@@ -16,8 +16,7 @@
 
 	/**
 	 * Set up the main navigation toggle. This sets
-	 * up a toggle for navitaion on left side of
-	 * the window.
+	 * up a toggle for navitaion to overlay the window.
 	*/
 	$( '.main-navigation-toggle, #mobile-menu-close' ).on( 'click', function( event ) {
 		event.preventDefault();
@@ -27,13 +26,26 @@
 
 	/**
 	 * Set up the widget area toggle. This sets
-	 * up a toggle for sidebar on right side of
-	 * the window.
+	 * up a toggle for sidebar to overlay the window.
 	*/
 	$( '.widget-area-toggle' ).on( 'click', function( event ) {
 		event.preventDefault();
 
-		$( '#masthead' ).find( '.widget-area-toggle i' ).toggleClass( 'fa-caret-square-o-left fa-caret-square-o-right' );
+		// $( '#masthead' ).find( '.widget-area-toggle i' ).toggleClass( 'fa-caret-square-o-left fa-caret-square-o-right' );
 		$( 'body' ).toggleClass( 'widget-area-open' );
+	});
+
+	/**
+	 * Closes the main navigation or sidebar when
+	 * the esc key is pressed.
+	*/
+	$( document ).keyup( function( event ) {
+		if ( event.keyCode == 27 ) {
+			if ( $( 'body' ).hasClass( 'main-navigation-open' ) ) {
+				 $( 'body' ).removeClass( 'main-navigation-open' );
+			} else if ( $( 'body' ).hasClass( 'widget-area-open' ) ) {
+				 $( 'body' ).removeClass( 'widget-area-open' );
+			}
+		}
 	});
 } )( jQuery );
