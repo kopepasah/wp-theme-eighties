@@ -9,7 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<span class="entry-meta entry-meta-categories"><?php the_category( ', ' ); ?></span>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<p class="entry-meta entry-meta-time"><i class="fa fa-clock-o"></i><?php echo eighties_get_time_difference( get_the_date( 'Y-m-d H:i:s' ) ); ?><p>
 	</header><!-- .entry-header -->
 
