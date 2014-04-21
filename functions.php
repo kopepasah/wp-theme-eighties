@@ -164,7 +164,7 @@ function eighties_body_font_url() {
 	 * 'off'. Do not translate into your own language.
 	 */
 	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'eighties' ) ) {
-		$font_url = add_query_arg( 'family', urlencode( 'Open+Sans:400italic,700italic,400,700' ), "//fonts.googleapis.com/css" );
+		$font_url = add_query_arg( 'family', urlencode( 'Open Sans:400italic,700italic,400,700' ), "//fonts.googleapis.com/css" );
 	}
 
 	return $font_url;
