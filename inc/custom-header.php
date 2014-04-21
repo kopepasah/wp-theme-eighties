@@ -159,6 +159,7 @@ function eighties_admin_header_style() {
 			<?php if ( 'blank' == get_header_textcolor() ) : ?>
 				display: none;
 			<?php endif; ?>
+			font-family: 'Righteous', 'Open Sans', cursive;
 			width: 100%;
 			text-align: center;
 		}
@@ -166,8 +167,11 @@ function eighties_admin_header_style() {
 			text-decoration: none;
 		}
 		#headimg h1 {
-			font-size: 5em;
+			font-size: 160px;
 			margin: 0 0 16px;
+		}
+		#headimg #desc {
+			font-size: 32px;
 		}
 	</style>
 <?php
@@ -189,9 +193,6 @@ function eighties_admin_header_image() {
 			<div id="desc" <?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
 		</div>
 	</div>
-	<?php if ( 'blank' != get_header_textcolor() ) : ?>
-		<p><?php _e( 'This is just an example of what your text may look like. Actual fonts may differ on the public side.', 'eighties' ); ?></p>
-	<?php endif; ?>
 <?php
 }
 endif; // eighties_admin_header_image

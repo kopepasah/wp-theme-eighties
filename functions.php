@@ -111,16 +111,85 @@ function eighties_widgets_init() {
 add_action( 'widgets_init', 'eighties_widgets_init' );
 
 /**
+ * Register Righteous Google font for Eighties
+ *
+ * @since 1.0.0
+ * @return string
+*/
+function eighties_header_font_url() {
+	$font_url = '';
+	/*
+	 * Translators: If there are characters in your language
+	 * that are not supported by Righteous, translate this to
+	 * 'off'. Do not translate into your own language.
+	*/
+	if ( 'off' !== _x( 'on', 'Righteous font: on or off', 'eighties' ) ) {
+		$font_url = add_query_arg( 'family', urlencode( 'Righteous' ), "//fonts.googleapis.com/css" );
+	}
+
+	return $font_url;
+}
+
+/**
+ * Register Raleway Google font for Eighties
+ *
+ * @since 1.0.0
+ * @return string
+*/
+function eighties_headings_font_url() {
+	$font_url = '';
+	/*
+	 * Translators: If there are characters in your language
+	 * that are not supported by Raleway, translate this to
+	 * 'off'. Do not translate into your own language.
+	 */
+	if ( 'off' !== _x( 'on', 'Raleway font: on or off', 'eighties' ) ) {
+		$font_url = add_query_arg( 'family', urlencode( 'Raleway:600' ), "//fonts.googleapis.com/css" );
+	}
+
+	return $font_url;
+}
+
+/**
+ * Register Open Sans Google font for Eighties
+ *
+ * @since 1.0.0
+ * @return string
+*/
+function eighties_body_font_url() {
+	$font_url = '';
+	/*
+	 * Translators: If there are characters in your language
+	 * that are not supported by Open Sans, translate this to
+	 * 'off'. Do not translate into your own language.
+	 */
+	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'eighties' ) ) {
+		$font_url = add_query_arg( 'family', urlencode( 'Open+Sans:400italic,700italic,400,700' ), "//fonts.googleapis.com/css" );
+	}
+
+	return $font_url;
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function eighties_scripts() {
 	$protocol = is_ssl() ? 'https' : 'http';
 
-	wp_enqueue_style( 'eighties', get_stylesheet_uri() );
+	// Add Righteous font, used in the main stylesheet.
+	wp_enqueue_style( 'eighties-header', eighties_header_font_url(), array(), null );
 
-	// Fonts
-	wp_enqueue_style( 'eighties-fonts', $protocol . '://fonts.googleapis.com/css?family=Raleway:600,800|Righteous' );
+	// Add Raleway font, used in the main stylesheet.
+	wp_enqueue_style( 'eighties-headings', eighties_headings_font_url(), array(), null );
+
+	// Add Open Sans font, used in the main stylesheet.
+	wp_enqueue_style( 'eighties-body', eighties_body_font_url(), array(), null );
+
+	// Font Awesome Icons
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fa/font-awesome.css' );
+
+	// Eighties Styles
+	wp_enqueue_style( 'eighties', get_stylesheet_uri() );
 
 	// Register scripts
 	wp_register_script( 'backstretch', get_template_directory_uri() . '/js/jquery.backstretch.js', array( 'jquery' ), '2.0.4', true );
@@ -146,6 +215,17 @@ function eighties_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'eighties_scripts' );
+
+/**
+ * Enqueue Header Google fonts style to admin
+ * screen for custom header display.
+ *
+ * @since 1.0.0
+ */
+function eighties_admin_fonts() {
+	wp_enqueue_style( 'eighties-header', eighties_header_font_url(), array(), null );
+}
+add_action( 'admin_print_scripts-appearance_page_custom-header', 'eighties_admin_fonts' );
 
 /**
  * Implement the Custom Header feature.
