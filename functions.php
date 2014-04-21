@@ -10,9 +10,6 @@
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-/*
-	TODO Calculate width.
-*/
 if ( ! isset( $content_width ) ) {
 	$content_width = 760; /* pixels */
 }
