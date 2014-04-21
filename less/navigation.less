@@ -151,7 +151,14 @@ a {
 			}
 			#page {
 				position: fixed;
+				right: 0;
+				left: 0;
 				z-index: 0;
+			}
+			#primary,
+			#masthead {
+				.transition( ~'all 100ms linear 300ms' );
+				.filter( blur( 5px ) );
 			}
 		}
 		.menu {
@@ -169,7 +176,7 @@ a {
 				border-left: 0px solid @primary;
 				border-bottom: 1px solid lighten( @dark, 2% );
 				color: #FFF;
-				.transition( ~'border-width .2s ease' );
+				.transition( ~'border-width 200ms ease' );
 				&:hover,
 				&:active {
 					border-left-width: 3px;
@@ -232,6 +239,8 @@ a {
 			}
 		}
 		#mobile-menu-close {
+			background-color: lighten( @dark, 5% );
+			font-size: .9em;
 			i {
 				float: right;
 				margin-top: 3px;
