@@ -14,8 +14,10 @@
 			background: darken( @dark , 5% );
 			background: fadeout( darken( @dark , 5% ), 20% );
 			border-radius: 2px;
+			.transition( ~'background 100ms linear' );
 			&:hover {
-				color: darken( white, 5% );
+				background: @primary;
+				background: fadeout( @primary, 20% );
 				.toggle-title {
 					opacity: 1;
 				}
