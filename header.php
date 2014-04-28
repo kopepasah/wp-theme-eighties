@@ -22,16 +22,17 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'eighties' ); ?></a>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav><!-- #site-navigation -->
-
-	<header id="masthead" class="site-header" role="banner">
+	<div class="site-toggles">
 		<a href class="main-navigation-toggle"><i class="fa fa-bars"></i></a>
 		<?php if ( is_active_sidebar( 'eighties-interactive-sidebar' ) ) : ?>
 			<a href class="widget-area-toggle"><i class="fa fa-align-right"></i></a>
 		<?php endif; ?>
+	</div>
+
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'eighties' ); ?></a>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	</nav><!-- #site-navigation -->
 
 		<div class="site-branding" <?php echo ( get_header_image() ) ? 'data-backstretch="' . get_header_image() . '"' : ''; ?>>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
