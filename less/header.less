@@ -4,15 +4,15 @@
 		position: relative;
 		.main-navigation-toggle,
 		.widget-area-toggle {
-			position: absolute;
-			top: 16px;
+			position: fixed;
+			top: 48px;
 			left: 32px;
 			.font-size( 40 );
 			line-height: 1;
 			color: white;
 			padding: 5px 10px;
-			background: @dark;
-			background: fadeout( @dark, 20% );
+			background: darken( @dark , 5% );
+			background: fadeout( darken( @dark , 5% ), 20% );
 			border-radius: 2px;
 			&:hover {
 				color: darken( white, 5% );
@@ -59,5 +59,12 @@
 	}
 	&-description {
 		margin-top: 1.5em;
+	}
+}
+
+.admin-bar {
+	.main-navigation-toggle,
+	.widget-area-toggle {
+		top: 62px;
 	}
 }

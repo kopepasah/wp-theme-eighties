@@ -21,6 +21,7 @@
 	$( '.main-navigation-toggle, #mobile-menu-close' ).on( 'click', function( event ) {
 		event.preventDefault();
 
+		$( 'html' ).toggleClass( 'disable-scroll' );
 		$( 'body' ).toggleClass( 'main-navigation-open' );
 	});
 
@@ -31,7 +32,7 @@
 	$( '.widget-area-toggle' ).on( 'click', function( event ) {
 		event.preventDefault();
 
-		// $( '#masthead' ).find( '.widget-area-toggle i' ).toggleClass( 'fa-caret-square-o-left fa-caret-square-o-right' );
+		$( 'html' ).toggleClass( 'disable-scroll' );
 		$( 'body' ).toggleClass( 'widget-area-open' );
 	});
 
