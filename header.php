@@ -21,24 +21,24 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<div class="site-toggles">
-		<a href class="main-navigation-toggle"><i class="fa fa-bars"></i></a>
-		<?php if ( is_active_sidebar( 'eighties-interactive-sidebar' ) ) : ?>
-			<a href class="widget-area-toggle"><i class="fa fa-align-right"></i></a>
-		<?php endif; ?>
-	</div>
-
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'eighties' ); ?></a>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav><!-- #site-navigation -->
-
-	<header id="masthead" class="site-header" role="banner" data-0="height: 600px; overflow: hidden;" data-600="height: 0px;">
-		<div class="site-branding" <?php echo ( get_header_image() ) ? 'data-backstretch="' . get_header_image() . '"' : ''; ?>>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+	<div id="page" class="hfeed site">
+		<div class="site-toggles">
+			<a href class="main-navigation-toggle"><i class="fa fa-bars"></i></a>
+			<?php if ( is_active_sidebar( 'eighties-interactive-sidebar' ) ) : ?>
+				<a href class="widget-area-toggle"><i class="fa fa-align-right"></i></a>
+			<?php endif; ?>
 		</div>
-	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'eighties' ); ?></a>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- #site-navigation -->
+
+		<header id="masthead" class="site-header" role="banner" data-0="height: 600px; overflow: hidden;" data-600="height: 0px;">
+			<div class="site-branding" <?php echo ( get_header_image() ) ? 'data-backstretch="' . get_header_image() . '"' : ''; ?>>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</div>
+		</header><!-- #masthead -->
+
+		<div id="content" class="site-content">

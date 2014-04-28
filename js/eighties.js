@@ -43,9 +43,11 @@
 	$( document ).keyup( function( event ) {
 		if ( event.keyCode == 27 ) {
 			if ( $( 'body' ).hasClass( 'main-navigation-open' ) ) {
-				 $( 'body' ).removeClass( 'main-navigation-open' );
+				$( 'html' ).removeClass( 'disable-scroll' );
+				$( 'body' ).removeClass( 'main-navigation-open' );
 			} else if ( $( 'body' ).hasClass( 'widget-area-open' ) ) {
-				 $( 'body' ).removeClass( 'widget-area-open' );
+				$( 'html' ).removeClass( 'disable-scroll' );
+				$( 'body' ).removeClass( 'widget-area-open' );
 			}
 		}
 	});
