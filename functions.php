@@ -192,6 +192,7 @@ function eighties_scripts() {
 	wp_register_script( 'backstretch', get_template_directory_uri() . '/js/jquery.backstretch.js', array( 'jquery' ), '2.0.4', true );
 	wp_register_script( 'bigslide', get_template_directory_uri() . '/js/jquery.bigslide.js', array( 'jquery' ), '0.4.3', true );
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7.1', false );
+	wp_register_script( 'skrollr', get_template_directory_uri() . '/js/skrollr.js', array(), '0.6.24', true );
 
 	// Enqueue global (includes navigation and others).
 	wp_enqueue_script( 'eighties', get_template_directory_uri() . '/js/eighties.js', array( 'modernizr' ), '20120206', true );
@@ -208,7 +209,7 @@ function eighties_scripts() {
 	// }
 
 	if ( get_header_image() ) {
-		wp_enqueue_script( 'eighties-header', get_template_directory_uri() . '/js/eighties-header.js', array( 'backstretch' ), '20140407', true );
+		wp_enqueue_script( 'eighties-header', get_template_directory_uri() . '/js/eighties-header.js', array( 'backstretch', 'skrollr' ), '20140407', true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'eighties_scripts' );

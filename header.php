@@ -34,6 +34,7 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 	</nav><!-- #site-navigation -->
 
+	<header id="masthead" class="site-header" role="banner" data-0="height: 600px; overflow: hidden;" data-600="height: 0px;">
 		<div class="site-branding" <?php echo ( get_header_image() ) ? 'data-backstretch="' . get_header_image() . '"' : ''; ?>>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
