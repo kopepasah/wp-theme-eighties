@@ -28,25 +28,102 @@
 	}
 }
 
-.site-main .gallery {
-	margin-bottom: 1.5em;
+/** ---:[ Gallery ]:--- */
+.gallery {
+	.clearfix();
+	&-columns-2 {
+		.gallery {
+			&-item {
+				.column( 6 );
+				&:nth-child( 2n+1 ) {
+					clear: both;
+				}
+			}
+		}
+	}
+	&-columns-3 {
+		.gallery {
+			&-item {
+				.column( 4 );
+				&:nth-child( 3n+1 ) {
+					clear: both;
+				}
+			}
+		}
+	}
+	&-columns-4 {
+		.gallery {
+			&-item {
+				.column( 3 );
+				&:nth-child( 4n+1 ) {
+					clear: both;
+				}
+			}
+		}
+	}
+	&-columns-5 {
+		.gallery {
+			&-item {
+				.column( 2.4 );
+				&:nth-child( 5n+1 ) {
+					clear: both;
+				}
+			}
+		}
+	}
+	&-columns-6 {
+		.gallery {
+			&-item {
+				.column( 2 );
+				&:nth-child( 6n+1 ) {
+					clear: both;
+				}
+			}
+		}
+	}
+	&-columns-7 {
+		.gallery {
+			&-item {
+				.column( 1.7 );
+				&:nth-child( 7n+1 ) {
+					clear: both;
+				}
+			}
+		}
+	}
+	&-columns-8 {
+		.gallery {
+			&-item {
+				.column( 1.5 );
+				&:nth-child( 8n+1 ) {
+					clear: both;
+				}
+			}
+		}
+	}
+	&-columns-9 {
+		.gallery {
+			&-item {
+				.column( 1.33 );
+				&:nth-child( 9n+1 ) {
+					clear: both;
+				}
+			}
+		}
+	}
+	&-item {
+		margin-bottom: @spacing-base;
+		text-align: center;
+	}
+	&-caption {
+		font-size: .8em;
+	}
+	&-icon,
+	&-caption {
+		.inner( middle );
+	}
 }
-.gallery-caption {
-	
-}
-.site-main .gallery a img {
-	border: none;
-	height: auto;
-	max-width: 90%;
-}
-.site-main .gallery dd,
-.site-main .gallery figcaption {
-	margin: 0;
-}
-.site-main .gallery-columns-4 .gallery-item {
-}
-.site-main .gallery-columns-4 .gallery-item img {
-}
+
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
