@@ -278,12 +278,12 @@ hr {
  */
 
 a {
-	color: #24890d;
+	color: @primary;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #24890d;
+	color: @primary;
 }
 
 a:focus {
@@ -336,24 +336,24 @@ blockquote.alignright p {
  * 6.0 Tables
  * ----------------------------------------------------------------------------
  */
-.mceItemTable {
+.mce-item-table {
 	width: 100%;
 	margin: 0 0 unit( ( 36 / @font-size-base ), em );
 	background: #FFF;
 	border: 1px solid @light;
 	border-collapse: collapse;
 }
-.mceItemTable th {
+.mce-item-table th {
 	font-weight: bold;
 }
-.mceItemTable th,
-.mceItemTable caption {
+.mce-item-table th,
+.mce-item-table caption {
 	border: 1px solid @light;
 	border-collapse: collapse;
 	padding: .75em;
 }
 
-.mceItemTable td {
+.mce-item-table td {
 	border: 1px solid @light;
 	border-collapse: collapse;
 	padding: .75em;
