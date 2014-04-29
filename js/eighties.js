@@ -6,6 +6,14 @@
 */
 ( function( $ ) {
 	/**
+	 * Register fitvids with a custom selector.
+	 * Possibly add more selectors later, if needed.
+	*/
+	$( 'body' ).fitVids({
+		customSelector: "iframe[src*='rd.io'], iframe[src*='rdio.com']",
+	});
+
+	/**
 	 * If we've made it this far, JavaScript is working.
 	 * We should set the main navigation css to display
 	 * block. Don't worry, if JavaScript is not working
