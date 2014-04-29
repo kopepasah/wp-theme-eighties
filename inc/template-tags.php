@@ -119,7 +119,7 @@ function eighties_comment( $comment, $args, $depth ) {
 			<div class="comment-wrap">
 				<div class="comment-top vcard">
 					<span class="comment-author">
-						<?php printf( __( '%s'), get_comment_author_link() ) ?>
+						<?php printf( __( '%s', 'eighties' ), get_comment_author_link() ) ?>
 					</span>
 					<span class="comment-meta comment-time">
 						 &middot; <?php echo $timestamp; ?>
@@ -128,7 +128,7 @@ function eighties_comment( $comment, $args, $depth ) {
 				<div id="comment-body-<?php comment_ID(); ?>" class="comment-body">
 					<?php if ( $comment->comment_approved == '0' ) : ?>
 						<div class="comment-awaiting-moderation">
-							<p class="notice"><?php _e( 'Your comment is awaiting moderation.' ) ?></p>
+							<p class="notice"><?php _e( 'Your comment is awaiting moderation.', 'eighties' ) ?></p>
 						</div>
 					<?php endif; ?>
 					<?php comment_text(); ?>
