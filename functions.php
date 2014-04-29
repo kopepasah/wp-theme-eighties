@@ -189,14 +189,16 @@ function eighties_scripts() {
 	wp_enqueue_style( 'eighties', get_stylesheet_uri() );
 
 	// Register scripts
-	wp_register_script( 'backstretch', get_template_directory_uri() . '/js/jquery.backstretch.js', array( 'jquery' ), '2.0.4', true );
-	wp_register_script( 'bigslide', get_template_directory_uri() . '/js/jquery.bigslide.js', array( 'jquery' ), '0.4.3', true );
-	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.7.1', false );
-	wp_register_script( 'skrollr', get_template_directory_uri() . '/js/skrollr.js', array(), '0.6.24', true );
+	wp_register_script( 'backstretch', get_template_directory_uri() . '/js/jquery.backstretch.js', array( 'jquery' ), '2.0.4',  true  );
+	wp_register_script( 'bigslide',    get_template_directory_uri() . '/js/jquery.bigslide.js',    array( 'jquery' ), '0.4.3',  true  );
+	wp_register_script( 'fitvids',     get_template_directory_uri() . '/js/fitvids.js',            array(),           '1.0.3',  true  );
+	wp_register_script( 'modernizr',   get_template_directory_uri() . '/js/modernizr.js',          array(),           '2.7.1',  false );
+	wp_register_script( 'skrollr',     get_template_directory_uri() . '/js/skrollr.js',            array(),           '0.6.24', true  );
 
 	// Enqueue global (includes navigation and others).
-	wp_enqueue_script( 'eighties', get_template_directory_uri() . '/js/eighties.js', array( 'modernizr' ), '20120206', true );
+	wp_enqueue_script( 'eighties', get_template_directory_uri() . '/js/eighties.js', array( 'modernizr', 'fitvids' ), '20120206', true );
 
+	// Skip link focus. NOTE Review this.
 	wp_enqueue_script( 'eighties-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
