@@ -49,6 +49,9 @@
 		margin-top: 0;
 		a {
 			color: @dark;
+			&:hover {
+				color: @primary;
+			}
 		}
 	}
 	&-meta {
@@ -140,7 +143,10 @@
 	.search {
 		.hentry {
 			text-align: center;
-			.transition( background-color .2s ease );
+			.transition( ~'background-color 200ms linear' );
+			&:hover {
+				background-color: darken( #FFF, 1% );
+			}
 		}
 		.entry {
 			&-header,
@@ -155,12 +161,18 @@
 		}
 		// Sticky posts
 		.sticky {
-			background: @primary;
+			background-color: @primary;
 			color: #FFF;
+			&:hover {
+				background-color: @secondary;
+			}
 			.entry {
 				&-title {
 					a {
 						color: #FFF;
+						&:hover {
+							color: darken( #FFF, 5% );
+						}
 					}
 				}
 				&-meta {

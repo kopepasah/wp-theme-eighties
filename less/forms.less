@@ -16,21 +16,20 @@ textarea {
 	display: inline-block;
 	padding: 1em;
 	background: @primary;
-	border-radius: 2px;
 	border: 0;
+	border-radius: 2px;
 	box-shadow: none;
 	color: #FFF;
-	text-shadow: darken( @primary, 5% ) 2px 2px;
 	font-family: @headings-font-family;
 	text-transform: uppercase;
 	font-weight: @headings-font-weight;
-	.transition( opacity .2s linear );
+	.transition( ~'box-shadow 100ms linear, border-color 100ms linear' );
 	.backface-visibility( hidden );
 	&:hover,
 	&:focus,
 	&:active {
-		opacity: .9;
 		background: @primary;
+		box-shadow: 0 0 0 3px @primary;
 		color: #FFF;
 	}
 	&-full {
