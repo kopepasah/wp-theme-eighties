@@ -33,6 +33,10 @@ function eighties_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	if ( is_singular() && has_post_thumbnail( get_the_ID() ) ) {
+		$classes[] = 'single-has-thumbnail';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'eighties_body_classes' );
