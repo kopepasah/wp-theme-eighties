@@ -1843,6 +1843,10 @@ a:active {
 #comments .comment-respond + .reply {
 	display: none;
 }
+#comments .bypostauthor {
+	padding-right: 1em;
+	border-right: 3px solid #f2777a;
+}
 #respond {
 	position: relative;
 	width: 100%;
