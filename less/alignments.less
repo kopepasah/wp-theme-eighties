@@ -2,15 +2,32 @@
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
+	margin-right: ( @spacing-base / 2);
 }
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
+	margin-left: ( @spacing-base / 2);
 }
 .aligncenter {
 	clear: both;
 	display: block;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media screen and ( min-width: 960px ) {
+	.alignleft {
+		margin-left: -100px;
+	}
+	.alignright {
+		margin-right: -100px;
+	}
+}
+@media screen and ( min-width: 1160px ) {
+	.alignleft {
+		margin-left: -200px;
+	}
+	.alignright {
+		margin-right: -200px;
+	}
 }
