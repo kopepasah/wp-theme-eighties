@@ -1,10 +1,9 @@
 <?php
 /**
- * Template for displaying content. This is the
- * default content tempalte.
- *
- * @package Eighties
- * @author Justin Kopepasah
+ * Template for displaying video content.
+ * 
+ * @package expatriate
+ * @author kopepasah
  * @since 1.0.0
 */
 ?>
@@ -17,11 +16,9 @@
 		<p>
 	</header><!-- .entry-header -->
 
-	<?php if ( has_post_thumbnail() ) : ?>
-		<figure class="entry-image" <?php eighties_backstretch_data( get_the_ID() ); ?>>
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'large' ); ?></a>
-		</figure>
-	<?php endif; ?><!-- .entry-image -->
+	<figure class="entry-video">
+		<?php eighties_post_format_video_first_video(); ?>
+	</figure><!-- .entry-video -->
 
 	<div class="entry-summary" <?php eighties_backstretch_data( get_the_ID() ); ?>>
 		<?php the_excerpt(); ?>

@@ -27,7 +27,7 @@ add_filter( 'wp_page_menu_args', 'eighties_page_menu_args' );
  * @param array $classes Classes for the body element.
  * @return array
  */
-function eighties_body_classes( $classes ) {
+function eighties_body_class( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -39,7 +39,30 @@ function eighties_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'eighties_body_classes' );
+add_filter( 'body_class', 'eighties_body_class' );
+
+/**
+ * Adds custom classes to the array of post classes.
+ * 
+ * @since 1.0.0
+ * @param array $classes Classes for the post element.
+ * @return array
+*/
+function eighties_post_class( $classes ) {
+	// If we are in version 3.9 or below, add a has-post-thumbnail class.
+	if ( version_compare( $GLOBALS['wp_version'], '3.9', '<' ) ) {
+		if ( has_post_thumbnail() ) {
+			$classes[] = 'has-post-thumbnail';
+		}
+	}
+
+	if ( ( is_home() || is_archive() || is_search() ) && has_post_thumbnail() ) {
+		$classes[] = 'has-backstretch';
+	}
+
+	return $classes;
+}
+add_filter( 'post_class', 'eighties_post_class' );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.

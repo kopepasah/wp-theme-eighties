@@ -209,9 +209,9 @@ function eighties_scripts() {
 	}
 
 	// NOTE Tabling this for now. See note in JS file for more information.
-	// if ( is_home() || is_archive() || is_search() ) {
-	// 	wp_enqueue_script( 'eighties-blog', get_template_directory_uri() . '/js/eighties-blog.js', array( 'modernizr' ), '20120206', true );
-	// }
+	if ( is_home() || is_archive() || is_search() ) {
+		wp_enqueue_script( 'eighties-blog', get_template_directory_uri() . '/js/eighties-blog.js', array( 'modernizr', 'backstretch' ), '20120206', true );
+	}
 
 	if ( get_header_image() ) {
 		wp_enqueue_script( 'eighties-header', get_template_directory_uri() . '/js/eighties-header.js', array( 'backstretch', 'skrollr' ), '20140407', true );
@@ -239,6 +239,11 @@ require get_template_directory() . '/inc/custom-header.php';
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom post format functionality.
+ */
+require get_template_directory() . '/inc/post-formats.php';
 
 /**
  * Custom functions that act independently of the theme templates.

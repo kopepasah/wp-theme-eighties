@@ -13,6 +13,13 @@
 		customSelector: "iframe[src*='rd.io'], iframe[src*='rdio.com']",
 	});
 
+	// Custom event for loading fitvids when using infinite scroll.
+	$( document.body ).on( 'post-load', function() {
+		$( '.post' ).fitVids({
+			customSelector: "iframe[src*='rd.io'], iframe[src*='rdio.com']",
+		});
+	});
+
 	/**
 	 * If we've made it this far, JavaScript is working.
 	 * We should set the main navigation css to display

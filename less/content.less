@@ -164,7 +164,7 @@
 			background-color: @primary;
 			color: #FFF;
 			&:hover {
-				background-color: @secondary;
+				background-color: darken( @primary, 2% );
 			}
 			.entry {
 				&-title {
@@ -179,6 +179,15 @@
 					a {
 						color: #FFF;
 					}
+				}
+			}
+		}
+		// Has post thumbnail
+		.has-post-thumbnail {
+			.backstretch {
+				background: #FFF;
+				img {
+					opacity: .1;
 				}
 			}
 		}

@@ -246,3 +246,55 @@ function eighties_category_transient_flusher() {
 }
 add_action( 'edit_category', 'eighties_category_transient_flusher' );
 add_action( 'save_post',     'eighties_category_transient_flusher' );
+
+/**
+ * Check the content blob for an <audio>, <video> <object>, <embed>, or <iframe>
+ *
+ * @since 1.0.0
+ *
+ * @param string $content A string which might contain media data.
+ * @param array $types array of media types: 'audio', 'video', 'object', 'embed', or 'iframe'
+ * @param string $sortby A string which defines how to sort the results.
+ * @return array A list of found HTML media embeds
+ *
+ * NOTE This function only exists because the get_media_embedded_in_content() core function does not function properly.
+ *      See https://core.trac.wordpress.org/ticket/26675 for more information.
+ */
+function eighties_get_media_embedded_in_content( $content, $types = null ) {
+	$html = array();
+
+	$allowed_media_types = array( 'audio', 'video', 'object', 'embed', 'iframe' );
+	if ( ! empty( $types ) ) {
+		if ( ! is_array( $types ) ) {
+			$types = array( $types );
+		}
+		$allowed_media_types = array_intersect( $allowed_media_types, $types );
+	}
+
+	$tags = implode( '|', $allowed_media_types );
+
+	if ( preg_match_all( '#<(?P<tag>' . $tags . ')[^<]*?(?:>[\s\S]*?<\/(?P=tag)>|\s*\/>)#', $content, $matches ) ) {
+		foreach ( $matches[0] as $match ) {
+			$html[] = $match;
+		}
+	}
+
+	return $html;
+}
+
+/**
+ * Template tag for getting information regarding a
+ * setting a backstretch image.
+ *
+ * @since 1.0.0
+*/
+function eighties_backstretch_data( $post_id ) {
+	if ( ! has_post_thumbnail( $post_id ) ) {
+		return;
+	}
+	
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' );
+	$data = 'data-backstretch="' . $image[0] . '"';
+	
+	echo $data;
+}
