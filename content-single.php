@@ -16,7 +16,7 @@
 			<span class="entry-meta entry-meta-categories"><?php echo $categories_list; ?></span>
 		<?php endif; ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<p class="entry-meta entry-meta-time"><i class="fa fa-clock-o"></i><?php echo eighties_get_time_difference( get_the_date( 'Y-m-d H:i:s' ) ); ?><p>
+		<p class="entry-meta entry-meta-time"><i class="fa fa-clock-o"></i><?php echo eighties_get_time_difference( get_the_date( 'Y-m-d H:i:s' ) ); ?></p>
 	</header><!-- .entry-header -->
 
 	<?php if ( has_post_thumbnail() ) : ?>

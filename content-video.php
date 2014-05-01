@@ -13,7 +13,7 @@
 		<?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" rel="bookmark">', '</a></h2>' ); ?>
 		<p class="entry-meta entry-meta-time">
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><i class="fa fa-clock-o"></i><?php echo eighties_get_time_difference( get_the_date( 'Y-m-d H:i:s' ) ); ?></a>
-		<p>
+		</p>
 	</header><!-- .entry-header -->
 
 	<figure class="entry-video">
