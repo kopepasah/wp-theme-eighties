@@ -54,7 +54,7 @@ function eighties_setup() {
 	) );
 
 	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 'gallery', 'image', 'video', 'audio', 'status', 'aside', 'link' ) );
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(

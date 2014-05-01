@@ -92,8 +92,7 @@ function eighties_post_format_gallery_filter_image_size( $out, $pairs, $atts ) {
 	
 	return $out;
 }
-add_filter( 'shortcode_atts_gallery', 'eighties_post_format_gallery_filter_image_size', 10, 3 );
-
+// add_filter( 'shortcode_atts_gallery', 'eighties_post_format_gallery_filter_image_size', 10, 3 );
 
 /**
  * For status post formats we need to add the
@@ -112,19 +111,6 @@ function eighties_post_format_status_filter_the_content( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'eighties_post_format_status_filter_the_content' );
-
-// function eighties_single_get_template_part() {
-// 	$check = array( 'quote', 'link' );
-// 	
-// 	if ( in_array( $check, get_post_format() ) ) {
-// 		# code...
-// 	}
-// }
-
-
-/*
-	NOTE This needs to be cleaned.
-*/
 
 /**
  * For audio post formats we need to get the

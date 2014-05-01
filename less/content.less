@@ -142,7 +142,6 @@
 	.archive,
 	.search {
 		.hentry {
-			text-align: center;
 			.transition( ~'background-color 200ms linear' );
 			&:hover {
 				background-color: darken( #FFF, 1% );
@@ -151,7 +150,7 @@
 		.entry {
 			&-header,
 			&-summary {
-				text-align: center;
+				
 			}
 			&-summary {
 				p {
@@ -197,7 +196,6 @@
 			padding-top: @spacing-base;
 			padding-bottom: @spacing-base;
 			background: @primary;
-			border-bottom: 1px solid lighten( @light, 4% );
 			color: #FFF;
 			text-align: center;
 		}
@@ -231,28 +229,113 @@
 	.archive,
 	.search {
 		.format {
+			&-audio {
+				.entry {
+					&-title {
+						font-size: 1.5em;
+					}
+					&-audio {
+						margin-bottom: 1em;
+					}
+				}
+			}
+			&-video {
+				.entry {
+					&-title {
+						font-size: 1.5em;
+					}
+					&-video {
+						margin-bottom: 1em;
+					}
+				}
+			}
 			&-status {
 				background: @blue;
 				color: #FFF;
+				border-bottom-color: darken( @blue, 5% );
+				> [class^="entry-"] {
+					.max-width( 540px );
+				}
+				&:hover {
+					background: darken( @blue, 5% );
+				}
+				a {
+					color: #FFF;
+					&:hover {
+						color: darken( #FFF, 5% );
+					}
+				}
 				.entry {
 					&-title {
-						a {
-							color: #FFF;
-						}
+						font-size: 1.5em;
+					}
+					&-summary {
+						.font-size( 30 );
+					}
+					&-meta {
+						margin-bottom: 0;
+						margin-top: @spacing-base / 2;
+						color: #FFF;
 					}
 				}
 			}
 			&-aside {
 				background: @magenta;
+				border-bottom-color: darken( @magenta, 5% );
 				color: #FFF;
 				> [class^="entry-"] {
-					.max-width( 600px );
+					.max-width( 540px );
+				}
+				&:hover {
+					background: darken( @magenta, 5% );
+				}
+				a {
+					color: #FFF;
+					&:hover {
+						color: darken( #FFF, 5% );
+					}
 				}
 				.entry {
 					&-title {
 						font-size: 1.5em;
+					}
+					&-meta {
+						margin-bottom: 1em;
+						color: #FFF;
+					}
+				}
+			}
+			&-link {
+				background: @cyan;
+				border-bottom-color: darken( @cyan, 5% );
+				color: #FFF;
+				> [class^="entry-"] {
+					.max-width( 540px );
+				}
+				&:hover {
+					background: darken( @cyan, 5% );
+				}
+				a {
+					color: #FFF;
+					&:hover {
+						color: darken( #FFF, 5% );
+					}
+				}
+				.entry {
+					&-title {
+						font-size: 1.5em;
+					}
+					&-meta {
+						margin-bottom: 1em;
+					}
+					&-summary {
 						a {
-							color: #FFF;
+							border-bottom: 1px solid #FFF;
+							.transition( ~'all 100ms linear' );
+							&:hover {
+								background: darken( @cyan, 15% );
+								border-bottom-color: transparent;
+							}
 						}
 					}
 				}

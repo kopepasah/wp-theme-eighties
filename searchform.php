@@ -2,8 +2,8 @@
 /**
  * The template for displaying search forms.
  *
- * @package expatriate
- * @author kopepasah
+ * @package Eighties
+ * @author Justin Kopepasah
  * @since 1.0.0
  */
 ?>
