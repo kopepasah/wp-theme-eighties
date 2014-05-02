@@ -14,7 +14,11 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php if ( in_array( get_post_format(), array( 'aside', 'status', 'link' ) ) ) : ?>
+				<?php get_template_part( 'content',  get_post_format() ); ?>
+			<?php else : ?>
+				<?php get_template_part( 'content', 'single' ); ?>
+			<?php endif; ?>
 
 			<?php eighties_post_nav(); ?>
 

@@ -142,9 +142,9 @@
 	.archive,
 	.search {
 		.hentry {
-			.transition( ~'background-color 200ms linear' );
+			// .transition( ~'background-color 200ms linear' );
 			&:hover {
-				background-color: darken( #FFF, 1% );
+				// background-color: darken( #FFF, 1% );
 			}
 		}
 		.entry {
@@ -227,7 +227,8 @@
 .js {
 	.blog,
 	.archive,
-	.search {
+	.search,
+	.single {
 		.format {
 			&-audio {
 				.entry {
@@ -257,7 +258,7 @@
 					.max-width( 540px );
 				}
 				&:hover {
-					background: darken( @blue, 5% );
+					// background: darken( @blue, 5% );
 				}
 				a {
 					color: #FFF;
@@ -287,7 +288,7 @@
 					.max-width( 540px );
 				}
 				&:hover {
-					background: darken( @magenta, 5% );
+					// background: darken( @magenta, 5% );
 				}
 				a {
 					color: #FFF;
@@ -300,8 +301,26 @@
 						font-size: 1.5em;
 					}
 					&-meta {
-						margin-bottom: 1em;
-						color: #FFF;
+						&-categories {
+							margin-bottom: 1em;
+							a {
+								border-bottom: 1px solid #FFF;
+								.transition( ~'all 100ms linear' );
+								&:hover {
+									background: darken( @magenta, 15% );
+									border-bottom-color: transparent;
+								}
+							}
+						}
+						&-tags {
+							a {
+								background-color: darken( @magenta, 5% );
+								.transition( ~'background-color 100ms linear' );
+								&:hover {
+									background-color: darken( @magenta, 15% );
+								}
+							}
+						}
 					}
 				}
 			}
@@ -313,7 +332,7 @@
 					.max-width( 540px );
 				}
 				&:hover {
-					background: darken( @cyan, 5% );
+					// background: darken( @cyan, 5% );
 				}
 				a {
 					color: #FFF;
