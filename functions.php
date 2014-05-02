@@ -212,7 +212,7 @@ function eighties_scripts() {
 
 	// NOTE Tabling this for now. See note in JS file for more information.
 	if ( is_home() || is_archive() || is_search() ) {
-		wp_enqueue_script( 'eighties-blog', get_template_directory_uri() . '/js/eighties-blog.js', array( 'modernizr', 'backstretch' ), '20120206', true );
+		wp_enqueue_script( 'eighties-blog', get_template_directory_uri() . '/js/eighties-blog.js', array( 'backstretch' ), '20120206', true );
 	}
 
 	if ( get_header_image() ) {
