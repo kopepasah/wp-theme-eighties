@@ -194,15 +194,17 @@ function eighties_scripts() {
 	// Register scripts
 	wp_register_script( 'backstretch', get_template_directory_uri() . '/js/jquery.backstretch.js', array( 'jquery' ), '2.0.4',  true  );
 	wp_register_script( 'bigslide',    get_template_directory_uri() . '/js/jquery.bigslide.js',    array( 'jquery' ), '0.4.3',  true  );
-	wp_register_script( 'fitvids',     get_template_directory_uri() . '/js/fitvids.js',            array(),           '1.0.3',  true  );
-	wp_register_script( 'modernizr',   get_template_directory_uri() . '/js/modernizr.js',          array(),           '2.7.1',  false );
-	wp_register_script( 'skrollr',     get_template_directory_uri() . '/js/skrollr.js',            array(),           '0.6.24', true  );
+	wp_register_script( 'fitvids',     get_template_directory_uri() . '/js/fitvids.js',            false,             '1.0.3',  true  );
+	wp_register_script( 'skrollr',     get_template_directory_uri() . '/js/skrollr.js',            false,             '0.6.24', true  );
+
+	// Change no-js to js on the documentElement.
+	wp_enqueue_script( 'eighties-enable-js', get_template_directory_uri() . '/js/eighties-enable-js.js', false, '20140502', false );
 
 	// Enqueue global (includes navigation and others).
-	wp_enqueue_script( 'eighties', get_template_directory_uri() . '/js/eighties.js', array( 'modernizr', 'fitvids' ), '20120206', true );
+	wp_enqueue_script( 'eighties', get_template_directory_uri() . '/js/eighties.js', array( 'fitvids' ), '20120206', true );
 
 	// Skip link focus. NOTE Review this.
-	wp_enqueue_script( 'eighties-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'eighties-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', false, '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
