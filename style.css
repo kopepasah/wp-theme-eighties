@@ -385,7 +385,6 @@ textarea {
 	font-size: 100%;
 	margin: 0;
 	vertical-align: baseline;
-	*vertical-align: middle;
 	max-width: 100%;
 }
 
@@ -935,9 +934,6 @@ a:active {
 	width: auto;
 	left: auto;
 }
-.no-js .main-navigation .menu {
-	*zoom: 1;
-}
 .no-js .main-navigation .menu:before,
 .no-js .main-navigation .menu:after {
 	content: " ";
@@ -992,7 +988,6 @@ a:active {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 3em 0;
-	*zoom: 1;
 }
 .paging-navigation:before,
 .post-navigation:before,
@@ -1328,7 +1323,6 @@ a:active {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-	*zoom: 1;
 }
 .js #secondary .widgets-wrapper:before,
 .js #secondary .widgets-wrapper:after {
@@ -1405,7 +1399,6 @@ a:active {
 	-moz-transition: border 100ms linear;
 	-o-transition: border 100ms linear;
 	transition: border 100ms linear;
-	*zoom: 1;
 }
 .js #secondary .widget-area-toggle:before,
 .js #secondary .widget-area-toggle:after {
@@ -1495,7 +1488,6 @@ a:active {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-	*zoom: 1;
 }
 .no-js #content:before,
 .no-js #content:after {
@@ -1597,7 +1589,7 @@ a:active {
 	display: block;
 }
 .entry-footer {
-	margin-top: 1.5em;
+	margin-top: 2em;
 }
 
 /** ---:[ Single ]:--- */
@@ -1619,28 +1611,6 @@ a:active {
 	margin-left: auto;
 	margin-right: auto;
 }
-.js .blog .hentry,
-.js .archive .hentry,
-.js .search .hentry {
-	text-align: center;
-	-webkit-transition: background-color 200ms linear;
-	-moz-transition: background-color 200ms linear;
-	-o-transition: background-color 200ms linear;
-	transition: background-color 200ms linear;
-}
-.js .blog .hentry:hover,
-.js .archive .hentry:hover,
-.js .search .hentry:hover {
-	background-color: #fcfcfc;
-}
-.js .blog .entry-header,
-.js .archive .entry-header,
-.js .search .entry-header,
-.js .blog .entry-summary,
-.js .archive .entry-summary,
-.js .search .entry-summary {
-	text-align: center;
-}
 .js .blog .entry-summary p,
 .js .archive .entry-summary p,
 .js .search .entry-summary p {
@@ -1655,7 +1625,7 @@ a:active {
 .js .blog .sticky:hover,
 .js .archive .sticky:hover,
 .js .search .sticky:hover {
-	background-color: #6699cc;
+	background-color: #f16e71;
 }
 .js .blog .sticky .entry-title a,
 .js .archive .sticky .entry-title a,
@@ -1676,7 +1646,6 @@ a:active {
 	padding-top: 3em;
 	padding-bottom: 3em;
 	background: #f2777a;
-	border-bottom: 1px solid #f6f6f6;
 	color: #FFF;
 	text-align: center;
 }
@@ -1702,40 +1671,321 @@ a:active {
 /** ----------------------------------------:[ 10.2 - Post Formats ]:--- */
 
 /** ---:[ With JavaScript ]:--- */
+.js .blog .format-image.has-post-thumbnail,
+.js .archive .format-image.has-post-thumbnail,
+.js .search .format-image.has-post-thumbnail {
+	color: #FFF;
+}
+.js .blog .format-image.has-post-thumbnail a,
+.js .archive .format-image.has-post-thumbnail a,
+.js .search .format-image.has-post-thumbnail a {
+	color: #FFF;
+}
+.js .blog .format-image.has-post-thumbnail .entry-title,
+.js .archive .format-image.has-post-thumbnail .entry-title,
+.js .search .format-image.has-post-thumbnail .entry-title {
+	font-size: 1.5em;
+}
+.js .blog .format-image.has-post-thumbnail .entry-title a,
+.js .archive .format-image.has-post-thumbnail .entry-title a,
+.js .search .format-image.has-post-thumbnail .entry-title a {
+	padding: .5em;
+	background: #ececec;
+	border-radius: 2px;
+	color: #2d2d2d;
+}
+.js .blog .format-image.has-post-thumbnail .entry-summary p,
+.js .archive .format-image.has-post-thumbnail .entry-summary p,
+.js .search .format-image.has-post-thumbnail .entry-summary p {
+	display: inline-block;
+	padding: .75em;
+	background: #ececec;
+	border-radius: 2px;
+	color: #2d2d2d;
+}
+.js .blog .format-audio .entry-title,
+.js .archive .format-audio .entry-title,
+.js .search .format-audio .entry-title,
+.js .blog .format-video .entry-title,
+.js .archive .format-video .entry-title,
+.js .search .format-video .entry-title {
+	font-size: 1.5em;
+}
+.js .blog .format-audio .entry-audio,
+.js .archive .format-audio .entry-audio,
+.js .search .format-audio .entry-audio,
+.js .blog .format-video .entry-audio,
+.js .archive .format-video .entry-audio,
+.js .search .format-video .entry-audio {
+	margin-bottom: 1em;
+}
 .js .blog .format-status,
 .js .archive .format-status,
 .js .search .format-status {
 	background: #6699cc;
 	color: #FFF;
+	border-bottom-color: #538cc6;
 }
-.js .blog .format-status .entry-title a,
-.js .archive .format-status .entry-title a,
-.js .search .format-status .entry-title a {
+.js .blog .format-status > [class^="entry-"],
+.js .archive .format-status > [class^="entry-"],
+.js .search .format-status > [class^="entry-"] {
+	width: 100%;
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.js .blog .format-status a,
+.js .archive .format-status a,
+.js .search .format-status a {
+	color: #FFF;
+}
+.js .blog .format-status a:hover,
+.js .archive .format-status a:hover,
+.js .search .format-status a:hover {
+	color: #f2f2f2;
+}
+.js .blog .format-status .entry-title,
+.js .archive .format-status .entry-title,
+.js .search .format-status .entry-title {
+	font-size: 1.5em;
+}
+.js .blog .format-status .entry-summary,
+.js .archive .format-status .entry-summary,
+.js .search .format-status .entry-summary {
+	font-size: 30px;
+	font-size: 1.66666667rem;
+}
+.js .blog .format-status .entry-meta,
+.js .archive .format-status .entry-meta,
+.js .search .format-status .entry-meta {
+	margin-bottom: 0;
+	margin-top: 1.5em;
 	color: #FFF;
 }
 .js .blog .format-aside,
 .js .archive .format-aside,
 .js .search .format-aside {
 	background: #cc99cc;
+	border-bottom-color: #c388c3;
 	color: #FFF;
 }
 .js .blog .format-aside > [class^="entry-"],
 .js .archive .format-aside > [class^="entry-"],
 .js .search .format-aside > [class^="entry-"] {
 	width: 100%;
-	max-width: 600px;
+	max-width: 540px;
 	margin-left: auto;
 	margin-right: auto;
+}
+.js .blog .format-aside a,
+.js .archive .format-aside a,
+.js .search .format-aside a {
+	color: #FFF;
+}
+.js .blog .format-aside a:hover,
+.js .archive .format-aside a:hover,
+.js .search .format-aside a:hover {
+	color: #f2f2f2;
 }
 .js .blog .format-aside .entry-title,
 .js .archive .format-aside .entry-title,
 .js .search .format-aside .entry-title {
 	font-size: 1.5em;
 }
-.js .blog .format-aside .entry-title a,
-.js .archive .format-aside .entry-title a,
-.js .search .format-aside .entry-title a {
+.js .blog .format-aside .entry-meta-categories,
+.js .archive .format-aside .entry-meta-categories,
+.js .search .format-aside .entry-meta-categories {
+	margin-bottom: 1em;
+}
+.js .blog .format-aside .entry-meta-categories a,
+.js .archive .format-aside .entry-meta-categories a,
+.js .search .format-aside .entry-meta-categories a {
+	border-bottom: 1px solid #FFF;
+	-webkit-transition: all 100ms linear;
+	-moz-transition: all 100ms linear;
+	-o-transition: all 100ms linear;
+	transition: all 100ms linear;
+}
+.js .blog .format-aside .entry-meta-categories a:hover,
+.js .archive .format-aside .entry-meta-categories a:hover,
+.js .search .format-aside .entry-meta-categories a:hover {
+	background: #b366b3;
+	border-bottom-color: transparent;
+}
+.js .blog .format-aside .entry-meta-tags a,
+.js .archive .format-aside .entry-meta-tags a,
+.js .search .format-aside .entry-meta-tags a {
+	background-color: #c388c3;
+	-webkit-transition: background-color 100ms linear;
+	-moz-transition: background-color 100ms linear;
+	-o-transition: background-color 100ms linear;
+	transition: background-color 100ms linear;
+}
+.js .blog .format-aside .entry-meta-tags a:hover,
+.js .archive .format-aside .entry-meta-tags a:hover,
+.js .search .format-aside .entry-meta-tags a:hover {
+	background-color: #b366b3;
+}
+.js .blog .format-link,
+.js .archive .format-link,
+.js .search .format-link {
+	background: #66cccc;
+	border-bottom-color: #53c6c6;
 	color: #FFF;
+}
+.js .blog .format-link > [class^="entry-"],
+.js .archive .format-link > [class^="entry-"],
+.js .search .format-link > [class^="entry-"] {
+	width: 100%;
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.js .blog .format-link a,
+.js .archive .format-link a,
+.js .search .format-link a {
+	color: #FFF;
+}
+.js .blog .format-link a:hover,
+.js .archive .format-link a:hover,
+.js .search .format-link a:hover {
+	color: #f2f2f2;
+}
+.js .blog .format-link .entry-title,
+.js .archive .format-link .entry-title,
+.js .search .format-link .entry-title {
+	font-size: 1.5em;
+}
+.js .blog .format-link .entry-meta,
+.js .archive .format-link .entry-meta,
+.js .search .format-link .entry-meta {
+	margin-bottom: 1em;
+}
+.js .blog .format-link .entry-summary a,
+.js .archive .format-link .entry-summary a,
+.js .search .format-link .entry-summary a {
+	border-bottom: 1px solid #FFF;
+	-webkit-transition: all 100ms linear;
+	-moz-transition: all 100ms linear;
+	-o-transition: all 100ms linear;
+	transition: all 100ms linear;
+}
+.js .blog .format-link .entry-summary a:hover,
+.js .archive .format-link .entry-summary a:hover,
+.js .search .format-link .entry-summary a:hover {
+	background: #39acac;
+	border-bottom-color: transparent;
+}
+.js .single .format-audio .entry-meta-time,
+.js .single .format-video .entry-meta-time {
+	margin-bottom: 0;
+}
+.js .single .format-status {
+	background: #6699cc;
+	color: #FFF;
+	border-bottom-color: #538cc6;
+}
+.js .single .format-status > [class^="entry-"] {
+	width: 100%;
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.js .single .format-status a {
+	color: #FFF;
+}
+.js .single .format-status a:hover {
+	color: #f2f2f2;
+}
+.js .single .format-status .entry-title {
+	font-size: 1.5em;
+}
+.js .single .format-status .entry-summary {
+	font-size: 30px;
+	font-size: 1.66666667rem;
+}
+.js .single .format-status .entry-meta {
+	margin-bottom: 0;
+	margin-top: 1.5em;
+	color: #FFF;
+}
+.js .single .format-aside {
+	background: #cc99cc;
+	border-bottom-color: #c388c3;
+	color: #FFF;
+}
+.js .single .format-aside > [class^="entry-"] {
+	width: 100%;
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.js .single .format-aside a {
+	color: #FFF;
+}
+.js .single .format-aside a:hover {
+	color: #f2f2f2;
+}
+.js .single .format-aside .entry-title {
+	font-size: 1.5em;
+}
+.js .single .format-aside .entry-meta-categories {
+	margin-bottom: 1em;
+}
+.js .single .format-aside .entry-meta-categories a {
+	border-bottom: 1px solid #FFF;
+	-webkit-transition: all 100ms linear;
+	-moz-transition: all 100ms linear;
+	-o-transition: all 100ms linear;
+	transition: all 100ms linear;
+}
+.js .single .format-aside .entry-meta-categories a:hover {
+	background: #b366b3;
+	border-bottom-color: transparent;
+}
+.js .single .format-aside .entry-meta-tags a {
+	background-color: #c388c3;
+	-webkit-transition: background-color 100ms linear;
+	-moz-transition: background-color 100ms linear;
+	-o-transition: background-color 100ms linear;
+	transition: background-color 100ms linear;
+}
+.js .single .format-aside .entry-meta-tags a:hover {
+	background-color: #b366b3;
+}
+.js .single .format-link {
+	background: #66cccc;
+	border-bottom-color: #53c6c6;
+	color: #FFF;
+}
+.js .single .format-link > [class^="entry-"] {
+	width: 100%;
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.js .single .format-link a {
+	color: #FFF;
+}
+.js .single .format-link a:hover {
+	color: #f2f2f2;
+}
+.js .single .format-link .entry-title {
+	font-size: 1.5em;
+}
+.js .single .format-link .entry-meta {
+	margin-bottom: 1em;
+}
+.js .single .format-link .entry-summary a {
+	border-bottom: 1px solid #FFF;
+	-webkit-transition: all 100ms linear;
+	-moz-transition: all 100ms linear;
+	-o-transition: all 100ms linear;
+	transition: all 100ms linear;
+}
+.js .single .format-link .entry-summary a:hover {
+	background: #39acac;
+	border-bottom-color: transparent;
 }
 
 /** ----------------------------------------:[ 10.3 - Comments ]:--- */
@@ -1777,7 +2027,6 @@ a:active {
 #comments li.odd,
 #comments li.even {
 	clear: both;
-	*zoom: 1;
 }
 #comments li.odd:before,
 #comments li.even:before,
@@ -1904,7 +2153,6 @@ a:active {
 }
 #respond .comment-form {
 	margin-top: 3em;
-	*zoom: 1;
 }
 #respond .comment-form:before,
 #respond .comment-form:after {
@@ -2033,9 +2281,6 @@ a:active {
 }
 
 /** ---:[ Gallery ]:--- */
-.gallery {
-	*zoom: 1;
-}
 .gallery:before,
 .gallery:after {
 	content: " ";
@@ -2192,8 +2437,8 @@ object {
 }
 .site-toggles .main-navigation-toggle:hover,
 .site-toggles .widget-area-toggle:hover {
-	background: #f2777a;
-	background: rgba(242, 119, 122, 0.8);
+	background: #2d2d2d;
+	background: rgba(45, 45, 45, 0.8);
 }
 .site-toggles .main-navigation-toggle:hover .toggle-title,
 .site-toggles .widget-area-toggle:hover .toggle-title {
@@ -2239,7 +2484,6 @@ object {
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 3em;
-	*zoom: 1;
 }
 #site-supplementary:before,
 #site-supplementary:after {

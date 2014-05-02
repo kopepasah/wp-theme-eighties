@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php if ( in_array( get_post_format(), array( 'aside', 'status', 'link' ) ) ) : ?>
+			<?php if ( in_array( get_post_format(), array( 'aside', 'status', 'link', 'video', 'audio' ) ) ) : ?>
 				<?php get_template_part( 'content',  get_post_format() ); ?>
 			<?php else : ?>
 				<?php get_template_part( 'content', 'single' ); ?>

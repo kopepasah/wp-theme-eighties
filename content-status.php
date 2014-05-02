@@ -11,12 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( has_post_thumbnail() ) : ?>
-		<figure class="entry-image" <?php eighties_backstretch_data( get_the_ID() ); ?>>
+		<figure class="entry-image">
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'large' ); ?></a>
 		</figure>
 	<?php endif; ?><!-- .entry-image -->
 
-	<div class="entry-summary" <?php eighties_backstretch_data( get_the_ID() ); ?>>
+	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
