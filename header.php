@@ -30,12 +30,12 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'eighties' ); ?></a>
+			<a class="skip-link screen-reader-text" href="#content" <?php echo ( get_header_image() ) ? 'data-backstretch="' . get_header_image() . '"' : ''; ?>><?php _e( 'Skip to content', 'eighties' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 
 		<header id="masthead" class="site-header" role="banner" data-0="height: 600px; overflow: hidden;" data-600="height: 0px;">
-			<div class="site-branding" <?php echo ( get_header_image() ) ? 'data-backstretch="' . get_header_image() . '"' : ''; ?> data-0="opacity:1;" data-300="opacity:0;">
+			<div class="site-branding" data-0="opacity:1;" data-300="opacity:0;">
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>

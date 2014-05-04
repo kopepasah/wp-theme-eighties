@@ -150,8 +150,10 @@ textarea {
 	a {
 		color: #FFF;
 		border-bottom: 1px solid #FFF;
+		.transition( ~'background-color 200ms linear, border-color 200ms linear' );
 		&:hover {
-			border-bottom: none;
+			color: #FFF;
+			border-bottom-color: transparent;
 		}
 	}
 	&:before {
@@ -179,6 +181,11 @@ textarea {
 }
 .success {
 	background: @success;
+	a {
+		&:hover {
+			background-color: darken( @success, 10% );
+		}
+	}
 	&:before {
 		border-right-color: lighten( @success, 5% );
 	}
@@ -188,6 +195,11 @@ textarea {
 }
 .notice {
 	background: @warning;
+	a {
+		&:hover {
+			background-color: darken( @warning, 10% );
+		}
+	}
 	&:before {
 		border-right-color: lighten( @warning, 5% );
 	}
@@ -197,6 +209,11 @@ textarea {
 }
 .error {
 	background: @danger;
+	a {
+		&:hover {
+			background-color: darken( @danger, 10% );
+		}
+	}
 	&:before {
 		border-right-color: lighten( @danger, 5% );
 	}
@@ -206,6 +223,11 @@ textarea {
 }
 .update {
 	background: @info;
+	a {
+		&:hover {
+			background-color: darken( @info, 10% );
+		}
+	}
 	&:before {
 		border-right-color: lighten( @info, 5% );
 	}

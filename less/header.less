@@ -40,13 +40,11 @@
 		line-height: 1;
 		color: white;
 		padding: 5px 10px;
-		background: darken( @dark , 5% );
-		background: fadeout( darken( @dark , 5% ), 20% );
+		background: @dark;
 		border-radius: 2px;
 		.transition( ~'background 100ms linear' );
 		&:hover {
 			background: @dark;
-			background: fadeout( @dark, 20% );
 			.toggle-title {
 				opacity: 1;
 			}

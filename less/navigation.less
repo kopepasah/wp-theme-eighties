@@ -4,11 +4,11 @@
 a {
 	color: @primary;
 	text-decoration: none;
-	.transition( ~'color .2s ease' );
+	.transition( ~'color 200ms ease' );
 	&:hover,
 	&:focus,
 	&:active {
-		color: @secondary;
+		color: darken( @primary, 5% );
 	}
 }
 
@@ -143,14 +143,13 @@ a {
 		width: 100%;
 		z-index: 1000;
 		opacity: 0;
-		background: darken( @dark, 5% );
-		background: fadeout( darken( @dark, 5% ), 5% );
-		.transition( ~'opacity 300ms linear, bottom 0s linear 300ms' );
+		background: @dark;
+		.transition( ~'opacity 200ms linear, bottom 0s linear 200ms' );
 		&-open {
 			#site-navigation {
 				bottom: 0;
 				opacity: 1;
-				.transition( ~'opacity 300ms linear, bottom 0s linear' );
+				.transition( ~'opacity 200ms linear, bottom 0s linear' );
 			}
 			#page {
 				position: absolute;
@@ -160,8 +159,8 @@ a {
 			}
 			#primary,
 			#masthead {
-				.transition( ~'all 100ms linear 300ms' );
-				.filter( blur( 5px ) );
+				// .transition( ~'all 100ms linear 300ms' );
+				// .filter( blur( 5px ) );
 			}
 		}
 		.menu {

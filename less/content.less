@@ -78,6 +78,7 @@
 				padding: 0 .5em;
 				background: @light;
 				color: darken( @light, 40% );
+				.transition( ~'background 200ms linear, color 200ms ease' );
 				&:hover {
 					background: @primary;
 					color: #FFF;
@@ -101,7 +102,7 @@
 .single {
 	.entry {
 		&-title {
-			line-height: 1.5;
+			// line-height: 1.5;
 		}
 	}
 }
@@ -163,7 +164,7 @@
 			background-color: @primary;
 			color: #FFF;
 			&:hover {
-				background-color: darken( @primary, 2% );
+				// background-color: darken( @primary, 2% );
 			}
 			.entry {
 				&-title {
@@ -195,12 +196,16 @@
 		&-header {
 			padding-top: @spacing-base;
 			padding-bottom: @spacing-base;
-			background: @primary;
+			background: @base-19;
 			color: #FFF;
 			text-align: center;
 		}
 		&-title {
 			margin: 0;
+		}
+		&-description {
+			margin-top: 1em;
+			.max-width( 500px );
 		}
 		&-content {
 			padding-top: @spacing-base;

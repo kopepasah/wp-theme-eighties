@@ -2,7 +2,7 @@
  * Scripts for the custom header.
 */
 (function( $ ) {
-	$( '#masthead' ).backstretch( $( '#masthead .site-branding' ).data( 'backstretch' ) );
+	$( '#masthead' ).backstretch( $( '#masthead .screen-reader-text' ).data( 'backstretch' ) );
 
 	skrollr.init();
 }( jQuery ));
