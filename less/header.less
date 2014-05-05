@@ -38,16 +38,13 @@
 		z-index: 999;
 		.font-size( 40 );
 		line-height: 1;
-		color: white;
+		color: lighten( @dark, 10% );
 		padding: 5px 10px;
-		background: @dark;
+		background: #FFF;
 		border-radius: 2px;
-		.transition( ~'background 100ms linear' );
+		.transition( ~'color 100ms linear' );
 		&:hover {
-			background: @dark;
-			.toggle-title {
-				opacity: 1;
-			}
+			color: @dark;
 		}
 	}
 	.widget-area-toggle {

@@ -182,6 +182,14 @@ a img {
 }
 
 /** -----------------------------------------------------:[ 2.0 - Typography ]:---------- */
+::-moz-selection {
+	color: #FFF;
+	background: #f2777a;
+}
+::selection {
+	color: #FFF;
+	background: #f2777a;
+}
 html {
 	font-size: 18px;
 }
@@ -598,12 +606,17 @@ textarea:focus {
 .update a {
 	color: #FFF;
 	border-bottom: 1px solid #FFF;
+	-webkit-transition: background-color 200ms linear, border-color 200ms linear;
+	-moz-transition: background-color 200ms linear, border-color 200ms linear;
+	-o-transition: background-color 200ms linear, border-color 200ms linear;
+	transition: background-color 200ms linear, border-color 200ms linear;
 }
 .success a:hover,
 .error a:hover,
 .notice a:hover,
 .update a:hover {
-	border-bottom: none;
+	color: #FFF;
+	border-bottom-color: transparent;
 }
 .success:before,
 .error:before,
@@ -636,6 +649,9 @@ textarea:focus {
 .success {
 	background: #99cc99;
 }
+.success a:hover {
+	background-color: #77bb77;
+}
 .success:before {
 	border-right-color: #aad5aa;
 }
@@ -644,6 +660,9 @@ textarea:focus {
 }
 .notice {
 	background: #ffcc66;
+}
+.notice a:hover {
+	background-color: #ffbb33;
 }
 .notice:before {
 	border-right-color: #ffd480;
@@ -654,6 +673,9 @@ textarea:focus {
 .error {
 	background: #f2777a;
 }
+.error a:hover {
+	background-color: #ee484c;
+}
 .error:before {
 	border-right-color: #f48e91;
 }
@@ -662,6 +684,9 @@ textarea:focus {
 }
 .update {
 	background: #6699cc;
+}
+.update a:hover {
+	background-color: #407fbf;
 }
 .update:before {
 	border-right-color: #79a6d2;
@@ -676,15 +701,15 @@ textarea:focus {
 a {
 	color: #f2777a;
 	text-decoration: none;
-	-webkit-transition: color .2s ease;
-	-moz-transition: color .2s ease;
-	-o-transition: color .2s ease;
-	transition: color .2s ease;
+	-webkit-transition: color 200ms ease;
+	-moz-transition: color 200ms ease;
+	-o-transition: color 200ms ease;
+	transition: color 200ms ease;
 }
 a:hover,
 a:focus,
 a:active {
-	color: #6699cc;
+	color: #f06063;
 }
 
 /** ----------------------------------------:[ 5.2 - Menus ]:--- */
@@ -804,38 +829,25 @@ a:active {
 	width: 100%;
 	z-index: 1000;
 	opacity: 0;
-	background: #202020;
-	background: rgba(32, 32, 32, 0.95);
-	-webkit-transition: opacity 300ms linear, bottom 0s linear 300ms;
-	-moz-transition: opacity 300ms linear, bottom 0s linear 300ms;
-	-o-transition: opacity 300ms linear, bottom 0s linear 300ms;
-	transition: opacity 300ms linear, bottom 0s linear 300ms;
+	background: #2d2d2d;
+	-webkit-transition: opacity 200ms linear, bottom 0s linear 200ms;
+	-moz-transition: opacity 200ms linear, bottom 0s linear 200ms;
+	-o-transition: opacity 200ms linear, bottom 0s linear 200ms;
+	transition: opacity 200ms linear, bottom 0s linear 200ms;
 }
 .js .main-navigation-open #site-navigation {
 	bottom: 0;
 	opacity: 1;
-	-webkit-transition: opacity 300ms linear, bottom 0s linear;
-	-moz-transition: opacity 300ms linear, bottom 0s linear;
-	-o-transition: opacity 300ms linear, bottom 0s linear;
-	transition: opacity 300ms linear, bottom 0s linear;
+	-webkit-transition: opacity 200ms linear, bottom 0s linear;
+	-moz-transition: opacity 200ms linear, bottom 0s linear;
+	-o-transition: opacity 200ms linear, bottom 0s linear;
+	transition: opacity 200ms linear, bottom 0s linear;
 }
 .js .main-navigation-open #page {
 	position: absolute;
 	left: 0;
 	right: 0;
 	z-index: 0;
-}
-.js .main-navigation-open #primary,
-.js .main-navigation-open #masthead {
-	-webkit-transition: all 100ms linear 300ms;
-	-moz-transition: all 100ms linear 300ms;
-	-o-transition: all 100ms linear 300ms;
-	transition: all 100ms linear 300ms;
-	-webkit-filter: blur(5px);
-	-moz-filter: blur(5px);
-	-ms-filter: blur(5px);
-	-o-filter: blur(5px);
-	filter: blur(5px);
 }
 .js .main-navigation li {
 	display: block;
@@ -1576,6 +1588,10 @@ a:active {
 	padding: 0 .5em;
 	background: #ececec;
 	color: #868686;
+	-webkit-transition: background 200ms linear, color 200ms ease;
+	-moz-transition: background 200ms linear, color 200ms ease;
+	-o-transition: background 200ms linear, color 200ms ease;
+	transition: background 200ms linear, color 200ms ease;
 }
 .entry-meta-tags a:hover {
 	background: #f2777a;
@@ -1593,9 +1609,6 @@ a:active {
 }
 
 /** ---:[ Single ]:--- */
-.single .entry-title {
-	line-height: 1.5;
-}
 
 /** ---:[ Pages ]:--- */
 
@@ -1622,11 +1635,6 @@ a:active {
 	background-color: #f2777a;
 	color: #FFF;
 }
-.js .blog .sticky:hover,
-.js .archive .sticky:hover,
-.js .search .sticky:hover {
-	background-color: #f16e71;
-}
 .js .blog .sticky .entry-title a,
 .js .archive .sticky .entry-title a,
 .js .search .sticky .entry-title a {
@@ -1645,12 +1653,19 @@ a:active {
 .js .page-header {
 	padding-top: 3em;
 	padding-bottom: 3em;
-	background: #f2777a;
+	background: #515151;
 	color: #FFF;
 	text-align: center;
 }
 .js .page-title {
 	margin: 0;
+}
+.js .page-description {
+	margin-top: 1em;
+	width: 100%;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .js .page-content {
 	padding-top: 3em;
@@ -2135,7 +2150,7 @@ a:active {
 	color: #f2777a;
 }
 #respond #comment {
-	height: 65px;
+	height: 75px;
 	-webkit-transition: height 0.2s ease;
 	-moz-transition: height 0.2s ease;
 	-o-transition: height 0.2s ease;
@@ -2425,24 +2440,18 @@ object {
 	font-size: 40px;
 	font-size: 2.22222222rem;
 	line-height: 1;
-	color: white;
+	color: #474747;
 	padding: 5px 10px;
-	background: #202020;
-	background: rgba(32, 32, 32, 0.8);
+	background: #FFF;
 	border-radius: 2px;
-	-webkit-transition: background 100ms linear;
-	-moz-transition: background 100ms linear;
-	-o-transition: background 100ms linear;
-	transition: background 100ms linear;
+	-webkit-transition: color 100ms linear;
+	-moz-transition: color 100ms linear;
+	-o-transition: color 100ms linear;
+	transition: color 100ms linear;
 }
 .site-toggles .main-navigation-toggle:hover,
 .site-toggles .widget-area-toggle:hover {
-	background: #2d2d2d;
-	background: rgba(45, 45, 45, 0.8);
-}
-.site-toggles .main-navigation-toggle:hover .toggle-title,
-.site-toggles .widget-area-toggle:hover .toggle-title {
-	opacity: 1;
+	color: #2d2d2d;
 }
 .site-toggles .widget-area-toggle {
 	left: auto;
