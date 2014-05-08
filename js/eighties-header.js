@@ -4,5 +4,10 @@
 (function( $ ) {
 	$( '#masthead' ).backstretch( $( '#masthead .screen-reader-text' ).data( 'backstretch' ) );
 
-	skrollr.init();
+	// Initiate skrollr, but not on mobile devices.
+	if ( ! eighties_is_mobile.any() ) {
+		skrollr.init({
+			forceHeight: false
+		});
+	}
 }( jQuery ));

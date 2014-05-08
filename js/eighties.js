@@ -67,3 +67,29 @@
 		}
 	});
 } )( jQuery );
+
+/**
+ * Set up a bariable to check for if we are on a
+ * mobile device, because skrollr does not work
+ * well on mobile.
+*/
+var eighties_is_mobile = {
+	Android: function() {
+		return navigator.userAgent.match(/Android/i);
+	},
+	BlackBerry: function() {
+		return navigator.userAgent.match(/BlackBerry/i);
+	},
+	iOS: function() {
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	},
+	Opera: function() {
+		return navigator.userAgent.match(/Opera Mini/i);
+	},
+	Windows: function() {
+		return navigator.userAgent.match(/IEMobile/i);
+	},
+	any: function() {
+		return ( eighties_is_mobile.Android() || eighties_is_mobile.BlackBerry() || eighties_is_mobile.iOS() || eighties_is_mobile.Opera() || eighties_is_mobile.Windows() );
+	}
+};
