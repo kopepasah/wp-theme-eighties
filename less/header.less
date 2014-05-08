@@ -15,6 +15,7 @@
 		font-family: 'Righteous', cursive;
 		color: white;
 		margin: 0;
+		.hyphens();
 	}
 	&-title {
 		.font-size( 160 );
@@ -25,6 +26,16 @@
 	}
 	&-description {
 		margin-top: 1.5em;
+	}
+	@media screen and (max-width: 1000px) {
+		&-branding {
+			clear: both;
+			padding: 5em 0;
+			text-align: center;
+		}
+		&-title {
+			.font-size( 80 );
+		}
 	}
 }
 
@@ -68,6 +79,19 @@
 		.main-navigation-toggle,
 		.widget-area-toggle {
 			top: 64px;
+		}
+	}
+	@media screen and (max-width: 1000px) {
+		.clearfix();
+		.main-navigation-toggle,
+		.widget-area-toggle {
+			position: static;
+		}
+		.main-navigation-toggle {
+			float: left;
+		}
+		.widget-area-toggle {
+			float: right;
 		}
 	}
 }

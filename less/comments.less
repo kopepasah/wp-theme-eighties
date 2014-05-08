@@ -20,6 +20,24 @@
 	.no-comments {
 		.max-width( 760px );
 	}
+	@media screen and (max-width: 760px) {
+		padding: @spacing-base;
+		.avatar {
+			max-width: 35px;
+		}
+		.comment-wrap {
+			margin-left: 55px;
+			margin-bottom: @spacing-base / 2;
+		}
+	}
+	@media screen and (max-width: 500px) {
+		.avatar {
+			// position: static;
+		}
+		.comment-wrap {
+			// margin-left: 0;
+		}
+	}
 }
 
 #comments {
@@ -35,6 +53,12 @@
 	.children {
 		margin: 0;
 		margin-left: 85px;
+		@media screen and (max-width: 800px) {
+			margin-left: 55px;
+		}
+		@media screen and (max-width: 500px) {
+			// margin-left: 5px;
+		}
 	}
 	.comment {
 		display: block;

@@ -328,20 +328,48 @@ a {
 	.nav {
 		&-previous,
 		&-next {
-			width: 48%;
-		}
-		&-previous {
-			float: left;
 			a {
-				float: left;
 				.btn;
 			}
 		}
-		&-next {
-			float: right;
-			a {
+	}
+	@media screen and (max-width: 920px) {
+		padding: @spacing-base;
+		.nav {
+			&-previous {
+				margin-bottom: @spacing-base / 2;
+			}
+		}
+	}
+	@media screen and (max-width: 760px) {
+		.nav {
+			&-previous {
+				margin-bottom: @spacing-base / 2;
+			}
+			&-previous,
+			&-next {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+	@media screen and (min-width: 760px) {
+		.nav {
+			&-previous,
+			&-next {
+				width: 48%;
+			}
+			&-previous {
+				float: left;
+				a {
+					float: left;
+				}
+			}
+			&-next {
 				float: right;
-				.btn;
+				a {
+					float: right;
+				}
 			}
 		}
 	}

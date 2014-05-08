@@ -47,6 +47,10 @@
 		.heading( 3, 36 );
 		line-height: 1.2;
 		margin-top: 0;
+		.hyphens();
+		@media screen and (max-width: 760px) {
+			.heading( 2.25, 24 );
+		}
 		a {
 			color: @dark;
 			&:hover {
@@ -213,6 +217,11 @@
 			text-align: center;
 		}
 	}
+	@media screen and (max-width: 760px) {
+		.hentry {
+			padding: @spacing-base;
+		}
+	}
 }
 
 /** ---:[ Without JavaScript ]:--- */
@@ -243,6 +252,7 @@
 					.entry {
 						&-title {
 							font-size: 1.5em;
+							line-height: 2;
 							a {
 								padding: .5em;
 								background: @light;

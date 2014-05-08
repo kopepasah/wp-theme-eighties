@@ -10,6 +10,11 @@
 html {
 	font-size: @font-size-base;
 }
+@media screen and (max-width: 760px) {
+	html {
+		font-size: @font-size-base - 2;
+	}
+}
 body,
 button,
 input,
@@ -43,6 +48,27 @@ h5, h6 {
 }
 h6 {
 	.heading( 1, 36 );
+}
+@media screen and (max-width: 760px) {
+	h1 {
+		.heading( 1.75, 24 );
+		letter-spacing: -1px;
+	}
+	h2 {
+		.heading( 1.5, 24 );
+	}
+	h3 {
+		.heading( 1.25, 24 );
+	}
+	h4 {
+		.heading( 1, 24 );
+	}
+	h5, h6 {
+		.heading( .75, 24 );
+	}
+	h6 {
+		.heading( .5, 24 );
+	}
 }
 p {
 	margin-bottom: unit( ( 36 / @font-size-base ), em );
