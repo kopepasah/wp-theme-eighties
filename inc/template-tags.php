@@ -292,9 +292,10 @@ function eighties_backstretch_data( $post_id ) {
 	if ( ! has_post_thumbnail( $post_id ) ) {
 		return;
 	}
-	
+
 	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' );
+
 	$data = 'data-backstretch="' . $image[0] . '"';
-	
+
 	echo $data;
 }
