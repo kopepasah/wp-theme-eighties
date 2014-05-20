@@ -1,0 +1,277 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Eighties 1.0.0\n"
+"POT-Creation-Date: 2014-05-21 00:03+0900\n"
+"PO-Revision-Date: 2014-05-21 00:03+0900\n"
+"Last-Translator: \n"
+"Language-Team: Justin Kopepasah <justin@kopepasah.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n_noop;translate_nooped_plural\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "404"
+msgstr ""
+
+#: 404.php:19
+msgid "Your request was not found."
+msgstr ""
+
+#: 404.php:24
+msgid "Perhaps try a search?"
+msgstr ""
+
+#: archive.php:29
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: archive.php:32
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: archive.php:35
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:35
+msgid "F Y"
+msgstr ""
+
+#: archive.php:38
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: archive.php:38
+msgid "Y"
+msgstr ""
+
+#: archive.php:41
+msgid "Asides"
+msgstr ""
+
+#: archive.php:44
+msgid "Galleries"
+msgstr ""
+
+#: archive.php:47
+msgid "Images"
+msgstr ""
+
+#: archive.php:50
+msgid "Videos"
+msgstr ""
+
+#: archive.php:53
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:56
+msgid "Links"
+msgstr ""
+
+#: archive.php:59
+msgid "Statuses"
+msgstr ""
+
+#: archive.php:62
+msgid "Audios"
+msgstr ""
+
+#: archive.php:65
+msgid "Chats"
+msgstr ""
+
+#: archive.php:68
+msgid "Archives"
+msgstr ""
+
+#: comments.php:35
+msgid "Leave a reply..."
+msgstr ""
+
+#: comments.php:37
+msgid "Cancel"
+msgstr ""
+
+#: comments.php:38
+msgid "Submit Reply"
+msgstr ""
+
+#: comments.php:54
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:59
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:60
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:61
+msgid "Newer Comments"
+msgstr ""
+
+#: content-aside.php:17 content-audio.php:16 content-single.php:13
+#: content-video.php:16
+msgid ", "
+msgstr ""
+
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with "
+"different keywords."
+msgstr ""
+
+#: content-none.php:30
+msgid "It seems we cannot find what you are looking for. Perhaps try a search?"
+msgstr ""
+
+#: content-page.php:20 content-single.php:32
+msgid "Pages:"
+msgstr ""
+
+#: footer.php:19
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:19
+#, php-format
+msgid "Built with %s"
+msgstr ""
+
+#: footer.php:21
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:53
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:82
+msgid "Interactive Sidebar"
+msgstr ""
+
+#: functions.php:84
+msgid ""
+"This sidebar opens as a toggle on the right side of a users browser window. "
+"Note that the toggle feature requires JavaScript in order to function. But "
+"no need to worry, a plain sidebar will appear if JavaScript does not work. "
+"If empty, the sidebar with not display."
+msgstr ""
+
+#: functions.php:93
+msgid "Footer"
+msgstr ""
+
+#: functions.php:95
+msgid ""
+"Widget area for the footer. If no widgets are provided, this footer will not "
+"appear."
+msgstr ""
+
+#: functions.php:117 functions.php:137 functions.php:157
+msgid "on"
+msgstr ""
+
+#: header.php:37
+msgid "Skip to content"
+msgstr ""
+
+#: inc/extras.php:92
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: inc/extras.php:195 sidebar.php:15
+msgid "Close"
+msgstr ""
+
+#: inc/jetpack.php:37
+msgid "Load More"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:27
+msgid "Older Posts"
+msgstr ""
+
+#: inc/template-tags.php:31
+msgid "Newer Posts"
+msgstr ""
+
+#: inc/template-tags.php:54
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:57 inc/template-tags.php:58
+msgid "%title"
+msgstr ""
+
+#: inc/template-tags.php:84
+#, php-format
+msgid ""
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+
+#: inc/template-tags.php:113
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:122
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: inc/template-tags.php:131
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:181
+#, php-format
+msgid "%s Day Ago"
+msgstr ""
+
+#: inc/template-tags.php:189
+#, php-format
+msgid "%s Hour Ago"
+msgstr ""
+
+#: inc/template-tags.php:197
+#, php-format
+msgid "%s Minute Ago"
+msgstr ""
+
+#: inc/template-tags.php:203
+msgid "Just now"
+msgstr ""
+
+#: search.php:18
+msgid "Results"
+msgstr ""

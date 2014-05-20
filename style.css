@@ -1,6 +1,6 @@
 /*
 Theme Name: Eighties
-Theme URI: http://kopepasah.com/themes/eighties
+Theme URI: http://kopepasah.com/project/eighties/
 Author: Justin Kopepasah
 Author URI: http://kopepasah.com/
 Description: Hi. I'm a modern theme designed to keep your content front and center.
@@ -9,7 +9,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: eighties
 Domain Path: /languages/
-Tags: light, custom-header, one-column, responsive-layout, custom-menu, sticky-post, theme-options, threaded-comments, translation-ready, custom-menu, editor-style, featured-images, full-width-template, sticky-post, theme-options, threaded-comments
+Tags: light, custom-header, one-column, responsive-layout, custom-menu, sticky-post, threaded-comments, translation-ready, editor-style, featured-images, full-width
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -376,6 +376,12 @@ ul,
 ol {
 	margin: 0 0 1.5em 3em;
 }
+@media screen and (max-width: 760px) {
+  ul,
+  ol {
+	  margin-left: 1.5em;
+  }
+}
 ul {
 	list-style: disc;
 }
@@ -387,6 +393,9 @@ li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
+li img {
+	margin: 1em 0;
+}
 dt {
 	font-weight: bold;
 }
@@ -395,6 +404,11 @@ dd {
 }
 img {
 	height: auto;
+	max-width: 100%;
+}
+audio,
+video {
+	display: inline-block;
 	max-width: 100%;
 }
 figure {
@@ -1801,8 +1815,8 @@ a:active {
 
 /** ----------------------------------------:[ 10.1 - Posts and pages ]:--- */
 .hentry {
-	padding-top: 4.5em;
-	padding-bottom: 4.5em;
+	padding-top: 3em;
+	padding-bottom: 3em;
 	border-bottom: 1px solid #f6f6f6;
 }
 .hentry img {
@@ -1815,17 +1829,23 @@ a:active {
 	line-height: 1.2;
 	margin-top: 0;
 	word-wrap: break-word;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	-o-hyphens: auto;
-	hyphens: auto;
+	-webkit-hyphens: manual;
+	-moz-hyphens: manual;
+	-ms-hyphens: manual;
+	-o-hyphens: manual;
+	hyphens: manual;
 }
 @media screen and (max-width: 760px) {
   .entry-title {
 	  margin-top: 0.59259259em;
 	  margin-bottom: 0.59259259em;
 	  font-size: 2.25em;
+	  word-wrap: break-word;
+	  -webkit-hyphens: auto;
+	  -moz-hyphens: auto;
+	  -ms-hyphens: auto;
+	  -o-hyphens: auto;
+	  hyphens: auto;
   }
 }
 .entry-title a {
