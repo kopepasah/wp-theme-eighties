@@ -66,15 +66,6 @@ function eighties_setup() {
 
 	// Add Editor Style
 	add_editor_style( 'css/editor.css' );
-
-	// Enable support for less.
-	// REMOVE Remove less support before sending to WordPress.com.
-	add_theme_support( 'less', array(
-		'enable'  => true,
-		'develop' => true,
-		'watch'   => true,
-		'minify'  => true
-	) );
 }
 endif; // eighties_setup
 add_action( 'after_setup_theme', 'eighties_setup' );
