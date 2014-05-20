@@ -56,9 +56,8 @@
 		width: 100%;
 		z-index: 1000;
 		opacity: 0;
-		color: darken( @light, 25% );
-		background: darken( @dark, 5% );
-		background: fadeout( darken( @dark, 5% ), 5% );
+		color: @light;
+		background: @dark;
 		.transition( ~'opacity 300ms linear, bottom 0s linear 300ms' );
 		.widget {
 			margin-bottom: @spacing-base;

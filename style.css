@@ -193,6 +193,11 @@ a img {
 html {
 	font-size: 18px;
 }
+@media screen and (max-width: 760px) {
+  html {
+	  font-size: 16px;
+  }
+}
 body,
 button,
 input,
@@ -244,6 +249,40 @@ h6 {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	font-size: 1em;
+}
+@media screen and (max-width: 760px) {
+  h1 {
+	  margin-top: 0.76190476em;
+	  margin-bottom: 0.76190476em;
+	  font-size: 1.75em;
+	  letter-spacing: -1px;
+  }
+  h2 {
+	  margin-top: 0.88888889em;
+	  margin-bottom: 0.88888889em;
+	  font-size: 1.5em;
+  }
+  h3 {
+	  margin-top: 1.06666667em;
+	  margin-bottom: 1.06666667em;
+	  font-size: 1.25em;
+  }
+  h4 {
+	  margin-top: 1.33333333em;
+	  margin-bottom: 1.33333333em;
+	  font-size: 1em;
+  }
+  h5,
+  h6 {
+	  margin-top: 1.77777778em;
+	  margin-bottom: 1.77777778em;
+	  font-size: 0.75em;
+  }
+  h6 {
+	  margin-top: 2.66666667em;
+	  margin-bottom: 2.66666667em;
+	  font-size: 0.5em;
+  }
 }
 p {
 	margin-bottom: 2em;
@@ -329,8 +368,9 @@ big {
 hr {
 	background-color: #ececec;
 	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+	height: 3px;
+	width: 80%;
+	margin: 0 auto 2em;
 }
 ul,
 ol {
@@ -428,6 +468,33 @@ textarea {
 	width: 100%;
 	text-align: center;
 }
+.btn-secondary {
+	background: #6699cc;
+}
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+.btn-blue {
+	background: #6699cc;
+}
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+.btn-green {
+	background: #99cc99;
+}
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active {
+	background: #99cc99;
+	box-shadow: 0 0 0 3px #99cc99;
+}
 button,
 input[type="button"],
 input[type="reset"],
@@ -474,6 +541,69 @@ input[type="reset"]-full,
 input[type="submit"]-full {
 	width: 100%;
 	text-align: center;
+}
+button-secondary,
+input[type="button"]-secondary,
+input[type="reset"]-secondary,
+input[type="submit"]-secondary {
+	background: #6699cc;
+}
+button-secondary:hover,
+input[type="button"]-secondary:hover,
+input[type="reset"]-secondary:hover,
+input[type="submit"]-secondary:hover,
+button-secondary:focus,
+input[type="button"]-secondary:focus,
+input[type="reset"]-secondary:focus,
+input[type="submit"]-secondary:focus,
+button-secondary:active,
+input[type="button"]-secondary:active,
+input[type="reset"]-secondary:active,
+input[type="submit"]-secondary:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+button-blue,
+input[type="button"]-blue,
+input[type="reset"]-blue,
+input[type="submit"]-blue {
+	background: #6699cc;
+}
+button-blue:hover,
+input[type="button"]-blue:hover,
+input[type="reset"]-blue:hover,
+input[type="submit"]-blue:hover,
+button-blue:focus,
+input[type="button"]-blue:focus,
+input[type="reset"]-blue:focus,
+input[type="submit"]-blue:focus,
+button-blue:active,
+input[type="button"]-blue:active,
+input[type="reset"]-blue:active,
+input[type="submit"]-blue:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+button-green,
+input[type="button"]-green,
+input[type="reset"]-green,
+input[type="submit"]-green {
+	background: #99cc99;
+}
+button-green:hover,
+input[type="button"]-green:hover,
+input[type="reset"]-green:hover,
+input[type="submit"]-green:hover,
+button-green:focus,
+input[type="button"]-green:focus,
+input[type="reset"]-green:focus,
+input[type="submit"]-green:focus,
+button-green:active,
+input[type="button"]-green:active,
+input[type="reset"]-green:active,
+input[type="submit"]-green:active {
+	background: #99cc99;
+	box-shadow: 0 0 0 3px #99cc99;
 }
 
 /** ---:[ Inputs ]:--- */
@@ -1016,23 +1146,12 @@ a:active {
 .comment-navigation:after {
 	clear: both;
 }
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous,
-.comment-navigation .nav-previous,
-.paging-navigation .nav-next,
-.post-navigation .nav-next,
-.comment-navigation .nav-next {
-	width: 48%;
-}
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous,
-.comment-navigation .nav-previous {
-	float: left;
-}
 .paging-navigation .nav-previous a,
 .post-navigation .nav-previous a,
-.comment-navigation .nav-previous a {
-	float: left;
+.comment-navigation .nav-previous a,
+.paging-navigation .nav-next a,
+.post-navigation .nav-next a,
+.comment-navigation .nav-next a {
 	cursor: pointer;
 	display: inline-block;
 	padding: 1em;
@@ -1055,56 +1174,18 @@ a:active {
 .paging-navigation .nav-previous a:hover,
 .post-navigation .nav-previous a:hover,
 .comment-navigation .nav-previous a:hover,
-.paging-navigation .nav-previous a:focus,
-.post-navigation .nav-previous a:focus,
-.comment-navigation .nav-previous a:focus,
-.paging-navigation .nav-previous a:active,
-.post-navigation .nav-previous a:active,
-.comment-navigation .nav-previous a:active {
-	background: #f2777a;
-	box-shadow: 0 0 0 3px #f2777a;
-	color: #FFF;
-}
-.paging-navigation .nav-previous a-full,
-.post-navigation .nav-previous a-full,
-.comment-navigation .nav-previous a-full {
-	width: 100%;
-	text-align: center;
-}
-.paging-navigation .nav-next,
-.post-navigation .nav-next,
-.comment-navigation .nav-next {
-	float: right;
-}
-.paging-navigation .nav-next a,
-.post-navigation .nav-next a,
-.comment-navigation .nav-next a {
-	float: right;
-	cursor: pointer;
-	display: inline-block;
-	padding: 1em;
-	background: #f2777a;
-	border: 0;
-	border-radius: 2px;
-	box-shadow: none;
-	color: #FFF;
-	font-family: 'Raleway', sans-serif;
-	text-transform: uppercase;
-	font-weight: 600;
-	-webkit-transition: box-shadow 100ms linear, border-color 100ms linear;
-	-moz-transition: box-shadow 100ms linear, border-color 100ms linear;
-	-o-transition: box-shadow 100ms linear, border-color 100ms linear;
-	transition: box-shadow 100ms linear, border-color 100ms linear;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
 .paging-navigation .nav-next a:hover,
 .post-navigation .nav-next a:hover,
 .comment-navigation .nav-next a:hover,
+.paging-navigation .nav-previous a:focus,
+.post-navigation .nav-previous a:focus,
+.comment-navigation .nav-previous a:focus,
 .paging-navigation .nav-next a:focus,
 .post-navigation .nav-next a:focus,
 .comment-navigation .nav-next a:focus,
+.paging-navigation .nav-previous a:active,
+.post-navigation .nav-previous a:active,
+.comment-navigation .nav-previous a:active,
 .paging-navigation .nav-next a:active,
 .post-navigation .nav-next a:active,
 .comment-navigation .nav-next a:active {
@@ -1112,11 +1193,159 @@ a:active {
 	box-shadow: 0 0 0 3px #f2777a;
 	color: #FFF;
 }
+.paging-navigation .nav-previous a-full,
+.post-navigation .nav-previous a-full,
+.comment-navigation .nav-previous a-full,
 .paging-navigation .nav-next a-full,
 .post-navigation .nav-next a-full,
 .comment-navigation .nav-next a-full {
 	width: 100%;
 	text-align: center;
+}
+.paging-navigation .nav-previous a-secondary,
+.post-navigation .nav-previous a-secondary,
+.comment-navigation .nav-previous a-secondary,
+.paging-navigation .nav-next a-secondary,
+.post-navigation .nav-next a-secondary,
+.comment-navigation .nav-next a-secondary {
+	background: #6699cc;
+}
+.paging-navigation .nav-previous a-secondary:hover,
+.post-navigation .nav-previous a-secondary:hover,
+.comment-navigation .nav-previous a-secondary:hover,
+.paging-navigation .nav-next a-secondary:hover,
+.post-navigation .nav-next a-secondary:hover,
+.comment-navigation .nav-next a-secondary:hover,
+.paging-navigation .nav-previous a-secondary:focus,
+.post-navigation .nav-previous a-secondary:focus,
+.comment-navigation .nav-previous a-secondary:focus,
+.paging-navigation .nav-next a-secondary:focus,
+.post-navigation .nav-next a-secondary:focus,
+.comment-navigation .nav-next a-secondary:focus,
+.paging-navigation .nav-previous a-secondary:active,
+.post-navigation .nav-previous a-secondary:active,
+.comment-navigation .nav-previous a-secondary:active,
+.paging-navigation .nav-next a-secondary:active,
+.post-navigation .nav-next a-secondary:active,
+.comment-navigation .nav-next a-secondary:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+.paging-navigation .nav-previous a-blue,
+.post-navigation .nav-previous a-blue,
+.comment-navigation .nav-previous a-blue,
+.paging-navigation .nav-next a-blue,
+.post-navigation .nav-next a-blue,
+.comment-navigation .nav-next a-blue {
+	background: #6699cc;
+}
+.paging-navigation .nav-previous a-blue:hover,
+.post-navigation .nav-previous a-blue:hover,
+.comment-navigation .nav-previous a-blue:hover,
+.paging-navigation .nav-next a-blue:hover,
+.post-navigation .nav-next a-blue:hover,
+.comment-navigation .nav-next a-blue:hover,
+.paging-navigation .nav-previous a-blue:focus,
+.post-navigation .nav-previous a-blue:focus,
+.comment-navigation .nav-previous a-blue:focus,
+.paging-navigation .nav-next a-blue:focus,
+.post-navigation .nav-next a-blue:focus,
+.comment-navigation .nav-next a-blue:focus,
+.paging-navigation .nav-previous a-blue:active,
+.post-navigation .nav-previous a-blue:active,
+.comment-navigation .nav-previous a-blue:active,
+.paging-navigation .nav-next a-blue:active,
+.post-navigation .nav-next a-blue:active,
+.comment-navigation .nav-next a-blue:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+.paging-navigation .nav-previous a-green,
+.post-navigation .nav-previous a-green,
+.comment-navigation .nav-previous a-green,
+.paging-navigation .nav-next a-green,
+.post-navigation .nav-next a-green,
+.comment-navigation .nav-next a-green {
+	background: #99cc99;
+}
+.paging-navigation .nav-previous a-green:hover,
+.post-navigation .nav-previous a-green:hover,
+.comment-navigation .nav-previous a-green:hover,
+.paging-navigation .nav-next a-green:hover,
+.post-navigation .nav-next a-green:hover,
+.comment-navigation .nav-next a-green:hover,
+.paging-navigation .nav-previous a-green:focus,
+.post-navigation .nav-previous a-green:focus,
+.comment-navigation .nav-previous a-green:focus,
+.paging-navigation .nav-next a-green:focus,
+.post-navigation .nav-next a-green:focus,
+.comment-navigation .nav-next a-green:focus,
+.paging-navigation .nav-previous a-green:active,
+.post-navigation .nav-previous a-green:active,
+.comment-navigation .nav-previous a-green:active,
+.paging-navigation .nav-next a-green:active,
+.post-navigation .nav-next a-green:active,
+.comment-navigation .nav-next a-green:active {
+	background: #99cc99;
+	box-shadow: 0 0 0 3px #99cc99;
+}
+@media screen and (max-width: 920px) {
+  .paging-navigation,
+  .post-navigation,
+  .comment-navigation {
+	  padding: 3em;
+  }
+  .paging-navigation .nav-previous,
+  .post-navigation .nav-previous,
+  .comment-navigation .nav-previous {
+	  margin-bottom: 1.5em;
+  }
+}
+@media screen and (max-width: 760px) {
+  .paging-navigation .nav-previous,
+  .post-navigation .nav-previous,
+  .comment-navigation .nav-previous {
+	  margin-bottom: 1.5em;
+  }
+  .paging-navigation .nav-previous,
+  .post-navigation .nav-previous,
+  .comment-navigation .nav-previous,
+  .paging-navigation .nav-next,
+  .post-navigation .nav-next,
+  .comment-navigation .nav-next {
+	  margin-left: auto;
+	  margin-right: auto;
+  }
+}
+@media screen and (min-width: 760px) {
+  .paging-navigation .nav-previous,
+  .post-navigation .nav-previous,
+  .comment-navigation .nav-previous,
+  .paging-navigation .nav-next,
+  .post-navigation .nav-next,
+  .comment-navigation .nav-next {
+	  width: 48%;
+  }
+  .paging-navigation .nav-previous,
+  .post-navigation .nav-previous,
+  .comment-navigation .nav-previous {
+	  float: left;
+  }
+  .paging-navigation .nav-previous a,
+  .post-navigation .nav-previous a,
+  .comment-navigation .nav-previous a {
+	  float: left;
+  }
+  .paging-navigation .nav-next,
+  .post-navigation .nav-next,
+  .comment-navigation .nav-next {
+	  float: right;
+  }
+  .paging-navigation .nav-next a,
+  .post-navigation .nav-next a,
+  .comment-navigation .nav-next a {
+	  float: right;
+  }
 }
 .comment-navigation {
 	padding-bottom: 0;
@@ -1175,6 +1404,33 @@ a:active {
 .js #infinite-handle span-full {
 	width: 100%;
 	text-align: center;
+}
+.js #infinite-handle span-secondary {
+	background: #6699cc;
+}
+.js #infinite-handle span-secondary:hover,
+.js #infinite-handle span-secondary:focus,
+.js #infinite-handle span-secondary:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+.js #infinite-handle span-blue {
+	background: #6699cc;
+}
+.js #infinite-handle span-blue:hover,
+.js #infinite-handle span-blue:focus,
+.js #infinite-handle span-blue:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+.js #infinite-handle span-green {
+	background: #99cc99;
+}
+.js #infinite-handle span-green:hover,
+.js #infinite-handle span-green:focus,
+.js #infinite-handle span-green:active {
+	background: #99cc99;
+	box-shadow: 0 0 0 3px #99cc99;
 }
 .js #infinite-handle span:hover {
 	opacity: .9;
@@ -1319,9 +1575,8 @@ a:active {
 	width: 100%;
 	z-index: 1000;
 	opacity: 0;
-	color: #adadad;
-	background: #202020;
-	background: rgba(32, 32, 32, 0.95);
+	color: #ececec;
+	background: #2d2d2d;
 	-webkit-transition: opacity 300ms linear, bottom 0s linear 300ms;
 	-moz-transition: opacity 300ms linear, bottom 0s linear 300ms;
 	-o-transition: opacity 300ms linear, bottom 0s linear 300ms;
@@ -1559,6 +1814,19 @@ a:active {
 	font-size: 3em;
 	line-height: 1.2;
 	margin-top: 0;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
+}
+@media screen and (max-width: 760px) {
+  .entry-title {
+	  margin-top: 0.59259259em;
+	  margin-bottom: 0.59259259em;
+	  font-size: 2.25em;
+  }
 }
 .entry-title a {
 	color: #2d2d2d;
@@ -1663,7 +1931,7 @@ a:active {
 .js .page-description {
 	margin-top: 1em;
 	width: 100%;
-	max-width: 500px;
+	max-width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -1671,6 +1939,11 @@ a:active {
 	padding-top: 3em;
 	padding-bottom: 3em;
 	text-align: center;
+}
+@media screen and (max-width: 760px) {
+  .js .hentry {
+	  padding: 3em;
+  }
 }
 
 /** ---:[ Without JavaScript ]:--- */
@@ -1700,6 +1973,7 @@ a:active {
 .js .archive .format-image.has-post-thumbnail .entry-title,
 .js .search .format-image.has-post-thumbnail .entry-title {
 	font-size: 1.5em;
+	line-height: 2;
 }
 .js .blog .format-image.has-post-thumbnail .entry-title a,
 .js .archive .format-image.has-post-thumbnail .entry-title a,
@@ -2024,13 +2298,24 @@ a:active {
 }
 .discussion .comment-wrap {
 	margin-left: 85px;
-	margin-bottom: 3em;
+	margin-bottom: 1.5em;
 }
 .discussion .no-comments {
 	width: 100%;
 	max-width: 760px;
 	margin-left: auto;
 	margin-right: auto;
+}
+@media screen and (max-width: 760px) {
+  .discussion {
+	  padding: 3em;
+  }
+  .discussion .avatar {
+	  max-width: 35px;
+  }
+  .discussion .comment-wrap {
+	  margin-left: 55px;
+  }
 }
 #comments {
 	width: 100%;
@@ -2055,9 +2340,17 @@ a:active {
 #comments li.even:after {
 	clear: both;
 }
+#comments img {
+	border-radius: 2px;
+}
 #comments .children {
 	margin: 0;
 	margin-left: 85px;
+}
+@media screen and (max-width: 800px) {
+  #comments .children {
+	  margin-left: 55px;
+  }
 }
 #comments .comment {
 	display: block;
@@ -2080,6 +2373,14 @@ a:active {
 }
 #comments .comment.even {
 	background: #FFF;
+}
+#comments .comment.depth-1:before {
+	content: ' ';
+	background-color: #ececec;
+	border: 0;
+	height: 3px;
+	width: 80%;
+	margin: 4.5em auto;
 }
 #comments .comment #respond {
 	padding: 0;
@@ -2166,6 +2467,11 @@ a:active {
 #respond .commenter-avatar + .comment-form-comment {
 	margin-left: 85px;
 }
+@media screen and (max-width: 760px) {
+  #respond .commenter-avatar + .comment-form-comment {
+	  margin-left: 55px;
+  }
+}
 #respond .comment-form {
 	margin-top: 3em;
 }
@@ -2251,6 +2557,33 @@ a:active {
 #respond .form-submit input-full {
 	width: 100%;
 	text-align: center;
+}
+#respond .form-submit input-secondary {
+	background: #6699cc;
+}
+#respond .form-submit input-secondary:hover,
+#respond .form-submit input-secondary:focus,
+#respond .form-submit input-secondary:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+#respond .form-submit input-blue {
+	background: #6699cc;
+}
+#respond .form-submit input-blue:hover,
+#respond .form-submit input-blue:focus,
+#respond .form-submit input-blue:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+#respond .form-submit input-green {
+	background: #99cc99;
+}
+#respond .form-submit input-green:hover,
+#respond .form-submit input-green:focus,
+#respond .form-submit input-green:active {
+	background: #99cc99;
+	box-shadow: 0 0 0 3px #99cc99;
 }
 /*--------------------------------------------------------------
 11.0 Infinite scroll
@@ -2417,6 +2750,12 @@ object {
 	font-family: 'Righteous', cursive;
 	color: white;
 	margin: 0;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
 }
 .site-title {
 	font-size: 160px;
@@ -2428,6 +2767,17 @@ object {
 }
 .site-description {
 	margin-top: 1.5em;
+}
+@media screen and (max-width: 1000px) {
+  .site-branding {
+	  clear: both;
+	  padding: 5em 0;
+	  text-align: center;
+  }
+  .site-title {
+	  font-size: 80px;
+	  font-size: 4.44444444rem;
+  }
 }
 
 /** ----------------------------------------:[ 14.1 - Site Toggles ]:--- */
@@ -2477,6 +2827,27 @@ object {
 .admin-bar .site-toggles .main-navigation-toggle,
 .admin-bar .site-toggles .widget-area-toggle {
 	top: 64px;
+}
+@media screen and (max-width: 1000px) {
+  .site-toggles:before,
+  .site-toggles:after {
+	  content: " ";
+	  display: table;
+	  line-height: 0;
+  }
+  .site-toggles:after {
+	  clear: both;
+  }
+  .site-toggles .main-navigation-toggle,
+  .site-toggles .widget-area-toggle {
+	  position: static;
+  }
+  .site-toggles .main-navigation-toggle {
+	  float: left;
+  }
+  .site-toggles .widget-area-toggle {
+	  float: right;
+  }
 }
 
 /** -----------------------------------------------------:[ 14.0 - Footer ]:---------- */
@@ -2622,4 +2993,43 @@ input#carousel-reblog-submit:active {
 input#carousel-reblog-submit-full {
 	width: 100%;
 	text-align: center;
+}
+#jp-carousel-comment-form-button-submit-secondary,
+input#carousel-reblog-submit-secondary {
+	background: #6699cc;
+}
+#jp-carousel-comment-form-button-submit-secondary:hover,
+input#carousel-reblog-submit-secondary:hover,
+#jp-carousel-comment-form-button-submit-secondary:focus,
+input#carousel-reblog-submit-secondary:focus,
+#jp-carousel-comment-form-button-submit-secondary:active,
+input#carousel-reblog-submit-secondary:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+#jp-carousel-comment-form-button-submit-blue,
+input#carousel-reblog-submit-blue {
+	background: #6699cc;
+}
+#jp-carousel-comment-form-button-submit-blue:hover,
+input#carousel-reblog-submit-blue:hover,
+#jp-carousel-comment-form-button-submit-blue:focus,
+input#carousel-reblog-submit-blue:focus,
+#jp-carousel-comment-form-button-submit-blue:active,
+input#carousel-reblog-submit-blue:active {
+	background: #6699cc;
+	box-shadow: 0 0 0 3px #6699cc;
+}
+#jp-carousel-comment-form-button-submit-green,
+input#carousel-reblog-submit-green {
+	background: #99cc99;
+}
+#jp-carousel-comment-form-button-submit-green:hover,
+input#carousel-reblog-submit-green:hover,
+#jp-carousel-comment-form-button-submit-green:focus,
+input#carousel-reblog-submit-green:focus,
+#jp-carousel-comment-form-button-submit-green:active,
+input#carousel-reblog-submit-green:active {
+	background: #99cc99;
+	box-shadow: 0 0 0 3px #99cc99;
 }
