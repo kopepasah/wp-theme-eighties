@@ -178,26 +178,3 @@ function eighties_excerpt_more( $more ) {
 	}
 }
 add_filter( 'excerpt_more', 'eighties_excerpt_more' );
-
-/**
- * Add the mobile menu close to the primary menu.
- *
- * @param string $items The current navigation items.
- * @param string $args The current navigation arguments.
- * @return string $items The modified navigation items.
-*/
-function eighties_wp_nav_menu_items( $items, $args ) {
-	// If not the primary menu, return the items.
-	if ( $args->theme_location != 'primary'  ) {
-		return $items;
-	}
-
-	$close = '<li id="mobile-menu-close" class="menu-item menu-item-hidden"><a href><i class="fa fa-times"></i><span>' . __( 'Close', 'eighties' ) . '</span></a></li>';
-
-	$close .= $items;
-
-	$items = $close;
-
-	return $items;
-}
-add_action( 'wp_nav_menu_items' , 'eighties_wp_nav_menu_items', 100, 2 );
