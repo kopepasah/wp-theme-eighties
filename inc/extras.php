@@ -141,7 +141,7 @@ function eighties_primary_menu_items( $items, $args ) {
 	<?php
 	$search = ob_get_clean();
 
-	$items = $search . $items;
+	$items .= $search;
 
 	return $items;
 }

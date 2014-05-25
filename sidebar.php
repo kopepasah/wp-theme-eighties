@@ -12,7 +12,7 @@ if ( ! is_active_sidebar( 'eighties-interactive-sidebar' ) ) {
 }
 ?>
 	<div id="secondary" class="widget-area" role="complementary">
-		<a href class="widget-area-toggle"><?php _e( 'Close', 'eighties' ); ?><i class="fa fa-times"></i></a>
+		<a href class="widget-area-toggle"><i class="fa fa-times"></i></a>
 		<div class="widgets-wrapper">
 			<?php dynamic_sidebar( 'eighties-interactive-sidebar' ); ?>
 		</div>

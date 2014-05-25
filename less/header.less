@@ -82,10 +82,16 @@
 		}
 	}
 	@media screen and (max-width: 1000px) {
+		background: @dark;
 		.clearfix();
 		.main-navigation-toggle,
 		.widget-area-toggle {
 			position: static;
+			background: @dark;
+			color: #FFF;
+			&:hover {
+				color: #FFF;
+			}
 		}
 		.main-navigation-toggle {
 			float: left;

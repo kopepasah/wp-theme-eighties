@@ -30,6 +30,8 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<a href class="main-navigation-toggle"><i class="fa fa-times"></i></a>
+			<h4 class="main-navigation-title"><?php _e( 'Menu', 'eighties' ); ?></h4>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 
