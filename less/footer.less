@@ -14,15 +14,9 @@
 		padding-left: 2em;
 		padding-right: 2em;
 	}
-	a {
-		color: lighten( @dark, 30% );
-		&:hover {
-			color: #FFF;
-		}
-	}
 	.widget {
 		margin-bottom: @spacing-base;
-		@media screen and ( min-width: 500px ) {
+		@media screen and ( min-width: 500px ) and ( max-width: 800px ) {
 			.column( 6 );
 			&:nth-child( 2n+1 ) {
 				clear: left;

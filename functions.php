@@ -48,6 +48,9 @@ function eighties_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size( 'main-featured', '1000', '700', array( 'center', 'center' ) );
+	add_image_size( 'portfoio-featured', '500', '350', true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'eighties' ),

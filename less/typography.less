@@ -84,6 +84,20 @@ blockquote {
 	border-left: 4px solid @primary;
 	color: darken( @light, 50% );
 	font-style: italic;
+	&.alignleft,
+	&.alignright {
+		margin-bottom: 1.5em;
+		max-width: 300px;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	&.alignleft {
+		padding-left: 0;
+		padding-right: unit( ( 36 / @font-size-base ), em );
+		border-right: 4px solid @primary;
+		border-left: 0;
+	}
 }
 address {
 	margin: 0 0 unit( ( 36 / @font-size-base ), em );
