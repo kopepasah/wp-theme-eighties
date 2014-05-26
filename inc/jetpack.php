@@ -17,12 +17,15 @@ function eighties_jetpack_setup() {
 		'type'           => 'click',
 		'container'      => 'main',
 		'footer_widgets' => false,
-		// 'wrapper'        => false
 	) );
+
+	add_theme_support( 'jetpack-portfolio' );
 }
 add_action( 'after_setup_theme', 'eighties_jetpack_setup' );
 
-
+/**
+ * Dequeue Jetpack Infinite Scroll Styles
+*/
 function eighties_jetpack_enqueue_scripts() {
 	wp_dequeue_style( 'the-neverending-homepage' );
 }

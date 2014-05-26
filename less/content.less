@@ -527,3 +527,90 @@
 
 /** ----------------------------------------:[ 10.3 - Comments ]:--- */
 @import 'comments';
+
+/** ----------------------------------------:[ Jetpack Portfolio ]:--- */
+.post-type-archive-jetpack-portfolio,
+.tax-jetpack-portfolio-type,
+.tax-jetpack-portfolio-tag {
+	.portfolio-wrapper {
+		.clearfix();
+	}
+	.jetpack-portfolio {
+		padding: 0;
+		border-bottom: 0;
+		img {
+			border-radius: 0;
+			display: block;
+		}
+		.project {
+			&-details {
+				position: relative;
+				.max-width( 800px );
+				background: @dark;
+				&:hover {
+					.project {
+						&-image {
+							opacity: 1;
+						}
+					}
+				}
+			}
+			&-image {
+				opacity: .2;
+				.transition( ~'opacity 200ms linear' );
+			}
+			&-entry-meta {
+				font-size: .75em;
+				color: darken( @light, 20% );
+				a {
+					color: darken( @light, 20% );
+					&:hover {
+						color: #FFF;
+					}
+				}
+			}
+			&-title {
+				font-size: 1.8em;
+				margin-top: 20%;
+				margin-bottom: .5em;
+				a {
+					color: #FFF;
+					&:hover {
+						border-bottom: 1px solid #FFF;
+					}
+				}
+			}
+			&-summary {
+				position: absolute;
+				top: 1em;
+				left: 1em;
+				right: 1em;
+				text-align: center;
+			}
+		}
+		@media screen and (min-width: 500px) and (max-width: 1000px) {
+			.column( 6 );
+			&:nth-child( 2n+1 ) {
+				clear: left;
+			}
+		}
+		@media screen and (min-width: 1000px) and (max-width: 1500px) {
+			.column( 4 );
+			&:nth-child( 3n+1 ) {
+				clear: left;
+			}
+		}
+		@media screen and (min-width: 1500px) and (max-width: 2000px) {
+			.column( 3 );
+			&:nth-child( 4n+1 ) {
+				clear: left;
+			}
+		}
+		@media screen and (min-width: 2000px) {
+			.column( 2.4 );
+			&:nth-child( 5n+1 ) {
+				clear: left;
+			}
+		}
+	}
+}

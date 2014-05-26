@@ -49,7 +49,7 @@ function eighties_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size( 'main-featured', '1000', '700', array( 'center', 'center' ) );
-	add_image_size( 'portfoio-featured', '500', '350', true );
+	add_image_size( 'portfolio-featured', '500', '350', true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -65,6 +65,14 @@ function eighties_setup() {
 		'search-form',
 		'comment-form',
 		'gallery',
+	) );
+
+	// Enable support for HTML5 markup.
+	add_theme_support( 'less', array(
+		'enable'  => true,
+		'develop' => true,
+		'watch'   => true,
+		'minify'  => true
 	) );
 
 	// Add Editor Style
@@ -204,7 +212,6 @@ function eighties_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// NOTE Tabling this for now. See note in JS file for more information.
 	if ( is_home() || is_archive() || is_search() ) {
 		wp_enqueue_script( 'eighties-blog', get_template_directory_uri() . '/js/eighties-blog.js', array( 'backstretch' ), '20120206', true );
 	}

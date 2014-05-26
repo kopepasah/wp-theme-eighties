@@ -64,6 +64,12 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
 							_e( 'Chats', 'eighties' );
 
+						elseif ( is_post_type_archive( 'jetpack-portfolio' ) ) :
+							_e( 'Projects', 'eighties' );
+
+						elseif ( is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) :
+							single_term_title();
+
 						else :
 							_e( 'Archives', 'eighties' );
 
@@ -79,18 +85,35 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) : ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+				<div class="portfolio-wrapper">
 
-			<?php endwhile; ?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+	
+						<?php get_template_part( 'content', 'portfolio' ); ?>
+	
+					<?php endwhile; ?>
+
+				</div><!-- .portfolio-wrapper -->
+
+			<?php else : ?>
+
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<?php
+						/* Include the Post-Format-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'content', get_post_format() );
+					?>
+
+				<?php endwhile; ?>
+
+			<?php endif; ?>
 
 			<?php eighties_paging_nav(); ?>
 
