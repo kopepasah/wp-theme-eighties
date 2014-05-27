@@ -167,7 +167,7 @@ function eighties_get_time_difference( $time ) {
 		/**
 		 * If we've made it here, we know that we have not
 		 * yet passed one year, but have made it passed one
-		 * month. As such, let's remove the year from the 
+		 * month. As such, let's remove the year from the
 		 * output, but keep the date style format.
 		*/
 		$timestamp .= get_the_date( 'F j' );

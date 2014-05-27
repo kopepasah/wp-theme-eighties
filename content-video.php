@@ -1,7 +1,7 @@
 <?php
 /**
  * Template for displaying video content.
- * 
+ *
  * @package Eighties
  * @author Justin Kopepasah
  * @since 1.0.0

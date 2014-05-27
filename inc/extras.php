@@ -43,7 +43,7 @@ add_filter( 'body_class', 'eighties_body_class' );
 
 /**
  * Adds custom classes to the array of post classes.
- * 
+ *
  * @since 1.0.0
  * @param array $classes Classes for the post element.
  * @return array
@@ -75,7 +75,7 @@ function eighties_wp_title( $title, $sep ) {
 	if ( is_feed() ) {
 		return $title;
 	}
-	
+
 	global $page, $paged;
 
 	// Add the blog name
