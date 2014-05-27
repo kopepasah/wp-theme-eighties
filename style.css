@@ -215,8 +215,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 600;
+	font-family: 'Varela Round', sans-serif;
+	font-weight: 400;
 }
 h1 {
 	margin-top: 0.88888889em;
@@ -298,25 +298,20 @@ i {
 	font-style: italic;
 }
 blockquote {
-	padding-left: 2em;
-	border-left: 4px solid #f2777a;
-	color: #6d6d6d;
-	font-style: italic;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 2em;
+	padding: 1.5em;
+	color: #868686;
+	background: #f9f9f9;
+}
+blockquote p {
+	margin-bottom: 0;
 }
 blockquote.alignleft,
 blockquote.alignright {
 	margin-bottom: 1.5em;
-	max-width: 300px;
-}
-blockquote.alignleft p,
-blockquote.alignright p {
-	margin-bottom: 0;
-}
-blockquote.alignleft {
-	padding-left: 0;
-	padding-right: 2em;
-	border-right: 4px solid #f2777a;
-	border-left: 0;
+	max-width: 400px;
 }
 address {
 	margin: 0 0 2em;
@@ -475,9 +470,9 @@ textarea {
 	border-radius: 2px;
 	box-shadow: none;
 	color: #FFF;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 400;
 	-webkit-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-moz-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-o-transition: box-shadow 100ms linear, border-color 100ms linear;
@@ -537,9 +532,9 @@ input[type="submit"] {
 	border-radius: 2px;
 	box-shadow: none;
 	color: #FFF;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 400;
 	-webkit-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-moz-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-o-transition: box-shadow 100ms linear, border-color 100ms linear;
@@ -1201,9 +1196,9 @@ a:active {
 	border-radius: 2px;
 	box-shadow: none;
 	color: #FFF;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 400;
 	-webkit-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-moz-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-o-transition: box-shadow 100ms linear, border-color 100ms linear;
@@ -1409,6 +1404,7 @@ a:active {
 	left: 50% !important;
 }
 .js #infinite-handle {
+	clear: both;
 	padding: 3em;
 	color: #FFF;
 	text-align: center;
@@ -1424,9 +1420,9 @@ a:active {
 	border-radius: 2px;
 	box-shadow: none;
 	color: #FFF;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 400;
 	-webkit-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-moz-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-o-transition: box-shadow 100ms linear, border-color 100ms linear;
@@ -1921,21 +1917,22 @@ a:active {
 	margin-left: auto;
 	margin-right: auto;
 }
-.js .hentry .entry-image {
+.js .hentry .entry-image,
+.js .hentry .entry-video {
 	width: 100%;
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
 }
-.js .blog .entry-summary p,
-.js .archive .entry-summary p,
-.js .search .entry-summary p {
+.js .blog .entry-summary p:last-child,
+.js .archive .entry-summary p:last-child,
+.js .search .entry-summary p:last-child {
 	margin-bottom: 0;
 }
 .js .blog .sticky,
 .js .archive .sticky,
 .js .search .sticky {
-	background-color: #f2777a;
+	background-color: #2d2d2d;
 	color: #FFF;
 }
 .js .blog .sticky .entry-title a,
@@ -1946,12 +1943,22 @@ a:active {
 .js .blog .sticky .entry-title a:hover,
 .js .archive .sticky .entry-title a:hover,
 .js .search .sticky .entry-title a:hover {
-	color: #f2f2f2;
+	color: #f2777a;
 }
-.js .blog .sticky .entry-meta a,
-.js .archive .sticky .entry-meta a,
-.js .search .sticky .entry-meta a {
+.js .blog .sticky .entry-summary a,
+.js .archive .sticky .entry-summary a,
+.js .search .sticky .entry-summary a {
 	color: #FFF;
+	border-bottom: 1px solid #FFF;
+	-webkit-transition: border-color 200ms linear;
+	-moz-transition: border-color 200ms linear;
+	-o-transition: border-color 200ms linear;
+	transition: border-color 200ms linear;
+}
+.js .blog .sticky .entry-summary a:hover,
+.js .archive .sticky .entry-summary a:hover,
+.js .search .sticky .entry-summary a:hover {
+	border-color: transparent;
 }
 .js .page-header {
 	padding-top: 3em;
@@ -2027,28 +2034,25 @@ a:active {
 	border-radius: 2px;
 	color: #2d2d2d;
 }
-.js .blog .format-audio .entry-title,
-.js .archive .format-audio .entry-title,
-.js .search .format-audio .entry-title,
 .js .blog .format-video .entry-title,
 .js .archive .format-video .entry-title,
 .js .search .format-video .entry-title {
 	font-size: 1.5em;
 }
-.js .blog .format-audio .entry-audio,
-.js .archive .format-audio .entry-audio,
-.js .search .format-audio .entry-audio,
-.js .blog .format-video .entry-audio,
-.js .archive .format-video .entry-audio,
-.js .search .format-video .entry-audio {
+.js .blog .format-video .entry-video,
+.js .archive .format-video .entry-video,
+.js .search .format-video .entry-video {
 	margin-bottom: 1em;
 }
-.js .blog .format-status,
-.js .archive .format-status,
-.js .search .format-status {
-	background: #6699cc;
-	color: #FFF;
-	border-bottom-color: #538cc6;
+.js .blog .format-audio .entry-title,
+.js .archive .format-audio .entry-title,
+.js .search .format-audio .entry-title {
+	font-size: 1.5em;
+}
+.js .blog .format-audio .entry-audio,
+.js .archive .format-audio .entry-audio,
+.js .search .format-audio .entry-audio {
+	margin-bottom: 1em;
 }
 .js .blog .format-status > [class^="entry-"],
 .js .archive .format-status > [class^="entry-"],
@@ -2057,16 +2061,6 @@ a:active {
 	max-width: 540px;
 	margin-left: auto;
 	margin-right: auto;
-}
-.js .blog .format-status a,
-.js .archive .format-status a,
-.js .search .format-status a {
-	color: #FFF;
-}
-.js .blog .format-status a:hover,
-.js .archive .format-status a:hover,
-.js .search .format-status a:hover {
-	color: #f2f2f2;
 }
 .js .blog .format-status .entry-title,
 .js .archive .format-status .entry-title,
@@ -2084,14 +2078,6 @@ a:active {
 .js .search .format-status .entry-meta {
 	margin-bottom: 0;
 	margin-top: 1.5em;
-	color: #FFF;
-}
-.js .blog .format-aside,
-.js .archive .format-aside,
-.js .search .format-aside {
-	background: #cc99cc;
-	border-bottom-color: #c388c3;
-	color: #FFF;
 }
 .js .blog .format-aside > [class^="entry-"],
 .js .archive .format-aside > [class^="entry-"],
@@ -2100,16 +2086,6 @@ a:active {
 	max-width: 540px;
 	margin-left: auto;
 	margin-right: auto;
-}
-.js .blog .format-aside a,
-.js .archive .format-aside a,
-.js .search .format-aside a {
-	color: #FFF;
-}
-.js .blog .format-aside a:hover,
-.js .archive .format-aside a:hover,
-.js .search .format-aside a:hover {
-	color: #f2f2f2;
 }
 .js .blog .format-aside .entry-title,
 .js .archive .format-aside .entry-title,
@@ -2150,13 +2126,6 @@ a:active {
 .js .search .format-aside .entry-meta-tags a:hover {
 	background-color: #b366b3;
 }
-.js .blog .format-link,
-.js .archive .format-link,
-.js .search .format-link {
-	background: #66cccc;
-	border-bottom-color: #53c6c6;
-	color: #FFF;
-}
 .js .blog .format-link > [class^="entry-"],
 .js .archive .format-link > [class^="entry-"],
 .js .search .format-link > [class^="entry-"] {
@@ -2164,16 +2133,6 @@ a:active {
 	max-width: 540px;
 	margin-left: auto;
 	margin-right: auto;
-}
-.js .blog .format-link a,
-.js .archive .format-link a,
-.js .search .format-link a {
-	color: #FFF;
-}
-.js .blog .format-link a:hover,
-.js .archive .format-link a:hover,
-.js .search .format-link a:hover {
-	color: #f2f2f2;
 }
 .js .blog .format-link .entry-title,
 .js .archive .format-link .entry-title,
@@ -2184,21 +2143,6 @@ a:active {
 .js .archive .format-link .entry-meta,
 .js .search .format-link .entry-meta {
 	margin-bottom: 1em;
-}
-.js .blog .format-link .entry-summary a,
-.js .archive .format-link .entry-summary a,
-.js .search .format-link .entry-summary a {
-	border-bottom: 1px solid #FFF;
-	-webkit-transition: all 100ms linear;
-	-moz-transition: all 100ms linear;
-	-o-transition: all 100ms linear;
-	transition: all 100ms linear;
-}
-.js .blog .format-link .entry-summary a:hover,
-.js .archive .format-link .entry-summary a:hover,
-.js .search .format-link .entry-summary a:hover {
-	background: #39acac;
-	border-bottom-color: transparent;
 }
 .js .single .format-audio .entry-meta-time,
 .js .single .format-video .entry-meta-time {
@@ -2565,9 +2509,9 @@ a:active {
 	border-radius: 2px;
 	box-shadow: none;
 	color: #FFF;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 400;
 	-webkit-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-moz-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-o-transition: box-shadow 100ms linear, border-color 100ms linear;
@@ -2616,19 +2560,19 @@ a:active {
 }
 
 /** ----------------------------------------:[ Jetpack Portfolio ]:--- */
-.post-type-archive-jetpack-portfolio .portfolio-wrapper:before,
-.tax-jetpack-portfolio-type .portfolio-wrapper:before,
-.tax-jetpack-portfolio-tag .portfolio-wrapper:before,
-.post-type-archive-jetpack-portfolio .portfolio-wrapper:after,
-.tax-jetpack-portfolio-type .portfolio-wrapper:after,
-.tax-jetpack-portfolio-tag .portfolio-wrapper:after {
+.post-type-archive-jetpack-portfolio #portfolio-wrapper:before,
+.tax-jetpack-portfolio-type #portfolio-wrapper:before,
+.tax-jetpack-portfolio-tag #portfolio-wrapper:before,
+.post-type-archive-jetpack-portfolio #portfolio-wrapper:after,
+.tax-jetpack-portfolio-type #portfolio-wrapper:after,
+.tax-jetpack-portfolio-tag #portfolio-wrapper:after {
 	content: " ";
 	display: table;
 	line-height: 0;
 }
-.post-type-archive-jetpack-portfolio .portfolio-wrapper:after,
-.tax-jetpack-portfolio-type .portfolio-wrapper:after,
-.tax-jetpack-portfolio-tag .portfolio-wrapper:after {
+.post-type-archive-jetpack-portfolio #portfolio-wrapper:after,
+.tax-jetpack-portfolio-type #portfolio-wrapper:after,
+.tax-jetpack-portfolio-tag #portfolio-wrapper:after {
 	clear: both;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio,
@@ -3127,9 +3071,9 @@ input#carousel-reblog-submit {
 	border-radius: 2px;
 	box-shadow: none;
 	color: #FFF;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 400;
 	-webkit-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-moz-transition: box-shadow 100ms linear, border-color 100ms linear;
 	-o-transition: box-shadow 100ms linear, border-color 100ms linear;
