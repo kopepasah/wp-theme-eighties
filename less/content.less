@@ -137,7 +137,8 @@
 			.max-width( 760px );
 		}
 		.entry {
-			&-image {
+			&-image,
+			&-video {
 				.max-width( 1000px );
 			}
 		}
@@ -278,8 +279,17 @@
 					}
 				}
 			}
-			&-audio,
 			&-video {
+				.entry {
+					&-title {
+						font-size: 1.5em;
+					}
+					&-video {
+						margin-bottom: 1em;
+					}
+				}
+			}
+			&-audio{
 				.entry {
 					&-title {
 						font-size: 1.5em;
