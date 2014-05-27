@@ -87,7 +87,7 @@ get_header(); ?>
 
 			<?php if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) : ?>
 
-				<div class="portfolio-wrapper">
+				<div id="portfolio-wrapper">
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>

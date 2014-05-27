@@ -219,6 +219,10 @@ function eighties_scripts() {
 		wp_enqueue_script( 'eighties-blog', get_template_directory_uri() . '/js/eighties-blog.js', array( 'backstretch' ), '20120206', true );
 	}
 
+	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
+		wp_enqueue_script( 'eighties-portfolio', get_template_directory_uri() . '/js/eighties-portfolio.js', array(), '20140527', true );
+	}
+
 	if ( get_header_image() ) {
 		wp_enqueue_script( 'eighties-header', get_template_directory_uri() . '/js/eighties-header.js', array( 'backstretch', 'skrollr' ), '20140407', true );
 	}
