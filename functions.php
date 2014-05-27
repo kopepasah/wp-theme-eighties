@@ -148,8 +148,8 @@ function eighties_headings_font_url() {
 	 * that are not supported by Raleway, translate this to
 	 * 'off'. Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'Raleway font: on or off', 'eighties' ) ) {
-		$font_url = add_query_arg( 'family', urlencode( 'Raleway:600' ), "//fonts.googleapis.com/css" );
+	if ( 'off' !== _x( 'on', 'Varela Round font: on or off', 'eighties' ) ) {
+		$font_url = add_query_arg( 'family', 'Varela+Round', "//fonts.googleapis.com/css" );
 	}
 
 	return $font_url;
