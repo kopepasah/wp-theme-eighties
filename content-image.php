@@ -15,7 +15,7 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 		<figure class="entry-image">
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'large' ); ?></a>
+			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'main-featured' ); ?></a>
 		</figure>
 	<?php endif; ?><!-- .entry-image -->
 
