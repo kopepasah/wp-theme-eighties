@@ -77,6 +77,9 @@ function eighties_setup() {
 
 	// Add Editor Style
 	add_editor_style( 'css/editor.css' );
+
+	// Add shortcodes for the_excerpt
+	add_filter( 'the_excerpt', 'do_shortcode' );
 }
 endif; // eighties_setup
 add_action( 'after_setup_theme', 'eighties_setup' );
