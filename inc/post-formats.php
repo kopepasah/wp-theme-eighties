@@ -42,13 +42,19 @@ function eighties_post_format_video_first_video() {
 
 	echo eighties_post_format_video_get_first_video();
 
-	add_filter( 'the_content', 'eighties_post_format_video_filter_the_content' );
+	// add_filter( 'the_content', 'eighties_post_format_video_filter_the_content' );
 }
 
 /**
  * For video post formats we need to remove the
  * first video embedded in the content after we
  * place it in the template.
+ *
+ * NOTE This filter needs to remove the item that
+ *      we find out of the content when the full
+ *      content is displayed in the blog, archive
+ *      or search loop. However, we are using only
+ *      the_excerpt for these loops.
  *
  * @since 1.0.0
  * @var content
@@ -149,13 +155,19 @@ function eighties_post_format_audio_first_audio( $post_id ) {
 
 	echo eighties_post_format_audio_get_first_audio( $post_id );
 
-	add_filter( 'the_content', 'eighties_post_format_audio_filter_the_content' );
+	// add_filter( 'the_content', 'eighties_post_format_audio_filter_the_content' );
 }
 
 /**
  * For audio post formats we need to remove the
  * first audio embedded in the content after we
  * place it in the template.
+ *
+ * NOTE This filter needs to remove the item that
+ *      we find out of the content when the full
+ *      content is displayed in the blog, archive
+ *      or search loop. However, we are using only
+ *      the_excerpt for these loops.
  *
  * @since 1.0.0
  * @var content
