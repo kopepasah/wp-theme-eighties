@@ -1,0 +1,24 @@
+{
+	"name" : "eighties",
+	"version" : "1.0.0",
+	"author" : "Justin Kopepasah <justin@kopepasah.com>",
+	"homepage" : "http://eighties.me",
+	"repository" : {
+		"type" : "git",
+		"url" : "git://github.com/kopepasah/eighties.git"
+	},
+	"bugs" : {
+		"url" : "https://github.com/kopepasah/eighties/issues"
+	},
+	"licenses" : [{
+		"type" : "GPLv2",
+		"url" : "http://www.gnu.org/licenses/gpl-2.0.html"
+	}],
+	"engines" : {
+		"node" : ">= 0.10.0"
+	},
+	"devDependencies" : {
+		"grunt" : "~0.4.2",
+		"grunt-contrib-less" : "~0.8.1"
+	}
+}
