@@ -199,6 +199,7 @@
 		}
 	}
 	.page {
+		// For archive and other 'pages'.
 		&-header {
 			padding-top: @spacing-base;
 			padding-bottom: @spacing-base;
@@ -217,6 +218,12 @@
 			padding-top: @spacing-base;
 			padding-bottom: @spacing-base;
 			text-align: center;
+		}
+		// For actual pages.
+		.entry {
+			&-title {
+				
+			}
 		}
 	}
 	@media screen and (max-width: 760px) {
@@ -489,7 +496,8 @@
 /** ----------------------------------------:[ Jetpack Portfolio ]:--- */
 .post-type-archive-jetpack-portfolio,
 .tax-jetpack-portfolio-type,
-.tax-jetpack-portfolio-tag {
+.tax-jetpack-portfolio-tag,
+.page-template-portfolio-php {
 	#portfolio-wrapper {
 		.clearfix();
 	}
@@ -565,10 +573,22 @@
 			}
 		}
 		@media screen and (min-width: 2000px) {
-			.column( 2.4 );
-			&:nth-child( 5n+1 ) {
+			.column( 2 );
+			&:nth-child( 6n+1 ) {
 				clear: left;
 			}
 		}
+	}
+}
+.page-template-portfolio-php {
+	.entry {
+		&-content {
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.paging-navigation {
+		text-align: center;
 	}
 }
