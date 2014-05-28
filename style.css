@@ -1,9 +1,9 @@
 /*
 Theme Name: Eighties
-Theme URI: http://kopepasah.com/project/eighties/
+Theme URI: http://eighties.me
 Author: Justin Kopepasah
 Author URI: http://kopepasah.com/
-Description: Hi. I'm a modern theme designed to keep your content front and center.
+Description: Hello. I'm a modern, progressively enhanced theme designed to keep your content front and center. My menu and sidebar are built to stay out of the way until a user wants to see them; giving users what they want, when they want it.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -2563,33 +2563,39 @@ a:active {
 .post-type-archive-jetpack-portfolio #portfolio-wrapper:before,
 .tax-jetpack-portfolio-type #portfolio-wrapper:before,
 .tax-jetpack-portfolio-tag #portfolio-wrapper:before,
+.page-template-portfolio-php #portfolio-wrapper:before,
 .post-type-archive-jetpack-portfolio #portfolio-wrapper:after,
 .tax-jetpack-portfolio-type #portfolio-wrapper:after,
-.tax-jetpack-portfolio-tag #portfolio-wrapper:after {
+.tax-jetpack-portfolio-tag #portfolio-wrapper:after,
+.page-template-portfolio-php #portfolio-wrapper:after {
 	content: " ";
 	display: table;
 	line-height: 0;
 }
 .post-type-archive-jetpack-portfolio #portfolio-wrapper:after,
 .tax-jetpack-portfolio-type #portfolio-wrapper:after,
-.tax-jetpack-portfolio-tag #portfolio-wrapper:after {
+.tax-jetpack-portfolio-tag #portfolio-wrapper:after,
+.page-template-portfolio-php #portfolio-wrapper:after {
 	clear: both;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio,
 .tax-jetpack-portfolio-type .jetpack-portfolio,
-.tax-jetpack-portfolio-tag .jetpack-portfolio {
+.tax-jetpack-portfolio-tag .jetpack-portfolio,
+.page-template-portfolio-php .jetpack-portfolio {
 	padding: 0;
 	border-bottom: 0;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio img,
 .tax-jetpack-portfolio-type .jetpack-portfolio img,
-.tax-jetpack-portfolio-tag .jetpack-portfolio img {
+.tax-jetpack-portfolio-tag .jetpack-portfolio img,
+.page-template-portfolio-php .jetpack-portfolio img {
 	border-radius: 0;
 	display: block;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-details,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-details,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-details {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-details,
+.page-template-portfolio-php .jetpack-portfolio .project-details {
 	position: relative;
 	width: 100%;
 	max-width: 800px;
@@ -2599,12 +2605,14 @@ a:active {
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-details:hover .project-image,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-details:hover .project-image,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-details:hover .project-image {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-details:hover .project-image,
+.page-template-portfolio-php .jetpack-portfolio .project-details:hover .project-image {
 	opacity: 1;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-image,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-image,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-image {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-image,
+.page-template-portfolio-php .jetpack-portfolio .project-image {
 	opacity: .2;
 	-webkit-transition: opacity 200ms linear;
 	-moz-transition: opacity 200ms linear;
@@ -2613,40 +2621,47 @@ a:active {
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-entry-meta,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-entry-meta,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-entry-meta {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-entry-meta,
+.page-template-portfolio-php .jetpack-portfolio .project-entry-meta {
 	font-size: .75em;
 	color: #b9b9b9;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-entry-meta a,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-entry-meta a,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-entry-meta a {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-entry-meta a,
+.page-template-portfolio-php .jetpack-portfolio .project-entry-meta a {
 	color: #b9b9b9;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-entry-meta a:hover,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-entry-meta a:hover,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-entry-meta a:hover {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-entry-meta a:hover,
+.page-template-portfolio-php .jetpack-portfolio .project-entry-meta a:hover {
 	color: #FFF;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-title,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-title,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-title {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-title,
+.page-template-portfolio-php .jetpack-portfolio .project-title {
 	font-size: 1.8em;
 	margin-top: 20%;
 	margin-bottom: .5em;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-title a,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-title a,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-title a {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-title a,
+.page-template-portfolio-php .jetpack-portfolio .project-title a {
 	color: #FFF;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-title a:hover,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-title a:hover,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-title a:hover {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-title a:hover,
+.page-template-portfolio-php .jetpack-portfolio .project-title a:hover {
 	border-bottom: 1px solid #FFF;
 }
 .post-type-archive-jetpack-portfolio .jetpack-portfolio .project-summary,
 .tax-jetpack-portfolio-type .jetpack-portfolio .project-summary,
-.tax-jetpack-portfolio-tag .jetpack-portfolio .project-summary {
+.tax-jetpack-portfolio-tag .jetpack-portfolio .project-summary,
+.page-template-portfolio-php .jetpack-portfolio .project-summary {
 	position: absolute;
 	top: 1em;
 	left: 1em;
@@ -2656,54 +2671,68 @@ a:active {
 @media screen and (min-width: 500px) and (max-width: 1000px) {
   .post-type-archive-jetpack-portfolio .jetpack-portfolio,
   .tax-jetpack-portfolio-type .jetpack-portfolio,
-  .tax-jetpack-portfolio-tag .jetpack-portfolio {
+  .tax-jetpack-portfolio-tag .jetpack-portfolio,
+  .page-template-portfolio-php .jetpack-portfolio {
 	  float: left;
 	  width: 50%;
   }
   .post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-child( 2n+1 ),
   .tax-jetpack-portfolio-type .jetpack-portfolio:nth-child( 2n+1 ),
-  .tax-jetpack-portfolio-tag .jetpack-portfolio:nth-child( 2n+1 ) {
+  .tax-jetpack-portfolio-tag .jetpack-portfolio:nth-child( 2n+1 ),
+  .page-template-portfolio-php .jetpack-portfolio:nth-child( 2n+1 ) {
 	  clear: left;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1500px) {
   .post-type-archive-jetpack-portfolio .jetpack-portfolio,
   .tax-jetpack-portfolio-type .jetpack-portfolio,
-  .tax-jetpack-portfolio-tag .jetpack-portfolio {
+  .tax-jetpack-portfolio-tag .jetpack-portfolio,
+  .page-template-portfolio-php .jetpack-portfolio {
 	  float: left;
 	  width: 33.3333333%;
   }
   .post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-child( 3n+1 ),
   .tax-jetpack-portfolio-type .jetpack-portfolio:nth-child( 3n+1 ),
-  .tax-jetpack-portfolio-tag .jetpack-portfolio:nth-child( 3n+1 ) {
+  .tax-jetpack-portfolio-tag .jetpack-portfolio:nth-child( 3n+1 ),
+  .page-template-portfolio-php .jetpack-portfolio:nth-child( 3n+1 ) {
 	  clear: left;
   }
 }
 @media screen and (min-width: 1500px) and (max-width: 2000px) {
   .post-type-archive-jetpack-portfolio .jetpack-portfolio,
   .tax-jetpack-portfolio-type .jetpack-portfolio,
-  .tax-jetpack-portfolio-tag .jetpack-portfolio {
+  .tax-jetpack-portfolio-tag .jetpack-portfolio,
+  .page-template-portfolio-php .jetpack-portfolio {
 	  float: left;
 	  width: 25%;
   }
   .post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-child( 4n+1 ),
   .tax-jetpack-portfolio-type .jetpack-portfolio:nth-child( 4n+1 ),
-  .tax-jetpack-portfolio-tag .jetpack-portfolio:nth-child( 4n+1 ) {
+  .tax-jetpack-portfolio-tag .jetpack-portfolio:nth-child( 4n+1 ),
+  .page-template-portfolio-php .jetpack-portfolio:nth-child( 4n+1 ) {
 	  clear: left;
   }
 }
 @media screen and (min-width: 2000px) {
   .post-type-archive-jetpack-portfolio .jetpack-portfolio,
   .tax-jetpack-portfolio-type .jetpack-portfolio,
-  .tax-jetpack-portfolio-tag .jetpack-portfolio {
+  .tax-jetpack-portfolio-tag .jetpack-portfolio,
+  .page-template-portfolio-php .jetpack-portfolio {
 	  float: left;
-	  width: 20%;
+	  width: 16.6666667%;
   }
-  .post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-child( 5n+1 ),
-  .tax-jetpack-portfolio-type .jetpack-portfolio:nth-child( 5n+1 ),
-  .tax-jetpack-portfolio-tag .jetpack-portfolio:nth-child( 5n+1 ) {
+  .post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-child( 6n+1 ),
+  .tax-jetpack-portfolio-type .jetpack-portfolio:nth-child( 6n+1 ),
+  .tax-jetpack-portfolio-tag .jetpack-portfolio:nth-child( 6n+1 ),
+  .page-template-portfolio-php .jetpack-portfolio:nth-child( 6n+1 ) {
 	  clear: left;
   }
+}
+.page-template-portfolio-php .entry-content > *:last-child {
+	margin-bottom: 0;
+}
+.page-template-portfolio-php .paging-navigation {
+	text-align: center;
 }
 /*--------------------------------------------------------------
 11.0 Infinite scroll
