@@ -17,6 +17,7 @@ function eighties_jetpack_setup() {
 		'type'           => 'click',
 		'container'      => 'main',
 		'footer_widgets' => false,
+		'wrapper'        => false
 	) );
 
 	add_theme_support( 'jetpack-portfolio' );
@@ -37,6 +38,15 @@ add_action( 'wp_enqueue_scripts', 'eighties_jetpack_enqueue_scripts' );
 function eighties_infinite_scroll_js_settings( $settings ) {
 	$settings['text'] = __( 'Load More', 'eighties' );
 
+	/**
+	 * For the portfolio, we need to change the id and,
+	 * just for fun, switch the type to scroll.
+	*/
+	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
+		$settings['id'] = 'portfolio-wrapper';
+		$settings['type'] = 'scroll';
+	}
+
 	return $settings;
 }
 add_filter( 'infinite_scroll_js_settings', 'eighties_infinite_scroll_js_settings' );
@@ -55,26 +65,3 @@ function eighties_infinite_scroll_render() {
 	}
 }
 add_action( 'infinite_scroll_render', 'eighties_infinite_scroll_render' );
-
-/**
- * Filter query object to filter the infinite
- * scroll settings.
-*/
-function eighties_infinite_scroll_query_object( $query ) {
-	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
-		add_filter( 'infinite_scroll_settings', 'eighties_portfolio_infinite_scroll_settings' );
-	}
-
-	return $query;
-}
-add_filter( 'infinite_scroll_query_object', 'eighties_infinite_scroll_query_object' );
-
-/**
- * Filter for the infinite scroll settings.
-*/
-function eighties_portfolio_infinite_scroll_settings( $settings ) {
-	$settings['wrapper'] = false;
-	$settings['container'] = 'portfolio-wrapper';
-
-	return $settings;
-}
