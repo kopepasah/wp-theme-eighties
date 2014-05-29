@@ -112,7 +112,7 @@
 	.cancel-comment a {
 		color: darken( @light, 10% );
 		font-size: .8em;
-		.transition( ~'all .2s ease' );
+		.transition( ~'all .2s linear' );
 		&:hover {
 			color: @blue;
 		}
@@ -167,7 +167,7 @@
 	}
 	#comment {
 		height: 75px;
-		.transition( height .2s ease );
+		.transition( height .2s linear );
 		&:focus {
 			height: 150px;
 		}

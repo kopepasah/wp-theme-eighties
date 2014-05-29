@@ -104,7 +104,7 @@ a {
 			border-right: 1px solid fadeout( #fff, 90% );
 			background-color: transparent;
 			color: #FFF;
-			.transition( ~'background-color .2s ease' );
+			.transition( ~'background-color .2s linear' );
 			&:hover {
 				background: fadeout( #fff, 90% );
 			}
@@ -194,7 +194,7 @@ a {
 				border-right: 0;
 				border-bottom: 1px solid lighten( @dark, 5% );
 				color: #FFF;
-				.transition( ~'border-width 200ms ease' );
+				.transition( ~'border-width 200ms linear' );
 				&:hover,
 				&:active {
 					color: @primary;
