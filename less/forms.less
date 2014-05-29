@@ -37,6 +37,15 @@ textarea {
 		width: 100%;
 		text-align: center;
 	}
+	&-disabled {
+		background: darken( @light, 20% );
+		&:hover,
+		&:focus,
+		&:active {
+			background: darken( @light, 20% );
+			box-shadow: 0 0 0 3px darken( @light, 20% );
+		}
+	}
 	&-secondary {
 		background: @secondary;
 		&:hover,
