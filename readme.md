@@ -12,6 +12,8 @@ Well, this depends on you, as there a many ways to get a theme working on your W
 
 __NOTE__: Currently waiting on approval from WordPress.org. Help speed the process by [adding a comment](https://themes.trac.wordpress.org/ticket/18794).
 
+<hr>
+
 If you have a self hosted WordPress site, then I would recommend downloading me from the WordPress.org repo on your site's theme admin page. You can do that like so.
 
 1. In your admin panel, go to Appearance > Themes and click the __Add New__ button.
@@ -22,6 +24,8 @@ If you have a self hosted WordPress site, then I would recommend downloading me 
 ### WordPress.com
 
 __NOTE__: Currently waiting on approval from WordPress.com. Sorry, there is nothing you can do to help this. Perhaps you should [send them a tweet](https://twitter.com/wordpressdotcom).
+
+<hr>
 
 If your site is on WordPress.com, then I honestly don't know why you would be viewing this project on Github (unless you want to contribute). You should go to your site and shout out my name! Oh, and by 'shout out', I mean 'search for'.
 
