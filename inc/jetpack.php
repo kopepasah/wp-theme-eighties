@@ -42,7 +42,7 @@ function eighties_infinite_scroll_js_settings( $settings ) {
 	 * For the portfolio, we need to change the id and,
 	 * just for fun, switch the type to scroll.
 	*/
-	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
+	if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) {
 		$settings['id'] = 'portfolio-wrapper';
 		$settings['type'] = 'scroll';
 	}
@@ -56,7 +56,7 @@ add_filter( 'infinite_scroll_js_settings', 'eighties_infinite_scroll_js_settings
  * archive or page template.
 */
 function eighties_infinite_scroll_render() {
-	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
+	if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) {
 		while ( have_posts() ) {
 			the_post();
 
