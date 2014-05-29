@@ -4,12 +4,11 @@
 a {
 	color: @primary;
 	text-decoration: none;
-	.transition( ~'color 200ms linear, background 200ms linear' );
+	.transition( ~'color 200ms ease' );
 	&:hover,
 	&:focus,
 	&:active {
-		color: #FFF;
-		background: @primary;
+		color: darken( @primary, 5% );
 	}
 }
 
