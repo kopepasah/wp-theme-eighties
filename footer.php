@@ -18,7 +18,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'eighties' ) ); ?>"><?php printf( __( 'Built with %s', 'eighties' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'eighties' ), '<a href="' . esc_url( "http://kopepasah.com/project/eighties/" ) . '" rel="designer">Eighties</a>', '<a href="' . esc_url( "http://kopepasah.com/" ) . '" rel="designer">Kopepasah</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'eighties' ), '<a href="' . esc_url( "http://eighties.me/" ) . '" rel="designer">Eighties</a>', '<a href="' . esc_url( "http://kopepasah.com/" ) . '" rel="designer">Kopepasah</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
