@@ -15,6 +15,18 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
+ * Eighties only works in WordPress 3.6 or later.
+ * Let's make sure users do not run into any
+ * troubles when trying to activate Eighties on WP
+ * versions less than 3.6.
+ *
+ * @since 1.0.0
+*/
+if ( version_compare( $GLOBALS['wp_version'], '3.6', '<' ) ) {
+	require_once( dirname( __FILE__ ) . '/inc/compatibility.php' );
+}
+
+/**
  * Set the theme mods in a global variable. This makes it easier to
  * retrieve in templates and functions.
  */
