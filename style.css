@@ -492,6 +492,15 @@ textarea {
   width: 100%;
   text-align: center;
 }
+.btn-disabled {
+  background: #b9b9b9;
+}
+.btn-disabled:hover,
+.btn-disabled:focus,
+.btn-disabled:active {
+  background: #b9b9b9;
+  box-shadow: 0 0 0 3px #b9b9b9;
+}
 .btn-secondary {
   background: #99cc99;
 }
@@ -565,6 +574,27 @@ input[type="reset"]-full,
 input[type="submit"]-full {
   width: 100%;
   text-align: center;
+}
+button-disabled,
+input[type="button"]-disabled,
+input[type="reset"]-disabled,
+input[type="submit"]-disabled {
+  background: #b9b9b9;
+}
+button-disabled:hover,
+input[type="button"]-disabled:hover,
+input[type="reset"]-disabled:hover,
+input[type="submit"]-disabled:hover,
+button-disabled:focus,
+input[type="button"]-disabled:focus,
+input[type="reset"]-disabled:focus,
+input[type="submit"]-disabled:focus,
+button-disabled:active,
+input[type="button"]-disabled:active,
+input[type="reset"]-disabled:active,
+input[type="submit"]-disabled:active {
+  background: #b9b9b9;
+  box-shadow: 0 0 0 3px #b9b9b9;
 }
 button-secondary,
 input[type="button"]-secondary,
@@ -1228,6 +1258,35 @@ a:active {
   width: 100%;
   text-align: center;
 }
+.paging-navigation .nav-previous a-disabled,
+.post-navigation .nav-previous a-disabled,
+.comment-navigation .nav-previous a-disabled,
+.paging-navigation .nav-next a-disabled,
+.post-navigation .nav-next a-disabled,
+.comment-navigation .nav-next a-disabled {
+  background: #b9b9b9;
+}
+.paging-navigation .nav-previous a-disabled:hover,
+.post-navigation .nav-previous a-disabled:hover,
+.comment-navigation .nav-previous a-disabled:hover,
+.paging-navigation .nav-next a-disabled:hover,
+.post-navigation .nav-next a-disabled:hover,
+.comment-navigation .nav-next a-disabled:hover,
+.paging-navigation .nav-previous a-disabled:focus,
+.post-navigation .nav-previous a-disabled:focus,
+.comment-navigation .nav-previous a-disabled:focus,
+.paging-navigation .nav-next a-disabled:focus,
+.post-navigation .nav-next a-disabled:focus,
+.comment-navigation .nav-next a-disabled:focus,
+.paging-navigation .nav-previous a-disabled:active,
+.post-navigation .nav-previous a-disabled:active,
+.comment-navigation .nav-previous a-disabled:active,
+.paging-navigation .nav-next a-disabled:active,
+.post-navigation .nav-next a-disabled:active,
+.comment-navigation .nav-next a-disabled:active {
+  background: #b9b9b9;
+  box-shadow: 0 0 0 3px #b9b9b9;
+}
 .paging-navigation .nav-previous a-secondary,
 .post-navigation .nav-previous a-secondary,
 .comment-navigation .nav-previous a-secondary,
@@ -1430,6 +1489,15 @@ a:active {
 .js #infinite-handle span-full {
   width: 100%;
   text-align: center;
+}
+.js #infinite-handle span-disabled {
+  background: #b9b9b9;
+}
+.js #infinite-handle span-disabled:hover,
+.js #infinite-handle span-disabled:focus,
+.js #infinite-handle span-disabled:active {
+  background: #b9b9b9;
+  box-shadow: 0 0 0 3px #b9b9b9;
 }
 .js #infinite-handle span-secondary {
   background: #99cc99;
@@ -2438,6 +2506,15 @@ a:active {
   width: 100%;
   text-align: center;
 }
+#respond .form-submit input-disabled {
+  background: #b9b9b9;
+}
+#respond .form-submit input-disabled:hover,
+#respond .form-submit input-disabled:focus,
+#respond .form-submit input-disabled:active {
+  background: #b9b9b9;
+  box-shadow: 0 0 0 3px #b9b9b9;
+}
 #respond .form-submit input-secondary {
   background: #99cc99;
 }
@@ -2951,6 +3028,19 @@ input#carousel-reblog-submit:active {
 input#carousel-reblog-submit-full {
   width: 100%;
   text-align: center;
+}
+#jp-carousel-comment-form-button-submit-disabled,
+input#carousel-reblog-submit-disabled {
+  background: #b9b9b9;
+}
+#jp-carousel-comment-form-button-submit-disabled:hover,
+input#carousel-reblog-submit-disabled:hover,
+#jp-carousel-comment-form-button-submit-disabled:focus,
+input#carousel-reblog-submit-disabled:focus,
+#jp-carousel-comment-form-button-submit-disabled:active,
+input#carousel-reblog-submit-disabled:active {
+  background: #b9b9b9;
+  box-shadow: 0 0 0 3px #b9b9b9;
 }
 #jp-carousel-comment-form-button-submit-secondary,
 input#carousel-reblog-submit-secondary {
