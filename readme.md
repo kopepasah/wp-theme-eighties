@@ -10,10 +10,6 @@ Well, this depends on you, as there a many ways to get a theme working on your W
 
 ### WordPress.org
 
-__NOTE__: Currently waiting on approval from WordPress.org. Help speed the process by [adding a comment](https://themes.trac.wordpress.org/ticket/18794).
-
-<hr>
-
 If you have a self hosted WordPress site, then I would recommend downloading me from the WordPress.org repo on your site's theme admin page. You can do that like so.
 
 1. In your admin panel, go to Appearance > Themes and click the __Add New__ button.
