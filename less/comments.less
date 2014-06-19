@@ -229,3 +229,16 @@
 		}
 	}
 }
+
+// A fix for when a user is using Disqus for comments on the site.
+#disqus_thread {
+	.max-width( 760px );
+	margin-top: @spacing-base;
+	margin-bottom: @spacing-base;
+}
+@media screen and (max-width: 760px) {
+	#disqus_thread {
+		padding-left: @spacing-base;
+		padding-right: @spacing-base;
+	}
+}

@@ -2542,6 +2542,20 @@ a:active {
   background: #99cc99;
   box-shadow: 0 0 0 3px #99cc99;
 }
+#disqus_thread {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+@media screen and (max-width: 760px) {
+  #disqus_thread {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
 /** ----------------------------------------:[ Jetpack Portfolio ]:--- */
 #portfolio-wrapper:before,
 #portfolio-wrapper:after {
