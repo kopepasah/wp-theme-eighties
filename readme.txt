@@ -40,14 +40,3 @@ All other resourceses are licensed as followed:
 * FitVids - WTFPL license - http://sam.zoy.org/wtfpl/
 * Backstretch - MIT - https://raw.githubusercontent.com/srobbin/jquery-backstretch/master/LICENSE-MIT
 * header-default.jpg - http://creativecommons.org/publicdomain/zero/1.0/
-
-== Changelog ==
-
-= 1.0.0 - 2014-05-30 =
-* Initial release.
-
-= 1.0.1 - 2014-05-30 =
-* Fixed source reference for Font Awesome.
-
-= 1.0.1 - 2014-06-01 =
-* Added readme.txt.
