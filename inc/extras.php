@@ -178,3 +178,32 @@ function eighties_excerpt_more( $more ) {
 	}
 }
 add_filter( 'excerpt_more', 'eighties_excerpt_more' );
+
+/**
+ * Filter titles for items that do not have a title.
+ *
+ * The WordPress.org theme review requires that a link
+ * be provided to the single post page for untitled posts.
+ * This is a filter on 'the_title' so that an '(Untitled)'
+ * title appears in that scenario, allowing for the normal
+ * method to work.
+ *
+ * Borrowed from Hybrid Core by Justin Tadlock
+ * https://github.com/justintadlock/hybrid-core
+ *
+ * @since  1.0.3
+ * @access public
+ * @param  string  $title
+ * @return string
+ */
+function eighties_untitled_post( $title ) {
+	if ( is_admin() || is_singular() ) {
+		return $title;
+	}
+
+	if ( empty( $title ) && in_the_loop() )
+		$title = __( '(Untitled)', 'eighties' );
+
+	return $title;
+}
+add_filter( 'the_title', 'eighties_untitled_post' );
