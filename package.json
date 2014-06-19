@@ -20,6 +20,7 @@
 	"devDependencies" : {
 		"grunt" : "~0.4.2",
 		"grunt-contrib-less" : "~0.8.1",
-		"grunt-contrib-watch": "latest"
+		"grunt-contrib-watch": "latest",
+		"grunt-contrib-compress": "latest"
 	}
 }
