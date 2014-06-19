@@ -16,13 +16,24 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		watch: {
+			css: {
+				files: ['style.less','less/*.less'],
+				tasks: ['less:compress'],
+				options: {
+					livereload: true,
+				}
+			}
+		}
 	});
 
 	// Load tasks
 	grunt.loadNpmTasks( 'grunt-contrib-less' );
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Register tasks
 	grunt.registerTask( 'default', [
-		'less'
+		'less',
+		'watch'
 	]);
 };
