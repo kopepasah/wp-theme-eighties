@@ -9,19 +9,38 @@
 	$( '#masthead' ).data( 'height', $( '#masthead' ).outerHeight() );
 
 	$( window ).scroll( function( event ) {
-		if ( $( window ).width() > 700 ) {
-			var position = $( this ).scrollTop(),
-			    height   = $( '#masthead' ).data( 'height' );
 
-			$( '#masthead' ).css({
-				'height' : height - position + "px",
-				'overflow' : 'hidden'
-			});
+		if ( $( window ).width() > 800 ) {
+			var position = window.scrollY,
+			    height   = $( '#masthead' ).data( 'height' ),
+				content  = $( '#content' ).offset().top;
 
-			$( '.site-branding' ).css({
-				'opacity' : ( 1 - position / height * 2 )
-			});
-        } else {
+			if ( position > 0 && content > position ) {
+				if ( position < height ) {
+					$( '#masthead' ).css({
+						'height' : height - position + 'px',
+						'overflow' : 'hidden'
+					});
+
+					$( '.site-branding' ).css({
+						'opacity' : ( 1 - position / height * 2 )
+					});
+				} else {
+					$( '#masthead' ).css({
+						'height' : '0px'
+					});
+				}
+			} else if ( position <= 0 ) {
+				$( '#masthead' ).css({
+					'height' : height
+				});
+
+				$( '.site-branding' ).css({
+					'opacity' : 1
+				});
+			}
+
+		} else {
 			$( '#masthead' ).css({
 				'height' : height + "px",
 			});
