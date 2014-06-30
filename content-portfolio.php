@@ -10,7 +10,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="project-details">
-		<figure class="project-image" <?php eighties_backstretch_data(); ?>>
+		<figure class="project-image" <?php eighties_backstretch_data( get_the_ID() ); ?>>
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'portfolio-featured' ); ?></a>
 		</figure>
 		<div class="project-summary">
