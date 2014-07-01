@@ -37,7 +37,7 @@ if ( ! function_exists( 'eighties_header_style' ) ) :
  */
 function eighties_header_style() {
 	$header_text_color = get_header_textcolor();
-	$header_image = get_header_image();
+	$header_image = eighties_header_image();
 	$header = get_custom_header();
 
 	// If no custom options for text are set, let's bail

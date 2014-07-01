@@ -268,3 +268,34 @@ function eighties_backstretch_data( $post_id ) {
 
 	echo $data;
 }
+
+/**
+ * Eighties Header Image
+ *
+ * Template tag for getting the eightie header image
+ * based on the custom setting for featured image or
+ * header image.
+ *
+ * @since  1.1.0
+ * @return bool|string
+ */
+function eighties_header_image() {
+	// If the current them does not support custom header, return false.
+	if ( ! get_theme_support( 'custom-header' ) ) {
+		return false;
+	}
+
+	// If is singular, has post thumbnail and is set to display the featured image, return the image.
+	if ( is_singular() && has_post_thumbnail( get_the_ID() ) && get_theme_mod( 'eighties_singular_header_image' ) === 'featured_image' ) {
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
+
+		return $image[0];
+	}
+
+	// If has the header image, return the header image.
+	if ( get_header_image() ) {
+		return get_header_image();
+	}
+
+	return false;
+}

@@ -16,6 +16,44 @@ function eighties_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	/**
+	 * Singular Header Options
+	 *
+	 * Add a options for using the featured image in lieu
+	 * of the header image and the item title in lieu of the
+	 * site tite for singular items. But only if the current
+	 * theme supports the custom header (child themes can
+	 * remove this support).
+	 *
+	 * @since 1.1.0
+	 */
+	if ( get_theme_support( 'custom-header' ) ) {
+
+		// Add the new section just below the Header Image section.
+		$wp_customize->add_section( 'eighties_singular_header', array(
+			'title'       => __( 'Singular Header', 'eighties' ),
+			'description' => __( 'For singular items (e.g. posts, pages) you can select to display the default header image or the featured image of the item.' ),
+			'priority'    => 61,
+		) );
+
+		// Add setting for the singular header image control.
+		$wp_customize->add_setting( 'eighties_singular_header_image', array(
+			'default'   => 'header',
+			'transport' => 'postMessage'
+		) );
+
+		// Add control for the singulare header image.
+		$wp_customize->add_control( 'eighties_singular_header_image', array(
+			'label'   => __( 'Image Displays:' ),
+			'section' => 'eighties_singular_header',
+			'type'    => 'radio',
+			'choices' => array(
+				'header'         => __( 'Header Image' ),
+				'featured_image' => __( 'Featured Image' ),
+			),
+		) );
+	}
 }
 add_action( 'customize_register', 'eighties_customize_register' );
 
