@@ -50,14 +50,39 @@ module.exports = function(grunt) {
 						]
 					}
 				]
-		    },
+			},
 		},
+		makepot: {
+			target: {
+				options: {
+					domainPath: '/languages',
+					potFilename: 'eighties-en_US.pot',
+					exclude: [
+						'css/.*',
+						'fonts/.*',
+						'images/.*',
+						'js/.*',
+						'languages/.*',
+						'less/.*',
+						'releases/.*',
+					],
+					processPot: function( pot, options ) {
+						pot.headers['report-msgid-bugs-to'] = 'http://github.com/kopepasah/eighties/issues';
+						delete pot.headers['x-generator'];
+
+						return pot;
+					},
+					type: 'wp-theme'
+				}
+			}
+		}
 	});
 
 	// Load tasks
 	grunt.loadNpmTasks( 'grunt-contrib-less' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
+	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 
 	grunt.registerTask( 'zip', 'Make a zip file for the project.', function( name ){
 		if ( name ) {
