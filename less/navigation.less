@@ -260,6 +260,99 @@ a {
 			}
 		}
 	}
+	// Social Menu
+	.menu-social {
+		.clearfix();
+		padding-bottom: @spacing-base * 2;
+		li {
+			width: 20%;
+			float: left;
+			text-align: center;
+			a {
+				padding: 0.5em;
+				background: lighten( @dark, 5% );
+				border-bottom: 0;
+				font-size: 3em;
+				line-height: 0;
+				color: #FFF;
+				&:before {
+					min-width: 27px;
+					display: inline-block;
+					border-bottom: 0;
+					font-family: FontAwesome;
+					font-style: normal;
+					font-weight: normal;
+					line-height: 1;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
+				&[href*='twitter.com'] {
+					background: #55ACEE;
+					&:before {
+						content: "\f099";
+					}
+				}
+				&[href*='facebook.com'] {
+					background: #3B5998;
+					&:before {
+						content: "\f09a";
+					}
+				}
+				&[href*='github.com'] {
+					background: #4183C4;
+					&:before {
+						content: "\f09b";
+					}
+				}
+				&[href*='foursquare.com'] {
+					background: #0072B1;
+					&:before {
+						content: "\f180";
+					}
+				}
+				&[href*='flickr.com'] {
+					background: #FF0084;
+					&:before {
+						content: "\f16e";
+					}
+				}
+				&[href*='app.net'] {
+					background: #D87A68;
+					&:before {
+						content: "\f170";
+					}
+				}
+				&[href*='linkedin.com'] {
+					background: #0976B4;
+					&:before {
+						content: "\f0e1";
+					}
+				}
+				&[href*='google.com'] {
+					background: #DD4B39;
+					&:before {
+						content: "\f0d5";
+					}
+				}
+				&[href*='youtube.com'] {
+					background: #E52D27;
+					&:before {
+						content: "\f167";
+					}
+				}
+				&[href*='wordpress.org'] {
+					background: #21759B;
+					&:before {
+						content: "\f19a";
+					}
+				}
+				&:hover {
+					background: lighten( @dark, 5% );
+					color: #FFF;
+				}
+			}
+		}
+	}
 }
 
 /** ---:[ Without JS ]:--- */
@@ -314,6 +407,9 @@ a {
 		&-toggle {
 			display: none;
 		}
+	}
+	.eighties-social-menu {
+		display: none;
 	}
 }
 
