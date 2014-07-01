@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: ['style.less','less/*.less'],
-				tasks: ['less:compress'],
+				tasks: ['less:compress', 'shell:grunt'],
 				options: {
 					livereload: true,
 				}
@@ -75,6 +75,11 @@ module.exports = function(grunt) {
 					type: 'wp-theme'
 				}
 			}
+		},
+		shell: {
+			grunt: {
+				command: 'afplay ~/Library/Sounds/Grunt.aiff'
+			}
 		}
 	});
 
@@ -83,6 +88,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
+	grunt.loadNpmTasks( 'grunt-shell' );
 
 	grunt.registerTask( 'zip', 'Make a zip file for the project.', function( name ){
 		if ( name ) {
