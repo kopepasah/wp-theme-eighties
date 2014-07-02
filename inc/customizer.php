@@ -33,7 +33,7 @@ function eighties_customize_register( $wp_customize ) {
 		// Add the new section just below the Header Image section.
 		$wp_customize->add_section( 'eighties_singular_header', array(
 			'title'       => __( 'Singular Header', 'eighties' ),
-			'description' => __( 'For singular items (e.g. posts, pages) you can select to display the default header image or the featured image of the item.' ),
+			'description' => __( 'For singular items (e.g. posts, pages) you can select to display the default header image or the featured image of the item.', 'eighties' ),
 			'priority'    => 61,
 		) );
 
@@ -45,12 +45,12 @@ function eighties_customize_register( $wp_customize ) {
 
 		// Add control for the singulare header image.
 		$wp_customize->add_control( 'eighties_singular_header_image', array(
-			'label'   => __( 'Image Displays:' ),
+			'label'   => __( 'Image Displays:', 'eighties' ),
 			'section' => 'eighties_singular_header',
 			'type'    => 'radio',
 			'choices' => array(
-				'header'         => __( 'Header Image' ),
-				'featured_image' => __( 'Featured Image' ),
+				'header'         => __( 'Header Image', 'eighties' ),
+				'featured_image' => __( 'Featured Image', 'eighties' ),
 			),
 		) );
 	}
