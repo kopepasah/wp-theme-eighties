@@ -1123,6 +1123,106 @@ a:active {
     top: 46px;
   }
 }
+.js .menu-social {
+  padding-bottom: 6em;
+}
+.js .menu-social:before,
+.js .menu-social:after {
+  content: " ";
+  display: table;
+  line-height: 0;
+}
+.js .menu-social:after {
+  clear: both;
+}
+.js .menu-social li {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.js .menu-social li a {
+  padding: 0.5em;
+  background: #3a3a3a;
+  border-bottom: 0;
+  font-size: 3em;
+  line-height: 0;
+  color: #FFF;
+}
+.js .menu-social li a:before {
+  min-width: 27px;
+  display: inline-block;
+  border-bottom: 0;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.js .menu-social li a[href*='twitter.com'] {
+  background: #55ACEE;
+}
+.js .menu-social li a[href*='twitter.com']:before {
+  content: "\f099";
+}
+.js .menu-social li a[href*='facebook.com'] {
+  background: #3B5998;
+}
+.js .menu-social li a[href*='facebook.com']:before {
+  content: "\f09a";
+}
+.js .menu-social li a[href*='github.com'] {
+  background: #4183C4;
+}
+.js .menu-social li a[href*='github.com']:before {
+  content: "\f09b";
+}
+.js .menu-social li a[href*='foursquare.com'] {
+  background: #0072B1;
+}
+.js .menu-social li a[href*='foursquare.com']:before {
+  content: "\f180";
+}
+.js .menu-social li a[href*='flickr.com'] {
+  background: #FF0084;
+}
+.js .menu-social li a[href*='flickr.com']:before {
+  content: "\f16e";
+}
+.js .menu-social li a[href*='app.net'] {
+  background: #D87A68;
+}
+.js .menu-social li a[href*='app.net']:before {
+  content: "\f170";
+}
+.js .menu-social li a[href*='linkedin.com'] {
+  background: #0976B4;
+}
+.js .menu-social li a[href*='linkedin.com']:before {
+  content: "\f0e1";
+}
+.js .menu-social li a[href*='google.com'] {
+  background: #DD4B39;
+}
+.js .menu-social li a[href*='google.com']:before {
+  content: "\f0d5";
+}
+.js .menu-social li a[href*='youtube.com'] {
+  background: #E52D27;
+}
+.js .menu-social li a[href*='youtube.com']:before {
+  content: "\f167";
+}
+.js .menu-social li a[href*='wordpress.org'] {
+  background: #21759B;
+}
+.js .menu-social li a[href*='wordpress.org']:before {
+  content: "\f19a";
+}
+.js .menu-social li a:hover {
+  background: #3a3a3a;
+  color: #FFF;
+}
 /** ---:[ Without JS ]:--- */
 .no-js .main-navigation {
   display: block;
@@ -1175,6 +1275,9 @@ a:active {
   visibility: visible;
 }
 .no-js .main-navigation-toggle {
+  display: none;
+}
+.no-js .eighties-social-menu {
   display: none;
 }
 /** ----------------------------------------:[ Paging ]:--- */
