@@ -12,13 +12,7 @@ I am a modern, progressively enhanced theme designed to keep your content front 
 
 == Description ==
 
-Hello, my name is Eighties and I am a modern, progressively enhanced theme designed to keep your content front and center.  My menu and sidebar are built to stay out of the way until a user wants to see them; giving users what they want, when they want it. Here are some of my main features.
-
-* Responsive layout.
-* Navigation & Sidebar Overlays
-* Portfolio Page Template.
-* Custom Header.
-* Jetpack.me compatibility for Infinite Scroll, Portfolio Custom Post Type.
+Hello, my name is Eighties and I am a modern, progressively enhanced theme designed to keep your content front and center. My menu and sidebar are built to stay out of the way until a user wants to see them. When clicked, users get a nice clean overlay. You can upload a custom header image or select to use the featured image of the post as the header image. Both you and your site's visitors will love me and you can expect updates and future enhancements for years to come (because my maker loves me, too).
 
 == Installation ==
 
