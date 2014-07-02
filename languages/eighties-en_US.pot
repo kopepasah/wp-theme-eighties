@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Eighties 1.0.3\n"
+"Project-Id-Version: Eighties 1.1.0\n"
 "Report-Msgid-Bugs-To: http://github.com/kopepasah/eighties/issues\n"
 "POT-Creation-Date: 2014-07-02 05:13:14+00:00\n"
 "MIME-Version: 1.0\n"
