@@ -1,0 +1,416 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Eighties 1.0.0\n"
+"Report-Msgid-Bugs-To: http://github.com/kopepasah/eighties/issues\n"
+"POT-Creation-Date: 2014-07-02 05:13:14+00:00\n"
+"PO-Revision-Date: 2014-07-03 06:52+0100\n"
+"Last-Translator: Lukas Berger <dev@lukasberger.at>\n"
+"Language-Team: Lukas Berger <dev@lukasberger.at>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n_noop;translate_nooped_plural\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "404"
+msgstr "404"
+
+#: 404.php:19
+msgid "Your request was not found."
+msgstr "Ihre Anfrage wurde nicht gefunden"
+
+#: 404.php:24
+msgid "Perhaps try a search?"
+msgstr "Vielleicht wollen Sie suchen?"
+
+#: archive.php:29
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:32
+msgid "Day: %s"
+msgstr "Tag: %s"
+
+#: archive.php:35
+msgid "Month: %s"
+msgstr "Monat: %s"
+
+#: archive.php:38
+msgid "Year: %s"
+msgstr "Jahr: %s"
+
+#: archive.php:41
+msgid "Asides"
+msgstr "Randbemerkungen"
+
+#: archive.php:44
+msgid "Galleries"
+msgstr "Gallerien"
+
+#: archive.php:47
+msgid "Images"
+msgstr "Bilder"
+
+#: archive.php:50
+msgid "Videos"
+msgstr "Videos"
+
+#: archive.php:53
+msgid "Quotes"
+msgstr "Zitate"
+
+#: archive.php:56
+msgid "Links"
+msgstr "Links"
+
+#: archive.php:59
+msgid "Statuses"
+msgstr "Statuse"
+
+#: archive.php:62
+msgid "Audios"
+msgstr "Musik"
+
+#: archive.php:65
+msgid "Chats"
+msgstr "Chats"
+
+#: archive.php:68
+msgid "Projects"
+msgstr "Projekte"
+
+#: archive.php:74
+msgid "Archives"
+msgstr "Archive"
+
+#: comments.php:35
+msgid "Leave a reply..."
+msgstr "Antwort dalassen..."
+
+#: comments.php:37
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: comments.php:38
+msgid "Submit Reply"
+msgstr "Antwort absenden"
+
+#: comments.php:54
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen"
+
+#: comments.php:59
+msgid "Comment navigation"
+msgstr "Kommentarnavigation"
+
+#: comments.php:60
+msgid "Older Comments"
+msgstr "Ältere Kommentare"
+
+#: comments.php:61
+msgid "Newer Comments"
+msgstr "Neuere Kommentare"
+
+#. translators: used between list items, there is a space after the comma
+#: content-aside.php:17 content-audio.php:16 content-single.php:19
+#: content-video.php:16
+msgid ", "
+msgstr ", "
+
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: content-none.php:21
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Bereit um Ihren ersten Kommentar zu posten? <a href=\"%1$s\">Machen Sie es "
+"hier</a>."
+
+#: content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with "
+"different keywords."
+msgstr ""
+"Entschuldigung, aber nichts stimmte mit Ihren Suchergebnissen überein. "
+"Vielleicht versuchen Sie es mit anderen Stichwörtern."
+
+#: content-none.php:30
+msgid "It seems we cannot find what you are looking for. Perhaps try a search?"
+msgstr ""
+"Es scheint dass wir nichts finden können, wonnach Sie suchen. Vielleicht "
+"wollen Sie dannach nochmal Suchen?"
+
+#. translators: used between list items, there is a space after the comma
+#: content-page.php:20 content-single-portfolio.php:31 content-single.php:32
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: footer.php:19
+msgid "http://wordpress.org/"
+msgstr "http://de.wordpress.org/"
+
+#: footer.php:19
+msgid "Built with %s"
+msgstr "Erstellt mit %s"
+
+#: footer.php:21
+msgid "Theme: %1$s by %2$s."
+msgstr "Design \"%1$s\" by %2$s."
+
+#: functions.php:68
+msgid "Primary Menu"
+msgstr "Primäres Menü"
+
+#: functions.php:69
+msgid "Social Menu"
+msgstr "Soziales Menü"
+
+#: functions.php:101
+msgid "Interactive Sidebar"
+msgstr "Interaktive Sidebar"
+
+#: functions.php:103
+msgid ""
+"This sidebar opens as a toggle on the right side of a users browser window. "
+"Note that the toggle feature requires JavaScript in order to function. But "
+"no need to worry, a plain sidebar will appear if JavaScript does not work. "
+"If empty, the sidebar with not display."
+msgstr ""
+"Diese Sidebar öffnet ein Umschalter auf der rechten Seite von einem Benutzer-"
+"Browser-Fenster. Beachten Sie, dass die Umschalt-Funktion JavaScript "
+"benötigt, um zu funktionieren. Aber kein Grund zur Sorge, eine einfache "
+"Sidebar wird angezeigt, wenn JavaScript nicht funktioniert. Falls leer, die "
+"Sidebar nicht angezeigt."
+
+#: functions.php:112
+msgid "Footer"
+msgstr "Fußbereich"
+
+#: functions.php:114
+msgid ""
+"Widget area for the footer. If no widgets are provided, this footer will not "
+"appear."
+msgstr ""
+"Widgetberreich für den Fußberreich. Wenn keine Widgets vorhanden sind, wird "
+"der Footer nicht angezeigt."
+
+#: header.php:34
+msgid "Menu"
+msgstr "Menü"
+
+#: header.php:41
+msgid "Skip to content"
+msgstr "Zum Inhalt springen"
+
+#: inc/compatibility.php:40 inc/compatibility.php:52 inc/compatibility.php:67
+msgid ""
+"Eighties requires at least WordPress version 3.6. You are running version "
+"%s. Please upgrade and try again."
+msgstr ""
+"Eighties benötigt mindestens WordPress 3.6. Sie benutzen WordPress %s. Bitte "
+"updaten Sie und versuchen Sie es erneut."
+
+#: inc/customizer.php:35
+msgid "Singular Header"
+msgstr "Einmaliger Kopfbereich"
+
+#: inc/customizer.php:36
+msgid ""
+"For singular items (e.g. posts, pages) you can select to display the default "
+"header image or the featured image of the item."
+msgstr ""
+"Für einmalige Item (z.B. Artikel, Seiten) können Sie auswählen, dass das "
+"Standard-Kopferbereichbild oder das vorgestellte Bild des Artikels angezeigt "
+"wird."
+
+#: inc/customizer.php:48
+msgid "Image Displays:"
+msgstr "Bilderanzeigen:"
+
+#: inc/customizer.php:52
+msgid "Header Image"
+msgstr "Kopfbereichbild"
+
+#: inc/customizer.php:53
+msgid "Featured Image"
+msgstr "Vorgestelltes Bild:"
+
+#: inc/extras.php:92
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: inc/extras.php:205
+msgid "(Untitled)"
+msgstr "(Unbenannt)"
+
+#: inc/jetpack.php:39
+msgid "Load More"
+msgstr "Mehr laden"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Artikel-Navigation"
+
+#: inc/template-tags.php:27
+msgid "Older Posts"
+msgstr "Ältere Posts"
+
+#: inc/template-tags.php:31
+msgid "Newer Posts"
+msgstr "Neuere Posts"
+
+#: inc/template-tags.php:54
+msgid "Post navigation"
+msgstr "Artikel-Navigation"
+
+#: inc/template-tags.php:82
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/template-tags.php:91
+msgid "%s"
+msgstr "%s"
+
+#: inc/template-tags.php:100
+msgid "Your comment is awaiting moderation."
+msgstr "Ihr Kommentar wird nun modertiert"
+
+#: inc/template-tags.php:150
+msgid "%s Day Ago"
+msgid_plural "%s Days Ago"
+msgstr[0] "Vor %s Tagen"
+msgstr[1] "Vor %s Tagen"
+
+#: inc/template-tags.php:158
+msgid "%s Hour Ago"
+msgid_plural "%s Hours Ago"
+msgstr[0] "Vor %s Stunden"
+msgstr[1] "Vor %s Stunden"
+
+#: inc/template-tags.php:166
+msgid "%s Minute Ago"
+msgid_plural "%s Minutes Ago"
+msgstr[0] "Vor %s Minuten"
+msgstr[1] "Vor %s Minuten"
+
+#: inc/template-tags.php:172
+msgid "Just now"
+msgstr "Gerade eben"
+
+#: portfolio.php:44
+msgid "Porfolio page."
+msgstr "Portfolioseite."
+
+#: portfolio.php:46
+msgid "View Portfolio"
+msgstr "Portfoilio anzeigen"
+
+#: search.php:18
+msgid "Results"
+msgstr "Ergebnisse"
+
+#. Theme Name of the plugin/theme
+msgid "Eighties"
+msgstr "Eighties"
+
+#. Theme URI of the plugin/theme
+msgid "http://eighties.me"
+msgstr "http://eighties.me"
+
+#. Description of the plugin/theme
+msgid ""
+"Hello. I'm a modern, progressively enhanced theme designed to keep your "
+"content front and center. My menu and sidebar are built to stay out of the "
+"way until a user wants to see them; giving users what they want, when they "
+"want it."
+msgstr ""
+"Hallo. Ich bin ein modernes, schrittweise verbessertes Theme erstellt um den "
+"Vorinhalt und den Hauptinhalt zu behalten. Mein Menü und meine Sidebar sind "
+"erstellt worden um nicht im Weg zu stehen bis der Benutzer sie sehen will; "
+"gib den Benutzen was sie wollen, wenn sie es wollen"
+
+#. Author of the plugin/theme
+msgid "Justin Kopepasah"
+msgstr "Justin Kopepasah"
+
+#. Author URI of the plugin/theme
+msgid "http://kopepasah.com/"
+msgstr "http://kopepasah.com/"
+
+#. Template Name of the plugin/theme
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: archive.php:35
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:38
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: comments.php:26
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] "Ein Kommentar"
+msgstr[1] "%1$s Kommentare"
+
+#: content-portfolio.php:18
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: functions.php:136
+msgctxt "Righteous font: on or off"
+msgid "on"
+msgstr "an"
+
+#: functions.php:156
+msgctxt "Varela Round font: on or off"
+msgid "on"
+msgstr "an"
+
+#: functions.php:176
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "an"
+
+#: inc/extras.php:136 searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr "Suchen nach:"
+
+#: inc/extras.php:137 searchform.php:14
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Suche &hellip;"
+
+#: inc/template-tags.php:57
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:58
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%title"
+
+#~ msgid "Close"
+#~ msgstr "Schließen"
+
+#~ msgid ""
+#~ "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
+#~ "%2$s</span>"
+#~ msgstr ""
+#~ "<span class=\"posted-on\">Gepostet in %1$s</span><span class=\"byline\"> "
+#~ "von %2$s</span>"
