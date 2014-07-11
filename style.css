@@ -1136,17 +1136,32 @@ a:active {
   clear: both;
 }
 .js .menu-social li {
-  width: 20%;
+  width: 33%;
   float: left;
   text-align: center;
 }
+@media screen and (min-width: 500px) {
+  .js .menu-social li {
+    width: 20%;
+  }
+}
 .js .menu-social li a {
-  padding: 0.5em;
+  display: block;
+  padding: 1em 0;
   background: #3a3a3a;
   border-bottom: 0;
   font-size: 3em;
   line-height: 0;
   color: #FFF;
+}
+.js .menu-social li a .screen-reader-text {
+  font-size: 18px;
+  font-size: 1rem;
+}
+@media screen and (min-width: 500px) {
+  .js .menu-social li a {
+    padding: 0.5em 0;
+  }
 }
 .js .menu-social li a:before {
   min-width: 27px;
