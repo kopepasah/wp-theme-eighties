@@ -179,11 +179,11 @@ function eighties_body_font_url() {
 
 	return $font_url;
 }
-
 /**
  * Enqueue scripts and styles.
  */
-function eighties_scripts() {
+function eighties_styles() {
+	$suffix = defined( 'STYLES_DEBUG' ) && STYLES_DEBUG ? '.css' : '.min.css';
 
 	// Add Righteous font, used in the main stylesheet.
 	wp_enqueue_style( 'eighties-header', eighties_header_font_url(), array(), null );
@@ -195,38 +195,92 @@ function eighties_scripts() {
 	wp_enqueue_style( 'eighties-body', eighties_body_font_url(), array(), null );
 
 	// Font Awesome Icons
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fa/font-awesome.css' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fa/font-awesome' . $suffix );
 
 	// Eighties Styles
 	wp_enqueue_style( 'eighties', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'eighties_styles' );
 
-	// Register scripts
-	wp_register_script( 'backstretch', get_template_directory_uri() . '/js/jquery.backstretch.js', array( 'jquery' ), '2.0.4',  true  );
-	wp_register_script( 'fitvids',     get_template_directory_uri() . '/js/fitvids.js',            false,             '1.0.3',  true  );
+/**
+ * Enqueue scripts.
+ */
+function eighties_scripts() {
+	// If script debug is true, do not serve minified scripts.
+	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.js' : '.min.js';
+
+	// Our scripts.
+	$scripts = array(
+		'backstretch' => array(
+			'deps'     => array( 'jquery' ),
+			'version'  => '2.0.4',
+			'footer'   => true
+		),
+		'fitvids' => array(
+			'deps'    => array( 'jquery' ),
+			'version' => '1.0.3',
+			'footer'  => true
+		),
+		'eighties' => array(
+			'deps'    => array( 'fitvids' ),
+			'version' => '20140711',
+			'footer'  => true
+		),
+		'eighties-enable-js' => array(
+			'deps'    => false,
+			'version' => '20140711',
+			'footer'  => false
+		),
+		'eighties-blog' => array(
+			'deps'    => array( 'backstretch' ),
+			'version' => '20140711',
+			'footer'  => true
+		),
+		'eighties-portfolio' => array(
+			'deps'    => array( 'jquery' ),
+			'version' => '20140711',
+			'footer'  => true
+		),
+		'eighties-header' => array(
+			'deps'    => array( 'backstretch' ),
+			'version' => '20140711',
+			'footer'  => true
+		),
+		'skip-link-focus-fix' => array(
+			'deps'    => false,
+			'version' => '20140711',
+			'footer'  => true
+		)
+	);
+
+	// Foreach of the scripts, let's register them.
+	foreach ( $scripts as $script => $args ) {
+		wp_register_script( $script, get_template_directory_uri() . '/js/' . $script . $suffix, $args['deps'], $args['version'], $args['footer'] );
+	}
 
 	// Change no-js to js on the documentElement.
-	wp_enqueue_script( 'eighties-enable-js', get_template_directory_uri() . '/js/eighties-enable-js.js', false, '20140502', false );
+	wp_enqueue_script( 'eighties-enable-js' );
 
 	// Enqueue global (includes navigation and others).
-	wp_enqueue_script( 'eighties', get_template_directory_uri() . '/js/eighties.js', array( 'fitvids' ), '20120206', true );
+	wp_enqueue_script( 'eighties' );
 
-	// Skip link focus. NOTE Review this.
-	wp_enqueue_script( 'eighties-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', false, '20130115', true );
+	// Skip link focus.
+	wp_enqueue_script( 'skip-link-focus-fix' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_home() || is_archive() || is_search() ) {
-		wp_enqueue_script( 'eighties-blog', get_template_directory_uri() . '/js/eighties-blog.js', array( 'backstretch' ), '20120206', true );
+		wp_enqueue_script( 'eighties-blog' );
 	}
 
 	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
-		wp_enqueue_script( 'eighties-portfolio', get_template_directory_uri() . '/js/eighties-portfolio.js', array(), '20140527', true );
+		wp_enqueue_script( 'eighties-portfolio' );
 	}
 
 	if ( eighties_header_image() ) {
-		wp_enqueue_script( 'eighties-header', get_template_directory_uri() . '/js/eighties-header.js', array( 'backstretch' ), '20140407', true );
+		wp_enqueue_script( 'eighties-header' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'eighties_scripts' );
