@@ -184,7 +184,6 @@ function eighties_body_font_url() {
  * Enqueue scripts and styles.
  */
 function eighties_scripts() {
-	$protocol = is_ssl() ? 'https' : 'http';
 
 	// Add Righteous font, used in the main stylesheet.
 	wp_enqueue_style( 'eighties-header', eighties_header_font_url(), array(), null );
