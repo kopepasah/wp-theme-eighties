@@ -203,7 +203,6 @@ function eighties_scripts() {
 
 	// Register scripts
 	wp_register_script( 'backstretch', get_template_directory_uri() . '/js/jquery.backstretch.js', array( 'jquery' ), '2.0.4',  true  );
-	wp_register_script( 'bigslide',    get_template_directory_uri() . '/js/jquery.bigslide.js',    array( 'jquery' ), '0.4.3',  true  );
 	wp_register_script( 'fitvids',     get_template_directory_uri() . '/js/fitvids.js',            false,             '1.0.3',  true  );
 
 	// Change no-js to js on the documentElement.
