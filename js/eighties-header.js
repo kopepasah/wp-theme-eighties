@@ -12,10 +12,12 @@
 
 		if ( $( window ).width() > 800 ) {
 			var position = window.scrollY,
-			    height   = $( '#masthead' ).data( 'height' ),
-				content  = $( '#content' ).offset().top;
+				bottom   = window.innerHeight - document.getElementById( 'colophon' ).offsetHeight,
+				height   = $( '#masthead' ).data( 'height' ),
+				content  = $( '#content' ).offset().top,
+				footer   = $( '#colophon' ).offset().top - position;
 
-			if ( position > 0 && content > position ) {
+			if ( position > 0 && content > position && footer > bottom ) {
 				if ( position < height ) {
 					$( '#masthead' ).css({
 						'height' : height - position + 'px',
