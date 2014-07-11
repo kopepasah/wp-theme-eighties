@@ -80,6 +80,24 @@ module.exports = function(grunt) {
 			grunt: {
 				command: 'afplay ~/Library/Sounds/Grunt.aiff'
 			}
+		},
+		uglify: {
+			main: {
+				options: {
+					mangle: false
+				},
+				files: {
+					'js/backstretch.min.js'         : [ 'js/backstretch.js' ],
+					'js/customizer-preview.min.js'  : [ 'js/customizer-preview.js' ],
+					'js/eighties-blog.min.js'       : [ 'js/eighties-blog.js' ],
+					'js/eighties-enable-js.min.js'  : [ 'js/eighties-enable-js.js' ],
+					'js/eighties-header.min.js'     : [ 'js/eighties-header.js' ],
+					'js/eighties-portfolio.min.js'  : [ 'js/eighties-portfolio.js' ],
+					'js/eighties.min.js'            : [ 'js/eighties.js' ],
+					'js/fitvids.min.js'             : [ 'js/fitvids.js' ],
+					'js/skip-link-focus-fix.min.js' : [ 'js/skip-link-focus-fix.js' ]
+				}
+			}
 		}
 	});
 
@@ -89,6 +107,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-shell' );
+	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 
 	grunt.registerTask( 'zip', 'Make a zip file for the project.', function( name ){
 		if ( name ) {

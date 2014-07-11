@@ -23,6 +23,7 @@
 		"grunt-contrib-watch"    : "latest",
 		"grunt-contrib-compress" : "latest",
 		"grunt-wp-i18n"          : "latest",
-		"grunt-shell"            : "latest"
+		"grunt-shell"            : "latest",
+		"grunt-contrib-uglify"   : "latest"
 	}
 }
