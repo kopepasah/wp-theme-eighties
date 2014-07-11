@@ -33,7 +33,7 @@
 			<a href class="main-navigation-toggle"><i class="fa fa-times"></i></a>
 			<h4 class="main-navigation-title"><?php _e( 'Menu', 'eighties' ); ?></h4>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_class' => 'menu menu-social', 'link_before' => '<span class="screen-reader-text">', 'link_after' => '</span>' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_class' => 'menu menu-social', 'link_before' => '<span class="screen-reader-text">', 'link_after' => '</span>', 'fallback_cb' => false ) ); ?>
 		</nav><!-- #site-navigation -->
 
 		<?php if ( eighties_header_image() || get_theme_mod( 'header_textcolor' ) !== 'blank' ) : ?>
