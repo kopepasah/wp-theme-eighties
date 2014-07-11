@@ -265,16 +265,31 @@ a {
 		.clearfix();
 		padding-bottom: @spacing-base * 2;
 		li {
-			width: 20%;
+			width: 33%;
 			float: left;
 			text-align: center;
+
+			@media screen and (min-width: 500px) {
+				width: 20%;
+			}
+
 			a {
-				padding: 0.5em;
+				display: block;
+				padding: 1em 0;
 				background: lighten( @dark, 5% );
 				border-bottom: 0;
 				font-size: 3em;
 				line-height: 0;
 				color: #FFF;
+
+				.screen-reader-text {
+					.font-size( 18 );
+				}
+
+				@media screen and (min-width: 500px) {
+					padding: 0.5em 0;
+				}
+
 				&:before {
 					min-width: 27px;
 					display: inline-block;
