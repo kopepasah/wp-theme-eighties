@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 		less: {
 			compress: {
 				files: {
-					'style.min.css' : 'style.less' 
+					'style.min.css' : 'style.less'
 				},
 				options: {
 					compress: true,
