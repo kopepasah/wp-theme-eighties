@@ -1,0 +1,427 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Eighties 1.1.0\n"
+"Report-Msgid-Bugs-To: http://github.com/kopepasah/eighties/issues\n"
+"POT-Creation-Date: 2014-07-11 07:02:25+00:00\n"
+"PO-Revision-Date: Fri Aug 08 2014 16:08:47 GMT+0200 (CEST)\n"
+"Last-Translator: joan <joan@junyent.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: Catalan; Valencian (Spain)\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: ca_ES\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: 404.php:17
+msgid "404"
+msgstr "404"
+
+#: 404.php:19
+msgid "Your request was not found."
+msgstr "La teva consulta no ha trobat res."
+
+#: 404.php:24
+msgid "Perhaps try a search?"
+msgstr "Potser si ho proves amb el cercador?"
+
+#: archive.php:29
+#, c-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:32
+#, c-format
+msgid "Day: %s"
+msgstr "Dia: %s"
+
+#: archive.php:35
+#, c-format
+msgid "Month: %s"
+msgstr "Mes: %s"
+
+#: archive.php:38
+#, c-format
+msgid "Year: %s"
+msgstr "Any: %s"
+
+#: archive.php:41
+msgid "Asides"
+msgstr "Anotacions"
+
+#: archive.php:44
+msgid "Galleries"
+msgstr "Galeries"
+
+#: archive.php:47
+msgid "Images"
+msgstr "Imatges"
+
+#: archive.php:50
+msgid "Videos"
+msgstr "Vídeos"
+
+#: archive.php:53
+msgid "Quotes"
+msgstr "Cites"
+
+#: archive.php:56
+msgid "Links"
+msgstr "Enllaços"
+
+#: archive.php:59
+msgid "Statuses"
+msgstr "Estatus"
+
+#: archive.php:62
+msgid "Audios"
+msgstr "Audios"
+
+#: archive.php:65
+msgid "Chats"
+msgstr "Xats"
+
+#: archive.php:68
+msgid "Projects"
+msgstr "Projectes"
+
+#: archive.php:74
+msgid "Archives"
+msgstr "Arxius"
+
+#: comments.php:35
+msgid "Leave a reply..."
+msgstr "Deixa un comentari..."
+
+#: comments.php:37
+msgid "Cancel"
+msgstr "Cancela"
+
+#: comments.php:38
+msgid "Submit Reply"
+msgstr "Envia el comentari"
+
+#: comments.php:54
+msgid "Comments are closed."
+msgstr "Els comentaris estan tancats"
+
+#: comments.php:59
+msgid "Comment navigation"
+msgstr "Navegació pels comentaris"
+
+#: comments.php:60
+msgid "Older Comments"
+msgstr "Comentaris més antics"
+
+#: comments.php:61
+msgid "Newer Comments"
+msgstr "Comentaris més nous"
+
+#. translators: used between list items, there is a space after the comma
+#: content-aside.php:17 content-audio.php:16 content-single.php:19
+#: content-video.php:16
+msgid ", "
+msgstr ","
+
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "No s'ha trobat res."
+
+#: content-none.php:21
+#, c-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Preparat per publicar la teva primera entrada? <a href=\"%1$s\">Comença "
+"aquí</a>."
+
+#: content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with "
+"different keywords."
+msgstr ""
+"Ho sentim però sembla que no hi ha resultats. Si us plau, torna-ho a "
+"intentar amb paraules clau diferents."
+
+#: content-none.php:30
+msgid "It seems we cannot find what you are looking for. Perhaps try a search?"
+msgstr "Sembla que no trobem el que cerques. Potser si ho proves amb el cercador?"
+
+#. translators: used between list items, there is a space after the comma
+#: content-page.php:20 content-single-portfolio.php:31 content-single.php:32
+msgid "Pages:"
+msgstr "Pàgines"
+
+#: footer.php:19
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: footer.php:19
+#, c-format
+msgid "Built with %s"
+msgstr "Construït amb %s"
+
+#: footer.php:21
+#, c-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s per %2$s."
+
+#: functions.php:68
+msgid "Primary Menu"
+msgstr "Menú principal"
+
+#: functions.php:69
+msgid "Social Menu"
+msgstr "Menú social"
+
+#: functions.php:101
+msgid "Interactive Sidebar"
+msgstr "Barra lateral interactiva"
+
+#: functions.php:103
+msgid ""
+"This sidebar opens as a toggle on the right side of a users browser window. "
+"Note that the toggle feature requires JavaScript in order to function. But "
+"no need to worry, a plain sidebar will appear if JavaScript does not work. "
+"If empty, the sidebar with not display."
+msgstr ""
+"Aquesta barra lateral s'obre amb un interruptor al costat dret de la "
+"finestra de navegació. Tingues en compte que per a que funcioni "
+"l'interruptor cal que el JavaScript estigui activat. Però no et preocupis, "
+"si el JavaScript està desactivat es mostrarà una barra lateral plana. Si "
+"està buida la barra lateral no es mostrarà."
+
+#: functions.php:112
+msgid "Footer"
+msgstr "Peu"
+
+#: functions.php:114
+msgid ""
+"Widget area for the footer. If no widgets are provided, this footer will not "
+"appear."
+msgstr "Àrea de ginys del peu. Si no es seleccionen ginys, aquest peu no es mostrarà."
+
+#: header.php:34
+msgid "Menu"
+msgstr "Menú"
+
+#: header.php:41
+msgid "Skip to content"
+msgstr "Salta al contingut"
+
+#: inc/compatibility.php:40 inc/compatibility.php:52 inc/compatibility.php:67
+#, c-format
+msgid ""
+"Eighties requires at least WordPress version 3.6. You are running version %s."
+" Please upgrade and try again."
+msgstr ""
+"Eighties necessita com a mínim la versió 3.6 de WordPress. Estàs fent servir "
+"la versió %s. Si us plau, actualitza-la i torna-ho a intentar."
+
+#: inc/customizer.php:35
+msgid "Singular Header"
+msgstr "Capçalera singular"
+
+#: inc/customizer.php:36
+msgid ""
+"For singular items (e.g. posts, pages) you can select to display the default "
+"header image or the featured image of the item."
+msgstr ""
+"Per a continguts singulars (p.ex. entrades, pàgines) pots escollir mostrar "
+"la imatge de capçalera o la imatge destacada del contingut."
+
+#: inc/customizer.php:48
+msgid "Image Displays:"
+msgstr "Imatge a mostrar:"
+
+#: inc/customizer.php:52
+msgid "Header Image"
+msgstr "Imatge de capçalera"
+
+#: inc/customizer.php:53
+msgid "Featured Image"
+msgstr "Imatge destacada"
+
+#: inc/extras.php:92
+#, c-format
+msgid "Page %s"
+msgstr "Pàgina %s"
+
+#: inc/extras.php:205
+msgid "(Untitled)"
+msgstr "(Sense títol)"
+
+#: inc/jetpack.php:39
+msgid "Load More"
+msgstr "Carrega més"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Navegació per les entrades"
+
+#: inc/template-tags.php:27
+msgid "Older Posts"
+msgstr "Entrades més antigues"
+
+#: inc/template-tags.php:31
+msgid "Newer Posts"
+msgstr "Entrades més noves"
+
+#: inc/template-tags.php:54
+msgid "Post navigation"
+msgstr "Navegació d'entrades"
+
+#: inc/template-tags.php:82
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/template-tags.php:91
+#, c-format
+msgid "%s"
+msgstr "%s"
+
+#: inc/template-tags.php:100
+msgid "Your comment is awaiting moderation."
+msgstr "El teu comentari està a l'espera de moderació."
+
+#: inc/template-tags.php:150
+#, c-format
+msgid "%s Day Ago"
+msgid_plural "%s Days Ago"
+msgstr[0] "Fa %s dia"
+msgstr[1] "Fa %s dies"
+
+#: inc/template-tags.php:158
+#, c-format
+msgid "%s Hour Ago"
+msgid_plural "%s Hours Ago"
+msgstr[0] "Fa %s hora"
+msgstr[1] "Fa %s hores"
+
+#: inc/template-tags.php:166
+#, c-format
+msgid "%s Minute Ago"
+msgid_plural "%s Minutes Ago"
+msgstr[0] "Fa %s minut"
+msgstr[1] "Fa %s minuts"
+
+#: inc/template-tags.php:172
+msgid "Just now"
+msgstr "Ara mateix"
+
+#: portfolio.php:44
+msgid "Porfolio page."
+msgstr "Pàgina de dossier de presentació."
+
+#: portfolio.php:46
+msgid "View Portfolio"
+msgstr "Mostra dossier de presentació"
+
+#: search.php:18
+msgid "Results"
+msgstr "Resultats"
+
+#. Theme Name of the plugin/theme
+msgid "Eighties"
+msgstr "Eighties"
+
+#. Theme URI of the plugin/theme
+msgid "http://eighties.me"
+msgstr "http://eighties.me"
+
+#. Description of the plugin/theme
+msgid ""
+"Hello, my name is Eighties and I am a modern, progressively enhanced theme "
+"designed to keep your content front and center. My menu and sidebar are "
+"built to stay out of the way until a user wants to see them. When clicked, "
+"users get a nice, clean overlay. You can upload a custom header image or "
+"select to use the featured image of the post as the header image. Both you "
+"and your site's visitors will love me and you can expect updates and future "
+"enhancements for years to come (because my maker loves me, too)."
+msgstr ""
+"Hola, el meu nom és Eighties i són un tema modern i progressivament millorat,"
+" dissenyat per a posar el eu contingut al davant i al centre. El meu menú i "
+"la meva barra lateral estan construïts per romandre fora del camí fins que "
+"l'usuari els vulgui veure. Quan s'hi fa click, els usuaris obtenen una capa "
+"superposada. Pots definir una imatge personalitzada per a la capçalera o "
+"pots fer servir la imatge destacada de cada entrada. Tant tu com els teus "
+"visitants m'estimareu i podeu esperar actualitzacions i futures millores en "
+"els propers anys (perquè el meu creador també m'estima)."
+
+#. Author of the plugin/theme
+msgid "Justin Kopepasah"
+msgstr "Justin Kopepasah"
+
+#. Author URI of the plugin/theme
+msgid "http://kopepasah.com/"
+msgstr "http://kopepasah.com/"
+
+#. Template Name of the plugin/theme
+msgid "Portfolio"
+msgstr "Dossier de presentació"
+
+#: archive.php:35
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "Mes i any"
+
+#: archive.php:38
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Any"
+
+#: comments.php:26
+#, c-format
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] "Un comentari"
+msgstr[1] "%1$s comentaris"
+
+#: content-portfolio.php:18
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ","
+
+#: functions.php:136
+msgctxt "Righteous font: on or off"
+msgid "on"
+msgstr "activat"
+
+#: functions.php:156
+msgctxt "Varela Round font: on or off"
+msgid "on"
+msgstr "activat"
+
+#: functions.php:176
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "activat"
+
+#: inc/extras.php:136 searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr "Cerca per:"
+
+#: inc/extras.php:137 searchform.php:14
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Cerca &hellip;"
+
+#: inc/template-tags.php:57
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:58
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%title"
