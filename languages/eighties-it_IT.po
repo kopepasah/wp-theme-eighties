@@ -1,0 +1,449 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Eighties v1.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-07-21 13:36:22+0000\n"
+"Last-Translator: admin <sipopunami@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:17
+#@ eighties
+msgid "404"
+msgstr ""
+
+#: 404.php:19
+#@ eighties
+msgid "Your request was not found."
+msgstr "La tua richiesta non è stata trovata."
+
+#: 404.php:24
+#@ eighties
+msgid "Perhaps try a search?"
+msgstr "Forse vuoi tentare ancora?"
+
+#: archive.php:29
+#, php-format
+#@ eighties
+msgid "Author: %s"
+msgstr "Autore: %s"
+
+#: archive.php:32
+#, php-format
+#@ eighties
+msgid "Day: %s"
+msgstr "Giorno: %s"
+
+#: archive.php:35
+#, php-format
+#@ eighties
+msgid "Month: %s"
+msgstr "Mese: %s"
+
+#: archive.php:35
+#@ eighties
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F A"
+
+#: archive.php:38
+#, php-format
+#@ eighties
+msgid "Year: %s"
+msgstr "Anno: %s"
+
+#: archive.php:38
+#@ eighties
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "A"
+
+#: archive.php:41
+#@ eighties
+msgid "Asides"
+msgstr "Da parte"
+
+#: archive.php:44
+#@ eighties
+msgid "Galleries"
+msgstr "Gallerie"
+
+#: archive.php:47
+#@ eighties
+msgid "Images"
+msgstr "Immagini"
+
+#: archive.php:50
+#@ eighties
+msgid "Videos"
+msgstr "Video"
+
+#: archive.php:53
+#@ eighties
+msgid "Quotes"
+msgstr "Citazioni"
+
+#: archive.php:56
+#@ eighties
+msgid "Links"
+msgstr "Collegamenti"
+
+#: archive.php:59
+#@ eighties
+msgid "Statuses"
+msgstr "Condizioni"
+
+#: archive.php:62
+#@ eighties
+msgid "Audios"
+msgstr "Audio"
+
+#: archive.php:65
+#@ eighties
+msgid "Chats"
+msgstr "Conversazioni"
+
+#: archive.php:68
+#@ eighties
+msgid "Projects"
+msgstr "Progetti"
+
+#: archive.php:74
+#@ eighties
+msgid "Archives"
+msgstr "Archivi"
+
+#: comments.php:26
+#, php-format
+#@ eighties
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] "Un commento"
+msgstr[1] "%1$s Commenti"
+
+#: comments.php:35
+#@ eighties
+msgid "Leave a reply..."
+msgstr "Scrivi un commento..."
+
+#: comments.php:37
+#@ eighties
+msgid "Cancel"
+msgstr "Cancella"
+
+#: comments.php:38
+#@ eighties
+msgid "Submit Reply"
+msgstr "Invia la risposta"
+
+#: comments.php:54
+#@ eighties
+msgid "Comments are closed."
+msgstr "I commenti sono chiusi"
+
+#: comments.php:59
+#@ eighties
+msgid "Comment navigation"
+msgstr "Leggi i commenti"
+
+#: comments.php:60
+#@ eighties
+msgid "Older Comments"
+msgstr "Vecchi commenti"
+
+#: comments.php:61
+#@ eighties
+msgid "Newer Comments"
+msgstr "Nuovi commenti"
+
+#. translators: used between list items, there is a space after the comma
+#: content-aside.php:17
+#: content-audio.php:16
+#: content-single.php:19
+#: content-video.php:16
+#@ eighties
+msgid ", "
+msgstr ", "
+
+#: content-none.php:15
+#@ eighties
+msgid "Nothing Found"
+msgstr "Non ho trovato nulla"
+
+#: content-none.php:21
+#, php-format
+#@ eighties
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Sei pronto per pubblicare il tuo primo articolo? <a href=\"%1$s\">Inizia</a>."
+
+#: content-none.php:25
+#@ eighties
+msgid "Sorry, but nothing matched your search terms. Please try again with different keywords."
+msgstr "Ci dispiace, ma non ho trovato nulla. Puoi tentare ancora con termini differenti."
+
+#: content-none.php:30
+#@ eighties
+msgid "It seems we cannot find what you are looking for. Perhaps try a search?"
+msgstr "Sembra che non riusciamo a trovare quello che stai cercando. Vuoi riprovare?"
+
+#. translators: used between list items, there is a space after the comma
+#: content-page.php:20
+#: content-single-portfolio.php:31
+#: content-single.php:32
+#@ eighties
+msgid "Pages:"
+msgstr "Pagine:"
+
+#: content-portfolio.php:18
+#@ eighties
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: footer.php:19
+#@ eighties
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: footer.php:19
+#, php-format
+#@ eighties
+msgid "Built with %s"
+msgstr "Costruito con %s"
+
+#: footer.php:21
+#, php-format
+#@ eighties
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s by %2$s."
+
+#: functions.php:68
+#@ eighties
+msgid "Primary Menu"
+msgstr "Menu primario"
+
+#: functions.php:69
+#@ eighties
+msgid "Social Menu"
+msgstr "Menu social"
+
+#: functions.php:101
+#@ eighties
+msgid "Interactive Sidebar"
+msgstr "Sidebar interattiva"
+
+#: functions.php:103
+#@ eighties
+msgid "This sidebar opens as a toggle on the right side of a users browser window. Note that the toggle feature requires JavaScript in order to function. But no need to worry, a plain sidebar will appear if JavaScript does not work. If empty, the sidebar with not display."
+msgstr "This sidebar opens as a toggle on the right side of a users browser window. Note that the toggle feature requires JavaScript in order to function. But no need to worry, a plain sidebar will appear if JavaScript does not work. If empty, the sidebar with not display."
+
+#: functions.php:112
+#@ eighties
+msgid "Footer"
+msgstr "Footer"
+
+#: functions.php:114
+#@ eighties
+msgid "Widget area for the footer. If no widgets are provided, this footer will not appear."
+msgstr "Area del footer. Se non hai organizzato i widget, il footer non apparirà."
+
+#: functions.php:136
+#@ eighties
+msgctxt "Righteous font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:156
+#@ eighties
+msgctxt "Varela Round font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:176
+#@ eighties
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "on"
+
+#: header.php:34
+#@ eighties
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:41
+#@ eighties
+msgid "Skip to content"
+msgstr "Salta il contenuto"
+
+#: inc/compatibility.php:40
+#: inc/compatibility.php:52
+#: inc/compatibility.php:67
+#, php-format
+#@ eighties
+#@ twentyfourteen
+msgid "Eighties requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
+msgstr "Eighties richiede Wordpress 3.6 o superiore. Sti eseguendo la versione %s. Per favore esegui l'aggiornamento e riprova."
+
+#: inc/customizer.php:35
+#@ eighties
+msgid "Singular Header"
+msgstr "Header singolo"
+
+#: inc/customizer.php:36
+#@ eighties
+msgid "For singular items (e.g. posts, pages) you can select to display the default header image or the featured image of the item."
+msgstr "Per oggetti singoli (e.s. articoli, pagine) puoi selezionare l'immagine Header di default o l'immagine presentata dall'oggetto."
+
+#: inc/customizer.php:48
+#@ eighties
+msgid "Image Displays:"
+msgstr "Schermo immagine:"
+
+#: inc/customizer.php:52
+#@ eighties
+msgid "Header Image"
+msgstr "Immagine Header"
+
+#: inc/customizer.php:53
+#@ eighties
+msgid "Featured Image"
+msgstr "Immagine presentata"
+
+#: inc/extras.php:92
+#, php-format
+#@ eighties
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#: inc/extras.php:136
+#: searchform.php:13
+#@ eighties
+msgctxt "label"
+msgid "Search for:"
+msgstr "Cerca per:"
+
+#: inc/extras.php:137
+#: searchform.php:14
+#@ eighties
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Cerca &hellip;"
+
+#: inc/extras.php:205
+#@ eighties
+msgid "(Untitled)"
+msgstr "(Senza nome)"
+
+#: inc/jetpack.php:39
+#@ eighties
+msgid "Load More"
+msgstr "Articoli precedenti"
+
+#: inc/template-tags.php:23
+#@ eighties
+msgid "Posts navigation"
+msgstr "Naviga tra gli articoli"
+
+#: inc/template-tags.php:27
+#@ eighties
+msgid "Older Posts"
+msgstr "Vecchi articoli"
+
+#: inc/template-tags.php:31
+#@ eighties
+msgid "Newer Posts"
+msgstr "Nuovi articoli"
+
+#: inc/template-tags.php:54
+#@ eighties
+msgid "Post navigation"
+msgstr "Naviga tra gli articoli"
+
+#: inc/template-tags.php:57
+#, php-format
+#@ eighties
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%titolo"
+
+#: inc/template-tags.php:58
+#, php-format
+#@ eighties
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%titolo"
+
+#: inc/template-tags.php:82
+#@ eighties
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/template-tags.php:91
+#, php-format
+#@ eighties
+msgid "%s"
+msgstr "%s"
+
+#: inc/template-tags.php:100
+#@ eighties
+msgid "Your comment is awaiting moderation."
+msgstr "Il tuo commento è in attesa di approvazione."
+
+#: inc/template-tags.php:150
+#, php-format
+#@ eighties
+msgid "%s Day Ago"
+msgid_plural "%s Days Ago"
+msgstr[0] "%s Giorno precedente"
+msgstr[1] "%s Giorni precedenti"
+
+#: inc/template-tags.php:158
+#, php-format
+#@ eighties
+msgid "%s Hour Ago"
+msgid_plural "%s Hours Ago"
+msgstr[0] "%s Ora precedente"
+msgstr[1] "%s Ore precedenti"
+
+#: inc/template-tags.php:166
+#, php-format
+#@ eighties
+msgid "%s Minute Ago"
+msgid_plural "%s Minutes Ago"
+msgstr[0] "%s Minuto precedente"
+msgstr[1] "%s Minuti precedenti"
+
+#: inc/template-tags.php:172
+#@ eighties
+msgid "Just now"
+msgstr "Adesso"
+
+#: portfolio.php:44
+#@ eighties
+msgid "Porfolio page."
+msgstr "Pagina Portfolio."
+
+#: portfolio.php:46
+#@ eighties
+msgid "View Portfolio"
+msgstr "Guarda Portfolio"
+
+#: search.php:18
+#@ eighties
+msgid "Results"
+msgstr "Risultati"
+
