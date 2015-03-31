@@ -36,13 +36,17 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_class' => 'menu menu-social', 'link_before' => '<span class="screen-reader-text">', 'link_after' => '</span>', 'fallback_cb' => false ) ); ?>
 		</nav><!-- #site-navigation -->
 
-		<?php if ( eighties_header_image() || get_theme_mod( 'header_textcolor' ) !== 'blank' ) : ?>
+	<?php if ( eighties_header_image() || get_theme_mod( 'header_textcolor' ) !== 'blank' ) : ?>
 			<header id="masthead" class="site-header" role="banner">
 				<a class="skip-link screen-reader-text" href="#content" <?php echo ( eighties_header_image() ) ? 'data-backstretch="' . eighties_header_image() . '"' : ''; ?>><?php _e( 'Skip to content', 'eighties' ); ?></a>
 				<div class="site-branding">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</div>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+    <?php if ( is_home() ) { ?>
+    	<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+    <?php } else { ?>
+    	<h2 class="site-description"><?php the_title() ?></h2>
+    <?php } ?>
+</div>
 			</header><!-- #masthead -->
 		<?php endif; ?>
 
