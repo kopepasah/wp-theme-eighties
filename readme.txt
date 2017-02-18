@@ -4,7 +4,7 @@ Contributors: Kopepasah
 Tags: dark, red, white, one-column, responsive-layout, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, infinite-scroll, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 
 Requires at least: 3.6
-Tested up to: 3.9.1
+Tested up to: 4.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,7 +28,7 @@ Nothing right now, but ask away!
 
 Eighties is GPL v2.0 or later license. :) Use it to make something cool.
 
-All other resourceses are licensed as followed:
+All other resources are licensed as followed:
 
 * Font Awesome - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
 * FitVids - WTFPL license - http://sam.zoy.org/wtfpl/

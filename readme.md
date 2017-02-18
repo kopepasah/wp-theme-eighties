@@ -23,10 +23,6 @@ If you have a self hosted WordPress site, then I would recommend downloading me 
 
 ### WordPress.com
 
-__NOTE__: Currently waiting on approval from WordPress.com. Sorry, there is nothing you can do to help this. Perhaps you should [send them a tweet](https://twitter.com/wordpressdotcom).
-
-<hr>
-
 If your site is on WordPress.com, then I honestly don't know why you would be viewing this project on Github (unless you want to contribute). You should go to your site and shout out my name! Oh, and by 'shout out', I mean 'search for'.
 
 Or you could follow these steps.
@@ -52,7 +48,3 @@ You can view the [full FAQ here](http://eighties.me/faq/).
 ## License
 
 If I could get a tattoo, it would say [GPL](http://www.gnu.org/licenses/gpl-2.0.html).
-
-## Contribute
-
-Hey, nobody's perfect. If you see something wrong with me, or simply want to make me better, do not hesitate to submit an issue or pull request.
