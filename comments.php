@@ -10,20 +10,20 @@
  * @package Eighties
  * @author Justin Kopepasah
  * @since 1.0.0
-*/
+ */
 
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
 */
-if ( post_password_required() )
+if ( post_password_required() ) {
 	return;
-
+}
 ?>
 <div class="discussion">
 	<h2 class="comments-header">
-		<?php printf( _nx( 'One comment', '%1$s comments', get_comments_number(), 'comments title', 'eighties' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
+		<?php printf( _nx( '%d comment', '%d comments', get_comments_number(), 'comments title', 'eighties' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
 	</h2>
 
 	<?php
@@ -49,7 +49,7 @@ if ( post_password_required() )
 
 	<?php
 		// If comments are closed, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'eighties' ); ?></p>
 	<?php endif; ?>
@@ -62,3 +62,4 @@ if ( post_password_required() )
 		</nav>
 	<?php endif; ?>
 </div>
+<?php
