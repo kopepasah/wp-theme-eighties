@@ -5,9 +5,10 @@
  * @package Eighties
  * @author Justin Kopepasah
  * @since 1.0.0
-*/
-?>
+ */
 
+?>
+<!-- TODO: caption is mal-aligned, see http://eighties.local/post-format-image/ -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
@@ -23,3 +24,4 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
+<?php

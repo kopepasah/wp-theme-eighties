@@ -23,7 +23,8 @@ if ( post_password_required() ) {
 ?>
 <div class="discussion">
 	<h2 class="comments-header">
-		<?php printf( _nx( '%d comment', '%d comments', get_comments_number(), 'comments title', 'eighties' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
+		<!-- TODO Review comments on front end check that numbers and singular/plural match comment number -->
+		<?php printf( _nx( 'One comment', '%1$s comments', get_comments_number(), 'comments title', 'eighties' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
 	</h2>
 
 	<?php
