@@ -8,6 +8,7 @@
  * @author Justin Kopepasah
  * @since 1.0.0
  */
+
 ?>
 
 <section class="no-results not-found">
@@ -33,3 +34,4 @@
 		<?php endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
+<?php
