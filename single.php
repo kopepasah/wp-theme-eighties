@@ -23,10 +23,10 @@ get_header(); ?>
 			<?php eighties_post_nav(); ?>
 
 			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
+				// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || '0' != get_comments_number() ) :
+				comments_template();
+			endif;
 			?>
 
 		<?php endwhile; // end of the loop. ?>
@@ -35,4 +35,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_footer();
