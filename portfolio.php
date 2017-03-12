@@ -21,7 +21,8 @@ get_header(); ?>
 					 * display some projects. We use get posts here,
 					 * because we are only retreving a set amount of
 					 * projects.
-					*/
+					 */
+
 					$args = array(
 						'post_type'      => 'jetpack-portfolio',
 						'posts_per_page' => 12,
@@ -48,10 +49,10 @@ get_header(); ?>
 				</nav><!-- .navigation -->
 
 				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() ) :
-						comments_template();
-					endif;
+					// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || '0' != get_comments_number() ) :
+					comments_template();
+				endif;
 				?>
 
 			<?php endwhile; // end of the loop. ?>
