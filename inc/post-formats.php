@@ -36,13 +36,13 @@ function eighties_post_format_video_get_first_video() {
  * @since 1.0.0
  */
 function eighties_post_format_video_first_video() {
+	
 	if ( get_post_format( get_the_ID() ) !== 'video' ) {
 		return;
 	}
 
 	echo eighties_post_format_video_get_first_video();
 
-	// add_filter( 'the_content', 'eighties_post_format_video_filter_the_content' );...
 }
 
 /**
