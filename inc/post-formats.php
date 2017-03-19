@@ -57,7 +57,7 @@ function eighties_post_format_video_first_video() {
  *      the_excerpt for these loops.
  *
  * @since 1.0.0
- * @param string $content For the function.
+ * @param string $content The post type's content.
  */
 function eighties_post_format_video_filter_the_content( $content ) {
 	if ( get_post_format( get_the_ID() ) !== 'video' ) {
