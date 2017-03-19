@@ -87,7 +87,7 @@ function eighties_wp_title( $title, $sep ) {
 		$title .= " $sep $site_description";
 	}
 
-	// Add a page number if necessary...
+	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
 		$title .= " $sep " . sprintf( __( 'Page %s', 'eighties' ), max( $paged, $page ) );
 	}
