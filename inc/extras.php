@@ -195,7 +195,7 @@ add_filter( 'excerpt_more', 'eighties_excerpt_more' );
  *
  * @since  1.0.3
  * @access public
- * @param  param $title For the function.
+ * @param  string $title For the function.
  * @return string
  */
 function eighties_untitled_post( $title ) {
