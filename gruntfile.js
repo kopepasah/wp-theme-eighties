@@ -77,11 +77,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		shell: {
-			grunt: {
-				command: 'afplay ~/Library/Sounds/Grunt.aiff'
-			}
-		},
 		uglify: {
 			main: {
 				options: {
