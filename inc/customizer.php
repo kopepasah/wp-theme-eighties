@@ -40,7 +40,8 @@ function eighties_customize_register( $wp_customize ) {
 		// Add setting for the singular header image control.
 		$wp_customize->add_setting( 'eighties_singular_header_image', array(
 			'default'   => 'header',
-			'transport' => 'postMessage'
+			'transport' => 'postMessage',
+			'sanitize_callback' => 'esc_html',
 		) );
 
 		// Add control for the singulare header image.

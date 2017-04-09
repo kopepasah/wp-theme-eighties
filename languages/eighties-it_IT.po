@@ -294,7 +294,6 @@ msgstr "Salta il contenuto"
 #: inc/compatibility.php:67
 #, php-format
 #@ eighties
-#@ twentyfourteen
 msgid "Eighties requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
 msgstr "Eighties richiede Wordpress 3.6 o superiore. Sti eseguendo la versione %s. Per favore esegui l'aggiornamento e riprova."
 
@@ -446,4 +445,3 @@ msgstr "Guarda Portfolio"
 #@ eighties
 msgid "Results"
 msgstr "Risultati"
-

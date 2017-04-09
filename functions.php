@@ -85,6 +85,9 @@ function eighties_setup() {
 
 	// Add shortcodes for the_excerpt
 	add_filter( 'the_excerpt', 'do_shortcode' );
+
+	// Add title tag support.
+	add_theme_support( 'title-tag' );
 }
 endif; // eighties_setup
 add_action( 'after_setup_theme', 'eighties_setup' );

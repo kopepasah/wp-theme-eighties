@@ -147,7 +147,7 @@ function eighties_get_time_difference( $time ) {
 		 * day. As such, let's show just the number of days
 		 * that have passed.
 		*/
-		$timestamp .= sprintf( translate_nooped_plural( _n_noop( '%s Day Ago', '%s Days Ago' ), $difference->days ), $difference->days );
+		$timestamp .= sprintf( translate_nooped_plural( _n_noop( '%s Day Ago', '%s Days Ago', 'eighties' ), $difference->days ), $difference->days );
 	} else if ( 0 < $difference->h ) {
 		/**
 		 * If we've made it here, we know that we have not
