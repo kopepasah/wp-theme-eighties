@@ -1,7 +1,7 @@
 <?php
 /**
  * Template for displaying content. This is the
- * default content tempalte.
+ * default content template.
  *
  * @package Eighties
  * @author Justin Kopepasah
