@@ -77,6 +77,7 @@ function eighties_header_style() {
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;
+			text-shadow:#000 1px 1px 3px;
 		}
 	<?php endif; ?>
 
