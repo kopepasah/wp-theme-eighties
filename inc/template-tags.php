@@ -91,7 +91,7 @@ if ( ! function_exists( 'eighties_comment' ) ) :
 				<div class="comment-wrap">
 					<div class="comment-top vcard">
 						<span class="comment-author">
-							<?php printf( ( '%s', 'eighties' ), get_comment_author_link() ) ?>
+							<?php printf( __( '%s', 'eighties' ), get_comment_author_link() ) ?>
 						</span>
 						<span class="comment-meta comment-time">
 							 &middot; <?php echo $timestamp; ?>
