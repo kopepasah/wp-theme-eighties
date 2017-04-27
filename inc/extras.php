@@ -47,7 +47,7 @@ add_filter( 'body_class', 'eighties_body_class' );
  * @since 1.0.0
  * @param array $classes Classes for the post element.
  * @return array
-*/
+ */
 function eighties_post_class( $classes ) {
 	// If we are in version 3.9 or below, add a has-post-thumbnail class.
 	if ( version_compare( $GLOBALS['wp_version'], '3.9', '<' ) ) {
@@ -78,7 +78,7 @@ function eighties_wp_title( $title, $sep ) {
 
 	global $page, $paged;
 
-	// Add the blog name
+	// Add the blog name.
 	$title .= get_bloginfo( 'name', 'display' );
 
 	// Add the blog description for the home/front page.
@@ -87,7 +87,7 @@ function eighties_wp_title( $title, $sep ) {
 		$title .= " $sep $site_description";
 	}
 
-	// Add a page number if necessary:
+	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
 		$title .= " $sep " . sprintf( __( 'Page %s', 'eighties' ), max( $paged, $page ) );
 	}
@@ -120,10 +120,12 @@ add_action( 'wp', 'eighties_setup_author' );
 /**
  * Add search to the primary menu.
  *
+ * @param params $items For the function.
+ * @param params $args For the function.
  * @return string Navigation menu items.
-*/
+ */
 function eighties_primary_menu_items( $items, $args ) {
-	if ( $args->theme_location != 'primary' ) {
+	if ( 'primary' != $args->theme_location ) {
 		return $items;
 	}
 
@@ -153,7 +155,7 @@ add_action( 'wp_nav_menu_items' , 'eighties_primary_menu_items', 100, 2 );
  *
  * @param string $length The current length.
  * @return string $length The filterd length.
-*/
+ */
 function eighties_excerpt_length( $length ) {
 	if ( is_home() || is_archive() || is_search() ) {
 		return 45;
@@ -169,7 +171,7 @@ add_filter( 'excerpt_length', 'eighties_excerpt_length' );
  *
  * @param string $more The current more text.
  * @return string $more The filterd more text.
-*/
+ */
 function eighties_excerpt_more( $more ) {
 	if ( is_home() || is_archive() || is_search() ) {
 		return '...';
@@ -193,7 +195,7 @@ add_filter( 'excerpt_more', 'eighties_excerpt_more' );
  *
  * @since  1.0.3
  * @access public
- * @param  string  $title
+ * @param  string $title Filter titles for items that do not have a title.
  * @return string
  */
 function eighties_untitled_post( $title ) {
@@ -201,8 +203,9 @@ function eighties_untitled_post( $title ) {
 		return $title;
 	}
 
-	if ( empty( $title ) && in_the_loop() )
+	if ( empty( $title ) && in_the_loop() ) {
 		$title = __( '(Untitled)', 'eighties' );
+	}
 
 	return $title;
 }

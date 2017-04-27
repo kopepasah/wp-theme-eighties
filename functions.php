@@ -1,6 +1,6 @@
 <?php
 /**
- * eighties functions and definitions
+ * Eighties functions and definitions
  *
  * @package Eighties
  * @author Justin Kopepasah
@@ -30,63 +30,62 @@ if ( version_compare( $GLOBALS['wp_version'], '3.6', '<' ) ) {
  * Set the theme mods in a global variable. This makes it easier to
  * retrieve in templates and functions.
  */
+
 // $GLOBALS['eighties_theme_mod'] = get_theme_mod( 'eighties' );
-
 if ( ! function_exists( 'eighties_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function eighties_setup() {
-
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on eighties, use a find and replace
-	 * to change 'eighties' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'eighties', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function eighties_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on eighties, use a find and replace
+		 * to change 'eighties' to the name of your theme in all the template files
+		 */
+		load_theme_textdomain( 'eighties', get_template_directory() . '/languages' );
 
-	add_image_size( 'main-featured', '1000', '700', array( 'center', 'center' ) );
-	add_image_size( 'portfolio-featured', '500', '350', true );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'eighties' ),
-		'social'  => __( 'Social Menu', 'eighties' )
-	) );
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		 */
+		add_theme_support( 'post-thumbnails' );
 
-	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'gallery', 'image', 'video', 'audio', 'status', 'aside', 'link' ) );
+		add_image_size( 'main-featured', '1000', '700', array( 'center', 'center' ) );
+		add_image_size( 'portfolio-featured', '500', '350', true );
 
-	// Enable support for HTML5 markup.
-	add_theme_support( 'html5', array(
-		'comment-list',
-		'search-form',
-		'comment-form',
-		'gallery',
-	) );
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+			'primary' => __( 'Primary Menu', 'eighties' ),
+			'social'  => __( 'Social Menu', 'eighties' ),
+		) );
 
-	// Add Editor Style
-	add_editor_style( 'css/editor.css' );
+		// Enable support for Post Formats.
+		add_theme_support( 'post-formats', array( 'gallery', 'image', 'video', 'audio', 'status', 'aside', 'link' ) );
 
-	// Add shortcodes for the_excerpt
-	add_filter( 'the_excerpt', 'do_shortcode' );
-}
-endif; // eighties_setup
+		// Enable support for HTML5 markup.
+		add_theme_support( 'html5', array(
+			'comment-list',
+			'search-form',
+			'comment-form',
+			'gallery',
+		) );
+
+		// Add Editor Style.
+		add_editor_style( 'css/editor.css' );
+
+		// Add shortcodes for the_excerpt.
+		add_filter( 'the_excerpt', 'do_shortcode' );
+	}
+endif; // eighties_setup.
 add_action( 'after_setup_theme', 'eighties_setup' );
 
 /**
@@ -125,16 +124,17 @@ add_action( 'widgets_init', 'eighties_widgets_init' );
  *
  * @since 1.0.0
  * @return string
-*/
+ */
 function eighties_header_font_url() {
 	$font_url = '';
+
 	/*
 	 * Translators: If there are characters in your language
 	 * that are not supported by Righteous, translate this to
 	 * 'off'. Do not translate into your own language.
 	*/
 	if ( 'off' !== _x( 'on', 'Righteous font: on or off', 'eighties' ) ) {
-		$font_url = add_query_arg( 'family', urlencode( 'Righteous' ), "//fonts.googleapis.com/css" );
+		$font_url = add_query_arg( 'family', urlencode( 'Righteous' ), '//fonts.googleapis.com/css' );
 	}
 
 	return $font_url;
@@ -145,16 +145,17 @@ function eighties_header_font_url() {
  *
  * @since 1.0.0
  * @return string
-*/
+ */
 function eighties_headings_font_url() {
 	$font_url = '';
+
 	/*
 	 * Translators: If there are characters in your language
 	 * that are not supported by Raleway, translate this to
 	 * 'off'. Do not translate into your own language.
 	 */
 	if ( 'off' !== _x( 'on', 'Varela Round font: on or off', 'eighties' ) ) {
-		$font_url = add_query_arg( 'family', 'Varela+Round', "//fonts.googleapis.com/css" );
+		$font_url = add_query_arg( 'family', 'Varela+Round', '//fonts.googleapis.com/css' );
 	}
 
 	return $font_url;
@@ -165,16 +166,17 @@ function eighties_headings_font_url() {
  *
  * @since 1.0.0
  * @return string
-*/
+ */
 function eighties_body_font_url() {
 	$font_url = '';
+
 	/*
 	 * Translators: If there are characters in your language
 	 * that are not supported by Open Sans, translate this to
 	 * 'off'. Do not translate into your own language.
 	 */
 	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'eighties' ) ) {
-		$font_url = add_query_arg( 'family', urlencode( 'Open Sans:400italic,700italic,400,700' ), "//fonts.googleapis.com/css" );
+		$font_url = add_query_arg( 'family', urlencode( 'Open Sans:400italic,700italic,400,700' ), '//fonts.googleapis.com/css' );
 	}
 
 	return $font_url;
@@ -194,10 +196,10 @@ function eighties_styles() {
 	// Add Open Sans font, used in the main stylesheet.
 	wp_enqueue_style( 'eighties-body', eighties_body_font_url(), array(), null );
 
-	// Font Awesome Icons
+	// Font Awesome Icons.
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fa/font-awesome' . $suffix );
 
-	// Eighties Styles
+	// Eighties Styles.
 	wp_enqueue_style( 'eighties', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'eighties_styles' );
@@ -214,43 +216,43 @@ function eighties_scripts() {
 		'backstretch' => array(
 			'deps'     => array( 'jquery' ),
 			'version'  => '2.0.4',
-			'footer'   => true
+			'footer'   => true,
 		),
 		'fitvids' => array(
 			'deps'    => array( 'jquery' ),
 			'version' => '1.0.3',
-			'footer'  => true
+			'footer'  => true,
 		),
 		'eighties' => array(
 			'deps'    => array( 'fitvids' ),
 			'version' => '20140711',
-			'footer'  => true
+			'footer'  => true,
 		),
 		'eighties-enable-js' => array(
 			'deps'    => false,
 			'version' => '20140711',
-			'footer'  => false
+			'footer'  => false,
 		),
 		'eighties-blog' => array(
 			'deps'    => array( 'backstretch' ),
 			'version' => '20140711',
-			'footer'  => true
+			'footer'  => true,
 		),
 		'eighties-portfolio' => array(
 			'deps'    => array( 'jquery' ),
 			'version' => '20140711',
-			'footer'  => true
+			'footer'  => true,
 		),
 		'eighties-header' => array(
 			'deps'    => array( 'backstretch' ),
 			'version' => '20140711',
-			'footer'  => true
+			'footer'  => true,
 		),
 		'skip-link-focus-fix' => array(
 			'deps'    => false,
 			'version' => '20140711',
-			'footer'  => true
-		)
+			'footer'  => true,
+		),
 	);
 
 	// Foreach of the scripts, let's register them.

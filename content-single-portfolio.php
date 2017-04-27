@@ -1,9 +1,12 @@
 <?php
 /**
+ * Template for displaying single portfolio content.
+ *
  * @package Eighties
  * @author Justin Kopepasah
  * @since 1.0.0
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -17,7 +20,7 @@
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_term_list( get_the_ID(), 'jetpack-portfolio-type', false, ', ', false );
-			if ( $categories_list ) :
+		if ( $categories_list ) :
 		?>
 			<span class="entry-meta entry-meta-categories"><?php echo $categories_list; ?></span>
 		<?php endif; ?>

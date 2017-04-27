@@ -1,6 +1,6 @@
 <?php
 /**
- * eighties Theme Customizer
+ * Eighties Theme Customizer
  *
  * @package Eighties
  * @author Justin Kopepasah
@@ -40,7 +40,7 @@ function eighties_customize_register( $wp_customize ) {
 		// Add setting for the singular header image control.
 		$wp_customize->add_setting( 'eighties_singular_header_image', array(
 			'default'   => 'header',
-			'transport' => 'postMessage'
+			'transport' => 'postMessage',
 		) );
 
 		// Add control for the singulare header image.

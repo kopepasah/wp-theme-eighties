@@ -4,14 +4,14 @@
  *
  * @package Eighties
  * @author Kopepasah
-*/
+ */
 
 /**
  * For video post formats we need to get the
  * first video embedded in the content.
  *
  * @since 1.0.0
-*/
+ */
 function eighties_post_format_video_get_first_video() {
 	if ( get_post_format( get_the_ID() ) !== 'video' ) {
 		return;
@@ -34,15 +34,15 @@ function eighties_post_format_video_get_first_video() {
  * first video embedded in the content.
  *
  * @since 1.0.0
-*/
+ */
 function eighties_post_format_video_first_video() {
+	
 	if ( get_post_format( get_the_ID() ) !== 'video' ) {
 		return;
 	}
 
 	echo eighties_post_format_video_get_first_video();
 
-	// add_filter( 'the_content', 'eighties_post_format_video_filter_the_content' );
 }
 
 /**
@@ -57,8 +57,8 @@ function eighties_post_format_video_first_video() {
  *      the_excerpt for these loops.
  *
  * @since 1.0.0
- * @var content
-*/
+ * @param string $content The post type's content.
+ */
 function eighties_post_format_video_filter_the_content( $content ) {
 	if ( get_post_format( get_the_ID() ) !== 'video' ) {
 		return $content;
@@ -86,7 +86,10 @@ function eighties_post_format_video_filter_the_content( $content ) {
  *
  * @since 1.0.0
  * @var $out, $pairs, $atts
-*/
+ * @param param $out for the function.
+ * @param param $pairs for the function.
+ * @param param $atts for the function.
+ */
 function eighties_post_format_gallery_filter_image_size( $out, $pairs, $atts ) {
 	if ( ( is_home() || is_archive() ) && get_post_format( get_the_ID() ) == 'gallery' ) {
 		$atts = shortcode_atts( array(
@@ -98,15 +101,15 @@ function eighties_post_format_gallery_filter_image_size( $out, $pairs, $atts ) {
 
 	return $out;
 }
-// add_filter( 'shortcode_atts_gallery', 'eighties_post_format_gallery_filter_image_size', 10, 3 );
-
+// add_filter( 'shortcode_atts_gallery', 'eighties_post_format_gallery_filter_image_size', 10, 3 );...
 /**
  * For status post formats we need to add the
  * title to the content.
  *
  * @since 1.0.0
  * @var content
-*/
+ * @param string $content for the function.
+ */
 function eighties_post_format_status_filter_the_content( $content ) {
 	if ( get_post_format( get_the_ID() ) !== 'status' ) {
 		return $content;
@@ -123,7 +126,8 @@ add_filter( 'the_content', 'eighties_post_format_status_filter_the_content' );
  * first audio embedded in the content.
  *
  * @since 1.0.0
-*/
+ * @param int $post_id for the function.
+ */
 function eighties_post_format_audio_get_first_audio( $post_id ) {
 	if ( get_post_format( $post_id ) !== 'audio' ) {
 		return;
@@ -147,7 +151,8 @@ function eighties_post_format_audio_get_first_audio( $post_id ) {
  * first audio embedded in the content.
  *
  * @since 1.0.0
-*/
+ * @param int $post_id for the function.
+ */
 function eighties_post_format_audio_first_audio( $post_id ) {
 	if ( get_post_format( $post_id ) !== 'audio' ) {
 		return;
@@ -155,7 +160,7 @@ function eighties_post_format_audio_first_audio( $post_id ) {
 
 	echo eighties_post_format_audio_get_first_audio( $post_id );
 
-	// add_filter( 'the_content', 'eighties_post_format_audio_filter_the_content' );
+	// add_filter( 'the_content', 'eighties_post_format_audio_filter_the_content' );...
 }
 
 /**
@@ -171,7 +176,8 @@ function eighties_post_format_audio_first_audio( $post_id ) {
  *
  * @since 1.0.0
  * @var content
-*/
+ * @param string $content for the function.
+ */
 function eighties_post_format_audio_filter_the_content( $content ) {
 	if ( get_post_format( get_the_ID() ) !== 'audio' ) {
 		return $content;
@@ -188,7 +194,7 @@ function eighties_post_format_audio_filter_the_content( $content ) {
 		$replace = $embeds[0];
 	}
 
-	if ( $replace == '' ) {
+	if ( '' == $replace ) {
 		return $content;
 	}
 

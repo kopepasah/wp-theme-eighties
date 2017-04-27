@@ -8,6 +8,7 @@
  * @author Justin Kopepasah
  * @since 1.0.0
  */
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>

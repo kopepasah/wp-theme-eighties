@@ -13,3 +13,5 @@ if ( ! is_active_sidebar( 'eighties-footer' ) ) {
 	<div id="site-supplementary" class="widget-area column-wrapper" role="complementary">
 		<?php dynamic_sidebar( 'eighties-footer' ); ?>
 	</div><!-- #site-supplementary -->
+
+<?php
